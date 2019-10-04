@@ -1,0 +1,28 @@
+<Files ~ "^\.ht">
+	Deny from all
+</Files>
+
+<Files wp-login.php>
+	Order deny,allow
+	Deny from all
+	Allow from all
+	#Allow from 127.0.0.1
+	AuthType Basic
+	AuthName "ENTER YOUR NAME & PASSWORD TO LOGIN"
+	AuthUserFile /home/kusanagi/.htpasswd
+	Require valid-user
+	Satisfy any
+</Files>
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+	#RewriteRule Shibboleth.sso - [L]
+	RewriteRule ^index\.php$ - [L]
+	RewriteCond %{REQUEST_URI} !\.(gif|css|js|swf|jpeg|jpg|jpe|png|ico|swd|pdf|svg|eot|ttf|woff)$
+	RewriteCond %{REQUEST_FILENAME} !-f
+	#RewriteCond %{REQUEST_URI} !(^/Shibboleth.sso/)
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /index.php [L]
+</IfModule>
+

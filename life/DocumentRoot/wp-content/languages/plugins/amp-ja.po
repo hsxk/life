@@ -1,0 +1,123 @@
+# Translation of Plugins - AMP - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - AMP - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-11-12 07:25:32+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - AMP - Stable (latest release)\n"
+
+#: includes/class-amp-content.php:102
+msgid "Sanitizer (%s) class does not exist"
+msgstr "サニタイザ (%s) クラスが存在しません。"
+
+#: templates/meta-taxonomy.php:17
+msgid "Tags: %s"
+msgstr "タグ: %s"
+
+#: templates/meta-taxonomy.php:4
+msgid "Categories: %s"
+msgstr "カテゴリー: %s"
+
+#: templates/footer.php:7
+msgid "Back to top"
+msgstr "トップへ戻る"
+
+#: templates/footer.php:5
+msgid "Powered by %s"
+msgstr "Powered by %s"
+
+#: templates/footer.php:5
+msgid "https://wordpress.org/"
+msgstr "https://ja.wordpress.org/"
+
+#: includes/settings/class-amp-customizer-design-settings.php:113
+msgid "Dark"
+msgstr "ダーク"
+
+#: includes/settings/class-amp-customizer-design-settings.php:112
+msgid "Light"
+msgstr "ライト"
+
+#: includes/settings/class-amp-customizer-design-settings.php:75
+msgid "Color Scheme"
+msgstr "配色 "
+
+#: includes/settings/class-amp-customizer-design-settings.php:66
+msgid "Header Background & Link Color"
+msgstr "ヘッダーの背景 & リンク色"
+
+#: includes/settings/class-amp-customizer-design-settings.php:56
+msgid "Header Text Color"
+msgstr "ヘッダーテキスト色"
+
+#: includes/settings/class-amp-customizer-design-settings.php:48
+msgid "Design"
+msgstr "デザイン"
+
+#: includes/class-amp-post-template.php:213
+msgid "View Comments"
+msgstr "コメントを表示"
+
+#: includes/class-amp-post-template.php:212
+msgid "Leave a Comment"
+msgstr "コメントを残す"
+
+#: includes/amp-post-template-actions.php:83
+msgid "Analytics entry for %s is missing one of the following keys: `type`, `attributes`, or `config_data` (array keys: %s)"
+msgstr "%s のアナリティクス項目が以下のキーのいずれかで見当たりません。`type`、`attributes`、`config_data` (配列キー: %s)"
+
+#. Author URI of the plugin/theme
+msgid "https://automattic.com"
+msgstr "https://automattic.com"
+
+#. Author of the plugin/theme
+msgid "Automattic"
+msgstr "Automattic"
+
+#. Description of the plugin/theme
+msgid "Add AMP support to your WordPress site."
+msgstr "WordPress サイトに AMP サポートを追加"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/automattic/amp-wp"
+msgstr "https://github.com/automattic/amp-wp"
+
+#. #-#-#-#-#  tmp-amp.pot (AMP 0.4.2)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: includes/admin/class-amp-customizer.php:113 includes/admin/functions.php:38
+#: includes/admin/functions.php:39
+msgid "AMP"
+msgstr "AMP"
+
+#: back-compat/templates-v0-3/meta-time.php:6 templates/meta-time.php:6
+msgctxt "%s = human-readable time difference"
+msgid "%s ago"
+msgstr "%s前"
+
+#: back-compat/templates-v0-3/meta-taxonomy.php:1
+#: back-compat/templates-v0-3/meta-taxonomy.php:9 templates/meta-taxonomy.php:1
+#: templates/meta-taxonomy.php:11
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr "、"
+
+#: includes/class-amp-post-template.php:384
+msgid "Path validation for template (%s) failed. Path cannot traverse and must be located in `%s`."
+msgstr "テンプレート (%s) のパス検証に失敗しました。パスは横断不可で、`%s` に設置する必要があります。"
+
+#: includes/class-amp-post-template.php:98
+msgid "Called for non-existant key (\"%s\")."
+msgstr "存在しないキー (\"%s\") を呼び出しています。"
+
+#: includes/class-amp-content.php:109
+msgid "Sanitizer (%s) must extend `AMP_Base_Sanitizer`"
+msgstr "サニタイザ (%s) は `AMP_Base_Sanitizer` を拡張する必要があります。"
+
+#: includes/class-amp-content.php:66
+msgid "Embed Handler (%s) must extend `AMP_Embed_Handler`"
+msgstr "埋め込みハンドラ (%s) は `AMP_Embed_Handler` を拡張する必要があります。"

@@ -1,0 +1,57 @@
+---
+pst: "on"
+watch: "on"
+timezone: Asia/Tokyo
+global_exclude:
+- ~$
+- /\.
+- /wp-admin
+- /wp-includes
+- /wp-content/upgrade
+conf:
+  editor: vim
+  format: yaml
+worker:
+  img:
+    "": []
+    .webp: []
+    .jp2: []
+  css: []
+  js: []
+wp:
+  wexal_init: []
+  wexal_head: []
+  wexal_enqueue_opt: []
+  wexal_footer: []
+  wexal_flush: []
+cron:
+  job:
+  - cmd: opt_image
+    args:
+	- '/'
+	- '--force'
+    schedule:
+	- '0'
+	- '1'
+	- '*'
+	- '*'
+	- '*'
+  - cmd: opt_css
+    args:
+	- '/wp-content/plugins'
+	schedule:
+	- '0'
+	- '3'
+	- '*'
+	- '*'
+	- '*'
+  - cmd: fcache
+    args:
+	- 'clear'
+	schedule:
+	- '30'
+	- '*'
+	- '*'
+	- '*'
+	- '*'
+...

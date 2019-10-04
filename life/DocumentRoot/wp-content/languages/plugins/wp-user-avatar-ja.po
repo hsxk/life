@@ -1,0 +1,488 @@
+# Translation of Plugins - WP User Avatar - Development (trunk) in Japanese
+# This file is distributed under the same license as the Plugins - WP User Avatar - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-06-30 23:01:05+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - WP User Avatar - Development (trunk)\n"
+
+#. Author URI of the plugin
+msgid "http://www.flippercode.com/"
+msgstr "http://www.flippercode.com/"
+
+#. Author of the plugin
+msgid "flippercode"
+msgstr "flippercode"
+
+#. Description of the plugin
+msgid "Use any image from your WordPress Media Library as a custom user avatar. Add your own Default Avatar."
+msgstr "WordPress のメディアライブラリにある任意の画像をユーザーのカスタムアバターとして使えるようにします。独自のデフォルトアバターを追加しましょう。"
+
+#. Plugin URI of the plugin
+msgid "http://wordpress.org/plugins/wp-user-avatar/"
+msgstr "https://ja.wordpress.org/plugins/wp-user-avatar/"
+
+#: includes/wpua-options-page.php:198
+msgid "For users without a custom avatar of their own, you can either display a generic logo or a generated one based on their e-mail address."
+msgstr "自分のアバターを持っていないユーザーには、汎用ロゴまたはメールアドレスをもとに作成される画像を表示できます。"
+
+#: includes/wpua-options-page.php:183
+msgid "X &#8212; Even more mature than above"
+msgstr "X &#8212; 最高レベルの制限"
+
+#: includes/wpua-options-page.php:182
+msgid "R &#8212; Intended for adult audiences above 17"
+msgstr "R &#8212; 18歳以上の成人向き"
+
+#: includes/wpua-options-page.php:181
+msgid "PG &#8212; Possibly offensive, usually for audiences 13 and above"
+msgstr "PG &#8212; 不快感を与える恐れ &#8212; 13歳以上の人向き"
+
+#: includes/wpua-options-page.php:180
+msgid "G &#8212; Suitable for all audiences"
+msgstr "G &#8212; あらゆる人に適切"
+
+#: includes/wpua-options-page.php:174 includes/wpua-options-page.php:177
+msgid "Maximum Rating"
+msgstr "最大評価"
+
+#: includes/wpua-options-page.php:168
+msgid "Show Avatars"
+msgstr "アバターを表示"
+
+#: includes/wpua-options-page.php:162 includes/wpua-options-page.php:165
+msgid "Avatar Display"
+msgstr "アバターの表示"
+
+#: includes/wpua-options-page.php:146
+msgid "Crop avatars to exact dimensions"
+msgstr "指定したサイズにサムネイルをトリミングする"
+
+#: includes/wpua-options-page.php:142
+msgid "Height"
+msgstr "高さ"
+
+#: includes/wpua-options-page.php:140
+msgid "Width"
+msgstr "幅"
+
+#: includes/wpua-options-page.php:136
+msgid "Resize avatars on upload"
+msgstr "アップロード時にアバターをリサイズする"
+
+#: includes/wpua-options-page.php:130
+msgid "Allow users to edit avatars"
+msgstr "ユーザーによるアバターの編集を許可"
+
+#: includes/wpua-options-page.php:123
+msgid "%s exceeds the maximum upload size for this site."
+msgstr "%s は、このサイトのアップロードサイズ上限を超えています。"
+
+#: includes/wpua-options-page.php:115 includes/wpua-options-page.php:120
+msgid "(only for Contributors & Subscribers)"
+msgstr "(寄稿者・購読者のみ)"
+
+#: includes/wpua-options-page.php:115 includes/wpua-options-page.php:120
+msgid "Upload Size Limit"
+msgstr "アップロードサイズ制限"
+
+#: includes/wpua-options-page.php:93
+msgid "Disable Gravatar and use only local avatars"
+msgstr "グラバターを無効にし、ローカルアバターのみを使用"
+
+#: includes/wpua-options-page.php:87
+msgid "Allow Contributors & Subscribers to upload avatars"
+msgstr "寄稿者・購読者によるアバター画像アップロードを許可"
+
+#: includes/wpua-options-page.php:81
+msgid "Add avatar button to Visual Editor"
+msgstr "ビジュアルエディターにアバターボタンを追加"
+
+#: includes/wpua-media-page.php:110
+msgid "Search"
+msgstr "検索"
+
+#: includes/wpua-media-page.php:102
+msgid "Media attachment permanently deleted."
+msgid_plural "%d media attachments permanently deleted."
+msgstr[0] "メディアファイルを完全に削除しました。"
+
+#: includes/wpua-media-page.php:95
+msgid "Search results for &#8220;%s&#8221;"
+msgstr "「%s」の検索結果"
+
+#: includes/wpua-media-page.php:74
+msgid "Error in deleting."
+msgstr "削除中にエラーが発生しました。"
+
+#: includes/wpua-media-page.php:71
+msgid "You are not allowed to delete this post."
+msgstr "この投稿を削除する権限がありません。"
+
+#: includes/wpua-media-page.php:39
+msgid "You do not have permission to upload files."
+msgstr "ファイルをアップロードする権限がありません。"
+
+#: includes/wpua-functions.php:90 includes/wpua-functions.php:96
+#: includes/wpua-functions.php:155
+msgid "Image"
+msgstr "画像"
+
+#: includes/tinymce/window.php:195 includes/tinymce/window.php:196
+#: includes/tinymce/window.php:197
+msgid "wp_user_avatar_upload"
+msgstr "wp_user_avatar_upload"
+
+#: includes/tinymce/window.php:191 includes/tinymce/window.php:201
+msgid "Insert into Post"
+msgstr "投稿に挿入"
+
+#: includes/tinymce/window.php:186
+msgid "Caption"
+msgstr "キャプション"
+
+#: includes/tinymce/window.php:186 includes/tinymce/window.php:187
+msgid "wp_user_avatar_caption"
+msgstr "wp_user_avatar_caption"
+
+#: includes/tinymce/window.php:182
+msgid "Open link in a new window"
+msgstr "リンクを新しいウィンドウで開く"
+
+#: includes/tinymce/window.php:181 includes/tinymce/window.php:182
+msgid "wp_user_avatar_target"
+msgstr "wp_user_avatar_target"
+
+#: includes/tinymce/window.php:176
+msgid "URL"
+msgstr "URL"
+
+#: includes/tinymce/window.php:176 includes/tinymce/window.php:177
+msgid "wp_user_avatar_link_external"
+msgstr "wp_user_avatar_link_external"
+
+#: includes/tinymce/window.php:175
+msgid "wp_user_avatar_link_external_section"
+msgstr "wp_user_avatar_link_external_section"
+
+#: includes/tinymce/window.php:171
+msgid "Custom URL"
+msgstr "カスタム URL"
+
+#: includes/tinymce/window.php:170
+msgid "Attachment Page"
+msgstr "添付ファイルのページ"
+
+#: includes/tinymce/window.php:169
+msgid "Image File"
+msgstr "画像ファイル"
+
+#: includes/tinymce/window.php:166
+msgid "Link To"
+msgstr "リンク先"
+
+#: includes/tinymce/window.php:166 includes/tinymce/window.php:167
+msgid "wp_user_avatar_link"
+msgstr "wp_user_avatar_link"
+
+#: includes/tinymce/window.php:161
+msgid "Right"
+msgstr "右"
+
+#: includes/tinymce/window.php:160
+msgid "Left"
+msgstr "左"
+
+#: includes/tinymce/window.php:159
+msgid "Center"
+msgstr "中央"
+
+#: includes/tinymce/window.php:156
+msgid "Alignment"
+msgstr "配置"
+
+#: includes/tinymce/window.php:156 includes/tinymce/window.php:157
+msgid "wp_user_avatar_align"
+msgstr "wp_user_avatar_align"
+
+#: includes/tinymce/window.php:151 includes/tinymce/window.php:152
+msgid "wp_user_avatar_size_number"
+msgstr "wp_user_avatar_size_number"
+
+#: includes/tinymce/window.php:150
+msgid "wp_user_avatar_size_number_section"
+msgstr "wp_user_avatar_size_number_section"
+
+#: includes/tinymce/window.php:146
+msgid "Custom"
+msgstr "カスタム"
+
+#: includes/tinymce/window.php:144
+msgid "Medium"
+msgstr "中"
+
+#: includes/tinymce/window.php:143
+msgid "Large"
+msgstr "大"
+
+#: includes/tinymce/window.php:139 includes/tinymce/window.php:151
+msgid "Size"
+msgstr "サイズ"
+
+#: includes/tinymce/window.php:139 includes/tinymce/window.php:140
+#: includes/tinymce/window.php:152 includes/tinymce/window.php:187
+msgid "wp_user_avatar_size"
+msgstr "wp_user_avatar_size"
+
+#: includes/tinymce/window.php:129
+msgid "User Name"
+msgstr "ユーザー名"
+
+#: includes/tinymce/window.php:129 includes/tinymce/window.php:130
+msgid "wp_user_avatar_user"
+msgstr "wp_user_avatar_user"
+
+#: includes/class-wp-user-avatar.php:236
+msgid "Unable to create directory %s. Is its parent directory writable by the server?"
+msgstr "ディレクトリ %s を作成できませんでした。この親ディレクトリはサーバーによる書き込みを許可していますか ?"
+
+#: includes/class-wp-user-avatar.php:232 includes/class-wp-user-avatar.php:258
+msgid "Memory exceeded. Please try another smaller file."
+msgstr "メモリ容量を超えました。別の小さいファイルをお試しください。"
+
+#: includes/class-wp-user-avatar.php:228
+msgid "This file is not an image. Please try another."
+msgstr "このファイルは画像ではありません。別のものをお試しください。"
+
+#: includes/class-wp-user-avatar.php:201
+msgid "Edit Image"
+msgstr "画像の編集"
+
+#: includes/class-wp-user-avatar.php:199
+msgid "Remove Image"
+msgstr "画像を削除"
+
+#: includes/class-wp-user-avatar.php:196 includes/tinymce/window.php:145
+msgid "Thumbnail"
+msgstr "サムネイル"
+
+#: includes/class-wp-user-avatar.php:192 includes/tinymce/window.php:142
+msgid "Original Size"
+msgstr "元のサイズ"
+
+#: includes/class-wp-user-avatar.php:186
+msgid "<code>jpg jpeg png gif</code>"
+msgstr "<code>jpg jpeg png gif</code>"
+
+#: includes/class-wp-user-avatar.php:186
+msgid "Allowed Files"
+msgstr "アップロード可能なファイル"
+
+#: includes/wpua-options-page.php:125 includes/class-wp-user-avatar.php:185
+msgid "Maximum upload file size: %d%s."
+msgstr "アップロードファイルサイズ上限: %d%s"
+
+#: includes/class-wp-user-avatar.php:182 includes/tinymce/window.php:124
+#: includes/tinymce/window.php:196
+msgid "Upload"
+msgstr "アップロード"
+
+#: includes/class-wp-user-avatar-widget.php:81
+msgid "Automatically add paragraphs"
+msgstr "自動的に段落を追加"
+
+#: includes/class-wp-user-avatar-widget.php:76
+msgid "Description:"
+msgstr "説明:"
+
+#: includes/class-wp-user-avatar-widget.php:72
+msgid "Title:"
+msgstr "タイトル: "
+
+#: includes/class-wp-user-avatar-widget.php:15 includes/tinymce/window.php:197
+msgid "[avatar_upload]"
+msgstr "[avatar_upload]"
+
+#: includes/class-wp-user-avatar-widget.php:15
+msgid "Insert"
+msgstr "挿入"
+
+#: includes/class-wp-user-avatar-subscriber.php:99
+msgid "You do not have sufficient permissions to access this page."
+msgstr "このページを表示する権限がありません。"
+
+#: includes/class-wp-user-avatar-shortcode.php:240
+msgid "Update Profile"
+msgstr "プロフィールの更新"
+
+#: includes/class-wp-user-avatar-shortcode.php:216
+msgid "Profile updated."
+msgstr "プロフィールを更新しました。"
+
+#: includes/class-wp-user-avatar-list-table.php:396
+msgid "View"
+msgstr "表示"
+
+#: includes/class-wp-user-avatar-list-table.php:396
+msgid "View &#8220;%s&#8221;"
+msgstr "「%s」を表示"
+
+#: includes/class-wp-user-avatar-list-table.php:387
+msgid "Trash"
+msgstr "ゴミ箱"
+
+#: includes/class-wp-user-avatar-list-table.php:385
+msgid "Restore"
+msgstr "復元"
+
+#: includes/class-wp-user-avatar-list-table.php:381
+msgid "Edit"
+msgstr "編集"
+
+#: includes/class-wp-user-avatar-list-table.php:323
+msgid "Y/m/d"
+msgstr "Y年n月j日"
+
+#: includes/class-wp-user-avatar-list-table.php:321
+msgid "%s ago"
+msgstr "%s前"
+
+#: includes/class-wp-user-avatar-list-table.php:319
+msgid "%s from now"
+msgstr "今から%s "
+
+#: includes/class-wp-user-avatar-list-table.php:313
+msgid "Unpublished"
+msgstr "未公開"
+
+#: includes/class-wp-user-avatar-list-table.php:268
+#: includes/class-wp-user-avatar-list-table.php:283
+msgid "Edit &#8220;%s&#8221;"
+msgstr "「%s」を編集"
+
+#: includes/class-wp-user-avatar-list-table.php:253
+msgid "Select %s"
+msgstr "%s を選択"
+
+#: includes/class-wp-user-avatar-list-table.php:186
+msgctxt "column name"
+msgid "Date"
+msgstr "日時"
+
+#: includes/class-wp-user-avatar-list-table.php:185
+msgctxt "column name"
+msgid "Uploaded to"
+msgstr "アップロード先"
+
+#: includes/class-wp-user-avatar-list-table.php:184
+msgid "Author"
+msgstr "登録者"
+
+#: includes/class-wp-user-avatar-list-table.php:183
+msgctxt "column name"
+msgid "File"
+msgstr "ファイル"
+
+#: includes/class-wp-user-avatar-list-table.php:171
+msgid "No media attachments found."
+msgstr "メディア添付ファイルが見つかりません。"
+
+#: includes/class-wp-user-avatar-list-table.php:142
+#: includes/class-wp-user-avatar-list-table.php:391
+msgid "Delete Permanently"
+msgstr "完全に削除"
+
+#: includes/class-wp-user-avatar-list-table.php:131
+msgctxt "uploaded files"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "すべて <span class=\"count\">(%s)</span>"
+
+#: includes/class-wp-user-avatar-functions.php:439
+#: includes/class-wp-user-avatar-functions.php:590
+#: includes/wpua-functions.php:79 includes/wpua-functions.php:88
+#: includes/wpua-functions.php:93 includes/wpua-functions.php:152
+#: includes/class-wp-user-avatar-admin.php:324
+#: includes/class-wp-user-avatar-admin.php:378 includes/tinymce/window.php:123
+msgid "Avatar"
+msgstr "アバター"
+
+#: includes/class-wp-user-avatar-admin.php:312
+msgid "Support Forums"
+msgstr "サポートフォーラム"
+
+#: includes/class-wp-user-avatar.php:204
+#: includes/class-wp-user-avatar-admin.php:268
+msgid "Undo"
+msgstr "取り消し"
+
+#: includes/class-wp-user-avatar-admin.php:268
+msgid "Remove"
+msgstr "削除"
+
+#: includes/wpua-options-page.php:194 includes/wpua-options-page.php:197
+#: includes/class-wp-user-avatar-admin.php:267
+#: includes/class-wp-user-avatar-admin.php:381
+msgid "Default Avatar"
+msgstr "デフォルトのアバター"
+
+#: includes/class-wp-user-avatar.php:177
+#: includes/class-wp-user-avatar-admin.php:267
+msgid "Choose Image"
+msgstr "画像の選択"
+
+#: includes/class-wp-user-avatar-admin.php:235
+msgid "Retro (Generated)"
+msgstr "Retro (自動生成)"
+
+#: includes/class-wp-user-avatar-admin.php:234
+msgid "MonsterID (Generated)"
+msgstr "MonsterID (自動生成)"
+
+#: includes/class-wp-user-avatar-admin.php:233
+msgid "Wavatar (Generated)"
+msgstr "Wavatar (自動生成)"
+
+#: includes/class-wp-user-avatar-admin.php:232
+msgid "Identicon (Generated)"
+msgstr "Identicon (自動生成)"
+
+#: includes/class-wp-user-avatar-admin.php:231
+msgid "Gravatar Logo"
+msgstr "グラバターのロゴ"
+
+#: includes/class-wp-user-avatar-admin.php:230
+msgid "Blank"
+msgstr "空白"
+
+#: includes/class-wp-user-avatar-admin.php:229
+msgid "Mystery Man"
+msgstr "ミステリーマン"
+
+#: includes/class-wp-user-avatar-admin.php:115
+msgid "Library"
+msgstr "ライブラリ"
+
+#: includes/wpua-options-page.php:73
+#: includes/class-wp-user-avatar-admin.php:114
+#: includes/class-wp-user-avatar-admin.php:298
+msgid "Settings"
+msgstr "設定"
+
+#: includes/class-wp-user-avatar-admin.php:113
+#: includes/class-wp-user-avatar-admin.php:148 includes/wpua-media-page.php:93
+msgid "Avatars"
+msgstr "アバター"
+
+#. Plugin Name of the plugin
+#: includes/class-wp-user-avatar-widget.php:16
+#: includes/wpua-options-page.php:43
+#: includes/class-wp-user-avatar-admin.php:113
+#: includes/class-wp-user-avatar-admin.php:266 includes/tinymce/window.php:21
+msgid "WP User Avatar"
+msgstr "WP User Avatar"

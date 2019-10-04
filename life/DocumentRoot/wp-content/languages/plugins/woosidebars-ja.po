@@ -1,0 +1,389 @@
+# Translation of Plugins - WooSidebars - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - WooSidebars - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-05-23 14:39:39+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - WooSidebars - Stable (latest release)\n"
+
+#. Description of the plugin/theme
+msgid "Replace widget areas in your theme for specific pages, archives and other sections of WordPress."
+msgstr "特定のページ、アーカイブ、WordPress の他のセクションでテーマのウィジェットエリアを置き換えます。"
+
+#. Plugin Name of the plugin/theme
+msgid "WooSidebars"
+msgstr "WooSidebars"
+
+#: integrations/integration-woocommerce.php:125
+msgid "Products tagged \"%s\""
+msgstr "タグ「%s」の商品"
+
+#: integrations/integration-woocommerce.php:124
+msgid "Products in the \"%s\" category"
+msgstr "「%s」カテゴリーの商品"
+
+#: integrations/integration-woocommerce.php:119
+msgid "The WooCommerce \"Account\" pages"
+msgstr "WooCommerce アカウントページ"
+
+#: integrations/integration-woocommerce.php:118
+msgid "Account Pages"
+msgstr "アカウントページ"
+
+#: integrations/integration-woocommerce.php:114
+msgid "The WooCommerce \"Checkout\" page"
+msgstr "WooCommerce 支払いページ"
+
+#: integrations/integration-woocommerce.php:113
+msgid "Checkout Page"
+msgstr "支払いページ"
+
+#: integrations/integration-woocommerce.php:109
+msgid "The WooCommerce \"Cart\" page"
+msgstr "WooCommerce 買い物カゴページ"
+
+#: integrations/integration-woocommerce.php:108
+msgid "Cart Page"
+msgstr "買い物カゴページ"
+
+#: integrations/integration-woocommerce.php:104
+msgid "All products"
+msgstr "すべての商品"
+
+#: integrations/integration-woocommerce.php:103
+msgid "Products"
+msgstr "商品"
+
+#: integrations/integration-woocommerce.php:99
+msgid "All product tags"
+msgstr "すべての商品タグ"
+
+#: integrations/integration-woocommerce.php:98
+msgid "Product Tags"
+msgstr "商品タグ"
+
+#: integrations/integration-woocommerce.php:94
+msgid "All product categories"
+msgstr "すべての商品カテゴリー"
+
+#: integrations/integration-woocommerce.php:93
+msgid "Product Categories"
+msgstr "商品カテゴリー"
+
+#: integrations/integration-woocommerce.php:89
+msgid "The WooCommerce \"Shop\" landing page"
+msgstr "WooCommerce ショップランディングページ"
+
+#: integrations/integration-woocommerce.php:88
+msgid "Shop Page"
+msgstr "ショップページ"
+
+#. #-#-#-#-#  woosidebars-code.pot (WooSidebars 1.4.4)  #-#-#-#-#
+#. Author of the plugin/theme
+#: integrations/integration-woocommerce.php:73
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: classes/class-woo-sidebars.php:781
+msgid "WooSidebars Documentation"
+msgstr "WooSidebars ドキュメンテーション"
+
+#: classes/class-woo-sidebars.php:780
+msgid "Support HelpDesk"
+msgstr "サポートヘルプデスク"
+
+#: classes/class-woo-sidebars.php:779
+msgid "For more information:"
+msgstr "詳細情報:"
+
+#: classes/class-woo-sidebars.php:774
+msgid "Once you are certain that you widgets have been moved across for all widget areas, remove the sidebar from the Sidebar Manager (don't forget to transfer any dependencies over as well, if necessary)."
+msgstr "すべてのウィジェットエリアでウィジェットを移動したことを確認したら、サイドバーマネージャーからサイドバーを削除してください。依存関係も同様に移されることを忘れないでください。"
+
+#: classes/class-woo-sidebars.php:773
+msgid "Repeat this process for each of your custom sidebars, including dependencies if necessary (the WooSidebars conditions system replaces the need for dependencies)."
+msgstr "必要であれば依存関係も含め、各カスタムサイドバーごとにこの手順を繰り返してください (WooSidebars の条件分岐システムは依存関係の必要性も置き換えます) 。"
+
+#: classes/class-woo-sidebars.php:772
+msgid "Visit the %sAppearance &rarr; Widgets%s screen and drag the widgets from the old sidebar into the newly created sidebar."
+msgstr "%s「外観」->「ウィジェット」%s画面にアクセスし、古いサイドバーから新規作成したサイドバーにウィジェットをドラッグしてください。"
+
+#: classes/class-woo-sidebars.php:771
+msgid "Create a new custom widget area in WooSidebars."
+msgstr "WooSidebars に新規カスタムウィジェットエリアを作成します。"
+
+#: classes/class-woo-sidebars.php:769
+msgid "To transfer a sidebar from the Sidebar Manager:"
+msgstr "サイドバーマネージャーからサイドバーを転送するには:"
+
+#: classes/class-woo-sidebars.php:768
+msgid "WooSidebars is intended to replace the Sidebar Manager found in the WooFramework. Please ensure that all sidebars have been transferred over from the Sidebar Manager, if you choose to use WooSidebars instead."
+msgstr "WooSidebars は WooFramework のサイドバーマネージャーを置き換えます。WooSidebars を使用する場合はサイドバーマネージャーからすべてのサイドバーが転送されていることを確認してください。"
+
+#: classes/class-woo-sidebars.php:766
+msgid "Sidebar Manager"
+msgstr "サイドバーマネージャー"
+
+#: classes/class-woo-sidebars.php:762
+msgid "All custom widget areas are listed on this screen. To add a new customised widget area, click the \"Add New\" button."
+msgstr "この画面にはすべてのカスタムウィジェットエリアが表示されています。新しいカスタムウィジェットエリアを追加するには「新規追加」ボタンをクリックしてください。"
+
+#: classes/class-woo-sidebars.php:760
+msgid "Overview"
+msgstr "概要"
+
+#: classes/class-woo-sidebars.php:701
+msgid "You have taken too long. Please go back and retry."
+msgstr "時間切れです。戻ってやり直してください"
+
+#: classes/class-woo-sidebars.php:700
+msgid "You do not have sufficient permissions to access this page."
+msgstr "このページにアクセスする権限がありません"
+
+#: classes/class-woo-sidebars.php:654
+msgid "Custom Sidebars"
+msgstr "カスタムサイドバー"
+
+#: classes/class-woo-sidebars.php:410
+msgid "Widget Area updated."
+msgstr "ウィジェットエリアを更新しました。"
+
+#: classes/class-woo-sidebars.php:393
+msgid "Enter widget area name here"
+msgstr "ここにウィジェットエリアの名前を入力"
+
+#: classes/class-woo-sidebars.php:380
+msgid "Add an optional description, to be displayed when adding widgets to this widget area on the %sWidgets%s screen."
+msgstr "オプションで説明を追加できます。%sウィジェット%s画面でこのウィジェットエリアにウィジェットを追加する際に表示されます。"
+
+#: classes/class-woo-sidebars.php:324
+msgid "No sidebars are available with this theme."
+msgstr "このテーマで使用できるサイドバーはありません。"
+
+#: classes/class-woo-sidebars.php:297 classes/class-woo-sidebars.php:379
+msgid "Description"
+msgstr "説明"
+
+#: classes/class-woo-sidebars.php:260
+msgid "Condition(s)"
+msgstr "条件"
+
+#: classes/class-woo-sidebars.php:260 classes/class-woo-sidebars.php:290
+msgid "Sidebar To Replace"
+msgstr "置換するサイドバー"
+
+#: classes/class-woo-sidebars.php:225
+msgid "(Not in use by current theme)"
+msgstr "(現在のテーマで未使用)"
+
+#: classes/class-woo-sidebars.php:174
+msgid "No %s Found In Trash"
+msgstr "ゴミ箱で「%s」が見つかりません"
+
+#: classes/class-woo-sidebars.php:173
+msgid "No %s Found"
+msgstr "「%s」が見つかりません"
+
+#: classes/class-woo-sidebars.php:172
+msgid "Search %a"
+msgstr "%a を検索"
+
+#: classes/class-woo-sidebars.php:171
+msgid "View %s"
+msgstr "表示 %s"
+
+#: classes/class-woo-sidebars.php:169
+msgid "New %s"
+msgstr "新規 %s"
+
+#: classes/class-woo-sidebars.php:168
+msgid "Edit %s"
+msgstr "編集 %s"
+
+#: classes/class-woo-sidebars.php:167
+msgid "Add New %s"
+msgstr "新規%sを追加"
+
+#: classes/class-woo-sidebars.php:166
+msgctxt "Widget Area"
+msgid "Add New"
+msgstr "新規追加"
+
+#: classes/class-woo-sidebars.php:165
+msgctxt "post type singular name"
+msgid "Widget Area"
+msgstr "ウィジェットエリア"
+
+#: classes/class-woo-sidebars.php:164
+msgctxt "post type general name"
+msgid "Widget Areas"
+msgstr "ウィジェットエリア"
+
+#: classes/class-woo-sidebars.php:157 classes/class-woo-sidebars.php:170
+msgid "Widget Areas"
+msgstr "ウィジェットエリア"
+
+#: classes/class-woo-sidebars.php:156
+msgid "Widget Area"
+msgstr "ウィジェットエリア"
+
+#: classes/class-woo-conditions.php:701
+msgid "Taxonomy Token"
+msgstr "タクソノミートークン"
+
+#: classes/class-woo-conditions.php:635
+msgid "Advanced"
+msgstr "詳細"
+
+#: classes/class-woo-conditions.php:626
+msgid "Taxonomy Terms"
+msgstr "タクソノミーターム"
+
+#: classes/class-woo-conditions.php:352
+msgid "Displayed on all 404 error screens."
+msgstr "すべての 404 エラー画面に表示されます。"
+
+#: classes/class-woo-conditions.php:351
+msgid "404 Error Screens"
+msgstr "404 エラー画面"
+
+#: classes/class-woo-conditions.php:347
+msgid "Displayed on all date archives."
+msgstr "すべての日付別アーカイブに表示されます。"
+
+#: classes/class-woo-conditions.php:346
+msgid "Date Archives"
+msgstr "日付別アーカイブ"
+
+#: classes/class-woo-conditions.php:342
+msgid "Displayed on all author archive screens (that don't have a more specific sidebar)."
+msgstr "特定のサイドバーを持たない、すべての投稿者アーカイブ画面に表示されます。"
+
+#: classes/class-woo-conditions.php:341
+msgid "Author Archives"
+msgstr "投稿者アーカイブ"
+
+#: classes/class-woo-conditions.php:337
+msgid "Displayed on all archives (category, tag, taxonomy, post type, dated, author and search)."
+msgstr "すべてのアーカイブ (カテゴリー、タグ、タクソノミー、投稿タイプ、日付別、投稿者、検索) に表示されます。"
+
+#: classes/class-woo-conditions.php:336
+msgid "All Archives"
+msgstr "すべてのアーカイブ"
+
+#: classes/class-woo-conditions.php:332
+msgid "Displayed on single entries of any public post type other than \"Pages\"."
+msgstr "「固定ページ」以外の公開投稿タイプの個別投稿に表示されます。"
+
+#: classes/class-woo-conditions.php:331
+msgid "Single Entries"
+msgstr "個別投稿"
+
+#: classes/class-woo-conditions.php:327
+msgid "Displayed on any front page, regardless of the settings under the \"Settings -> Reading\" admin screen."
+msgstr "「設定」 -> 「表示設定」管理画面での設定に関わらず、すべてのフロントページで表示されます。"
+
+#: classes/class-woo-conditions.php:326
+msgid "Front Page"
+msgstr "フロントページ"
+
+#: classes/class-woo-conditions.php:322
+msgid "Displayed on the default \"Your Latest Posts\" screen."
+msgstr "デフォルトの「最近の投稿」画面で表示されます。"
+
+#: classes/class-woo-conditions.php:321
+msgid "Default \"Your Latest Posts\" Screen"
+msgstr "デフォルトの「最近の投稿」画面"
+
+#: classes/class-woo-conditions.php:317
+msgid "Displayed on search results screens."
+msgstr "検索結果画面で表示されます。"
+
+#: classes/class-woo-conditions.php:316
+msgid "Search Results"
+msgstr "検索結果"
+
+#: classes/class-woo-conditions.php:312
+msgid "Displayed on all pages that don't have a more specific widget area."
+msgstr "より特化されたウィジェットエリアを持たないすべての固定ページに表示されます。"
+
+#: classes/class-woo-conditions.php:307
+msgid "Template Hierarchy"
+msgstr "テンプレート階層"
+
+#: classes/class-woo-conditions.php:298
+msgid "All posts tagged %s"
+msgstr "タグ「%s」のすべての投稿"
+
+#: classes/class-woo-conditions.php:298
+msgid "All posts tagged \"%s\""
+msgstr "タグ「%s」のすべての投稿"
+
+#: classes/class-woo-conditions.php:295
+msgid "All posts in the %s %s archive"
+msgstr "%s %s アーカイブ内のすべての投稿"
+
+#: classes/class-woo-conditions.php:295
+msgid "All posts in \"%s\""
+msgstr "「%s」のすべての投稿"
+
+#: classes/class-woo-conditions.php:293
+msgid "The %s %s archive"
+msgstr "%s %s アーカイブ"
+
+#: classes/class-woo-conditions.php:284
+msgid "The default \"%s\" archives"
+msgstr "デフォルト「%s」アーカイブ"
+
+#: classes/class-woo-conditions.php:276
+msgid "Taxonomy Archives"
+msgstr "タクソノミーアーカイブ"
+
+#: classes/class-woo-conditions.php:259
+msgid "Entries in the \"%s\" post type"
+msgstr "「%s」投稿タイプの投稿"
+
+#: classes/class-woo-conditions.php:258
+msgid "Each Individual %s"
+msgstr "各%s"
+
+#: classes/class-woo-conditions.php:250
+msgid "The \"%s\" post type archive"
+msgstr "「%s」投稿タイプアーカイブ"
+
+#: classes/class-woo-conditions.php:249
+msgid "\"%s\" Post Type Archive"
+msgstr "「%s」投稿タイプアーカイブ"
+
+#: classes/class-woo-conditions.php:242
+msgid "Post Types"
+msgstr "投稿タイプ"
+
+#: classes/class-woo-conditions.php:232
+msgid "The \"%s\" page template"
+msgstr "「%s」ページテンプレート"
+
+#: classes/class-woo-conditions.php:226
+msgid "Page Templates"
+msgstr "ページテンプレート"
+
+#: classes/class-woo-conditions.php:213
+msgid "A custom sidebar for \"%s\""
+msgstr "「%s」のカスタムサイドバー"
+
+#: classes/class-woo-conditions.php:142
+msgid "The \"%s\" page"
+msgstr "「%s」ページ"
+
+#: classes/class-woo-conditions.php:128 classes/class-woo-conditions.php:311
+msgid "Pages"
+msgstr "固定ページ"
+
+#: classes/class-woo-conditions.php:57
+msgid "Conditions"
+msgstr "条件"

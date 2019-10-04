@@ -1,0 +1,192 @@
+# Blank WordPress Pot
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: KUSANAGI Business Edition Pot v1.0.0\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2019-01-11 15:30+0900\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Prime Strategy\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,"
+"_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions.php:97
+msgid "You do not have permission."
+msgstr ""
+
+#: functions.php:114
+msgid "Please try again after few minutes."
+msgstr ""
+
+#: functions.php:144
+msgid "Please select the checkbox."
+msgstr ""
+
+#: functions.php:162 functions.php:239
+msgid "Success!"
+msgstr ""
+
+#: functions.php:175
+msgid "Please write your request."
+msgstr ""
+
+#: functions.php:197
+msgid "Your request has been sent successfully."
+msgstr ""
+
+#: functions.php:199 functions.php:241 functions.php:282 functions.php:316
+msgid "An unexpected error occurred. Please try again after few minutes."
+msgstr ""
+
+#: functions.php:216 template/parts/req-detail.php:33
+msgid "Please write your message."
+msgstr ""
+
+#: functions.php:255
+msgid "Invalid page number."
+msgstr ""
+
+#: functions.php:259
+msgid "Invalid status."
+msgstr ""
+
+#: functions.php:273
+msgid "An unexpected error. Please reload the page."
+msgstr ""
+
+#: functions.php:294
+msgid "Invalid request ID."
+msgstr ""
+
+#: functions.php:307
+msgid "An unexpected error. Please back to the Business Edition top page."
+msgstr ""
+
+#: template/front-page.php:6
+msgid "Settings"
+msgstr ""
+
+#: template/front-page.php:9
+msgid "Home"
+msgstr ""
+
+#: template/parts/agreement.php:5
+msgid "The question submission function of Business Edition."
+msgstr ""
+
+#: template/parts/agreement.php:9
+msgid "Ongoing service"
+msgstr ""
+
+#: template/parts/agreement.php:13
+msgid "Start using"
+msgstr ""
+
+#: template/parts/agreement.php:17 template/parts/home.php:10
+#: template/parts/req-detail.php:36
+msgid "Send"
+msgstr ""
+
+#: template/parts/home.php:3
+msgid "Request Form"
+msgstr ""
+
+#: template/parts/home.php:6
+msgid "Please write your request here."
+msgstr ""
+
+#: template/parts/home.php:7
+msgid "Note"
+msgstr ""
+
+#: template/parts/home.php:7
+msgid "Your request will contain the server information."
+msgstr ""
+
+#: template/parts/home.php:19
+msgid "Requests Status"
+msgstr ""
+
+#: template/parts/home.php:21
+msgid "Requests List"
+msgstr ""
+
+#: template/parts/home.php:30
+msgid "Filter"
+msgstr ""
+
+#: template/parts/home.php:39
+msgid "Request ID"
+msgstr ""
+
+#: template/parts/home.php:40 template/parts/req-detail.php:4
+msgid "Request Detail"
+msgstr ""
+
+#: template/parts/home.php:41
+msgid "Status"
+msgstr ""
+
+#: template/parts/home.php:42
+msgid "Latest"
+msgstr ""
+
+#: template/parts/home.php:43 template/parts/req-detail.php:15
+#: template/parts/req-detail.php:17
+msgid "Date"
+msgstr ""
+
+#: template/parts/home.php:50
+msgid "Open"
+msgstr ""
+
+#: template/parts/home.php:52
+msgid "Waiting"
+msgstr ""
+
+#: template/parts/home.php:54
+msgid "Replied"
+msgstr ""
+
+#: template/parts/home.php:57
+msgid "Closed"
+msgstr ""
+
+#: template/parts/home.php:58
+msgid "Done"
+msgstr ""
+
+#: template/parts/home.php:73 template/parts/req-detail.php:45
+msgid "NONE"
+msgstr ""
+
+#: template/parts/home.php:79
+msgid "Previous Page"
+msgstr ""
+
+#: template/parts/home.php:82
+msgid "Next Page"
+msgstr ""
+
+#: template/parts/req-detail.php:31
+msgid "Reply"
+msgstr ""
+
+#: template/parts/req-detail.php:41
+msgid "Ticket has been closed."
+msgstr ""

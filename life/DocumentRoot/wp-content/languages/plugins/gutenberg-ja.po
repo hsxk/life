@@ -1,0 +1,4313 @@
+# Translation of Plugins - Gutenberg - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Gutenberg - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-10-01 06:23:45+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Gutenberg - Stable (latest release)\n"
+
+#: build/edit-post/index.js:12
+msgid "Tips"
+msgstr "ヒント"
+
+#: build/block-directory/index.js:1
+msgid "Retry"
+msgstr "再試行"
+
+#: build/block-directory/index.js:1
+msgid "Add"
+msgstr "追加"
+
+#: build/block-directory/index.js:1
+msgid "Authored by %s"
+msgstr "作者: %s"
+
+#: build/block-directory/index.js:1
+msgid "%s out of 5 stars"
+msgstr "5つ星中%sつ星"
+
+#: build/block-directory/index.js:1
+msgid "Please contact your site administrator to install new blocks."
+msgstr "新しいブロックをインストールするには、サイト管理者に連絡してください。"
+
+#: build/block-directory/index.js:1
+msgid "No blocks found in your library. Please contact your site administrator to install new blocks."
+msgstr "ライブラリにブロックが見つかりません。サイト管理者に連絡し、新しいブロックをインストールしてください。"
+
+#: build/block-directory/index.js:1
+msgid "No blocks found in your library."
+msgstr "ライブラリにブロックが見つかりません。"
+
+#: build/block-directory/index.js:1
+msgid "No blocks found in your library. These blocks can be downloaded and installed:"
+msgstr "ライブラリにブロックが見つかりません。ブロックは以下からダウンロードとインストールできます:"
+
+#: build/block-directory/index.js:1
+msgid "No blocks found in your library. We did find %d block available for download."
+msgid_plural "No blocks found in your library. We did find %d blocks available for download."
+msgstr[0] "ライブラリにブロックが見つかりません。%d件のブロックがダウンロード可能です。"
+
+#: build/block-directory/index.js:1
+msgid "Block previews can’t load."
+msgstr "ブロックプレビューが読み込めません。"
+
+#: build/block-directory/index.js:1
+msgid "Block previews can't install."
+msgstr "ブロックプレビューがインストールできません。"
+
+#: build/block-directory/index.js:1
+msgid "Updated %s"
+msgstr "%s を更新しました"
+
+#: build/block-library/index.js:14
+msgid "Logos Only"
+msgstr "ロゴのみ"
+
+#: build/edit-post/index.js:12
+msgid "Inserter Help Panel"
+msgstr "挿入ツールヘルプパネル"
+
+#: build/edit-post/index.js:12
+msgid "Pre-publish Checks"
+msgstr "公開前チェック"
+
+#: build/block-directory/index.js:1
+msgid "%d active installation"
+msgid_plural "%d active installations"
+msgstr[0] "%d個の有効なインストール"
+
+#: build/block-library/index.js:14
+msgid "Enter Address"
+msgstr "アドレスを入力"
+
+#: build/block-library/index.js:14
+msgid "Social links"
+msgstr "ソーシャルリンク"
+
+#: build/block-library/index.js:14
+msgid "Fill"
+msgstr "塗りつぶし"
+
+#: build/block-library/index.js:14
+msgid "Attachment page"
+msgstr "添付ファイルのページ"
+
+#: build/block-library/index.js:14
+msgid "Link rel"
+msgstr "リンク rel 属性"
+
+#: lib/class-wp-rest-block-directory-controller.php:303
+msgid " ago"
+msgstr "前"
+
+#: lib/experiments-page.php:69
+msgid "Block Directory"
+msgstr "ブロックディレクトリ"
+
+#: lib/experiments-page.php:74
+msgid "Enable Block Directory search"
+msgstr "ブロックディレクトリ検索を有効化"
+
+#: build/editor/index.js:17
+msgid "Restore the backup"
+msgstr "バックアップから復元"
+
+#: build/block-editor/index.js:55
+msgid "Content Blocks"
+msgstr "コンテンツブロック"
+
+#: build/block-editor/index.js:55
+msgid "Not set"
+msgstr "未設定"
+
+#: lib/class-wp-rest-widget-areas-controller.php:104
+msgid "The content for the object."
+msgstr "オブジェクトのコンテンツ。"
+
+#: build/block-editor/index.js:55
+msgid "While writing, you can press \"/\" to quickly insert new blocks."
+msgstr "執筆中に \"/\" を押すと、新しいブロックを素早く挿入できます。"
+
+#: lib/class-wp-rest-widget-areas-controller.php:118
+msgid "HTML content for the object, transformed for display."
+msgstr "表示用に整形済みの、オブジェクトの HTML コンテンツ。"
+
+#: build/block-library/index.js:14
+msgid "Clear Media"
+msgstr "メディアをクリア"
+
+#: build/block-editor/index.js:55
+msgid "Default Style"
+msgstr "デフォルトスタイル"
+
+#: build/edit-post/index.js:12
+msgid "%1$d block is disabled."
+msgid_plural "%1$d blocks are disabled."
+msgstr[0] "%1$d個のブロックが無効になっています。"
+
+#: lib/class-wp-rest-widget-areas-controller.php:124
+msgid "Version of the content block format used by the object."
+msgstr "オブジェクトが使用するコンテンツブロック形式のバージョン。"
+
+#: build/block-library/index.js:14
+msgid "Start Value"
+msgstr "初期値"
+
+#: build/block-library/index.js:14
+msgid "Color"
+msgstr "色"
+
+#: build/block-library/index.js:14
+msgid "Align Column Right"
+msgstr "カラムを右寄せ"
+
+#: build/block-library/index.js:14
+msgid "Align Column Center"
+msgstr "カラムを中央配置"
+
+#: build/block-library/index.js:14
+msgid "Align Column Left"
+msgstr "カラムを左寄せ"
+
+#: build/block-library/index.js:14
+msgid "Change column alignment"
+msgstr "カラムの配置を変更"
+
+#: build/block-editor/index.js:55
+msgid "Vivid purple"
+msgstr "鮮やかなパープル"
+
+#: build/edit-post/index.js:12
+msgid "Disable & Reload"
+msgstr "無効化してリロード"
+
+#: build/edit-post/index.js:12
+msgid "Enable & Reload"
+msgstr "有効化してリロード"
+
+#: build/edit-post/index.js:12
+msgid "Display these keyboard shortcuts."
+msgstr "これらのキーボードショートカットを表示する。"
+
+#: lib/experiments-page.php:58
+msgid "Menu Block"
+msgstr "メニューブロック"
+
+#: lib/experiments-page.php:21
+msgid "Experiment settings"
+msgstr "実験的な設定"
+
+#: lib/experiments-page.php:63
+msgid "Enable Navigation Menu Block"
+msgstr "ナビゲーションメニューブロックを有効化"
+
+#: gutenberg.php:74
+msgid "Experiments Settings"
+msgstr "実験的設定"
+
+#: build/components/index.js:19
+msgid "Custom"
+msgstr "カスタム"
+
+#: build/editor/index.js:17
+msgid "Draft"
+msgstr "下書き"
+
+#: build/editor/index.js:17
+msgid "%1$s Error message: %2$s"
+msgstr "%1$s エラーメッセージ: %2$s"
+
+#: lib/customizer.php:61
+msgid "Widget Blocks (Experimental)"
+msgstr "ウィジェットブロック (テスト機能)"
+
+#: build/block-editor/index.js:55
+msgid "Learn more about anchors"
+msgstr "アンカーの詳細"
+
+#: build/block-library/index.js:14
+msgid "https://codex.wordpress.org/Nofollow"
+msgstr "https://codex.wordpress.org/Nofollow"
+
+#: build/block-library/index.js:14
+msgid "links"
+msgstr "リンク"
+
+#: build/block-library/index.js:14
+msgid "navigation"
+msgstr "ナビゲーション"
+
+#: build/block-library/index.js:14
+msgid "menu"
+msgstr "メニュー"
+
+#: build/block-library/index.js:14
+msgid "Add a navigation menu to your site."
+msgstr "サイトにナビゲーションメニューを追加します。"
+
+#: build/block-library/index.js:14
+msgid "Automatically add new pages"
+msgstr "新しいページの自動追加"
+
+#: build/block-library/index.js:14
+msgid "Automatically add new top level pages to this menu."
+msgstr "自動的に、新しいトップレベルのページをメニューに追加します。"
+
+#: build/block-library/index.js:14
+msgid "Learn more about embeds"
+msgstr "埋め込みの詳細"
+
+#: build/block-library/index.js:14
+msgid "Paste a link to the content you want to display on your site."
+msgstr "サイトに表示したいコンテンツのリンクを貼り付けます。"
+
+#: build/block-library/index.js:14
+msgid "Title Attribute"
+msgstr "タイトル属性"
+
+#: build/block-library/index.js:14
+msgid "SEO Settings"
+msgstr "SEO 設定"
+
+#: build/block-library/index.js:14
+msgid "Description"
+msgstr "概要"
+
+#: build/block-library/index.js:14
+msgid "Open in new tab"
+msgstr "新しいタブで開く"
+
+#: build/block-library/index.js:14
+msgid "Navigation Label"
+msgstr "ナビゲーションラベル"
+
+#: build/block-library/index.js:14
+msgid "Remove from menu"
+msgstr "メニューから削除"
+
+#: build/block-library/index.js:14
+msgid "Move right"
+msgstr "右に移動"
+
+#: build/block-library/index.js:14
+msgid "Move left"
+msgstr "左に移動"
+
+#: build/block-library/index.js:14
+msgid "Edit label text"
+msgstr "ラベルテキストを編集"
+
+#: build/block-library/index.js:14
+msgid "Menu Settings"
+msgstr "メニュー設定"
+
+#: build/block-library/index.js:14
+msgid "Upload a file or pick one from your media library."
+msgstr "ファイルをアップロード、またはメディアライブラリから選択して下さい。"
+
+#: build/block-library/index.js:14
+msgid "Add nofollow to menu item"
+msgstr "メニュー項目に nofollow を追加"
+
+#: build/block-editor/index.js:55
+msgid "Skip"
+msgstr "スキップ"
+
+#: build/block-editor/index.js:55
+msgid "Choose Layout"
+msgstr "レイアウトオプションを選択"
+
+#: build/edit-widgets/index.js:1
+msgid "Block areas saved succesfully."
+msgstr "ブロックエリアを正常に保存しました。"
+
+#: build/block-editor/index.js:55
+msgid "Upload a media file or pick one from your media library."
+msgstr "メディアファイルをアップロードするか、メディアライブラリから選択してください。"
+
+#: build/block-editor/index.js:55
+msgid "Select a layout to start with."
+msgstr "開始レイアウトを選択します。"
+
+#: build/block-editor/index.js:55
+msgid "Select a layout to start with, or make one yourself."
+msgstr "開始レイアウトを選択するか、独自に作成します。"
+
+#: build/block-library/index.js:14
+msgid "Add a page, link, or other item to your Navigation Menu."
+msgstr "固定ページやリンク、その他の項目をナビゲーションメニューに追加します。"
+
+#: build/block-library/index.js:14
+msgid "Upload an image or video file, or pick one from your media library."
+msgstr "画像や動画をアップロードするか、メディアライブラリから選択して下さい。"
+
+#: build/block-library/index.js:14
+msgid "Move to start"
+msgstr "先頭に移動"
+
+#: build/block-library/index.js:14
+msgid "Move to end"
+msgstr "最後尾に移動"
+
+#: build/block-library/index.js:14
+msgid "https://wordpress.org/support/article/embeds/"
+msgstr "https://wpdocs.osdn.jp/oEmbed"
+
+#: build/block-library/index.js:14
+msgid "Menu Item (Experimental)"
+msgstr "メニュー項目 (テスト機能)"
+
+#: build/block-library/index.js:14
+msgid "Navigation Menu (Experimental)"
+msgstr "ナビゲーションメニュー (テスト機能)"
+
+#: build/block-library/index.js:14
+msgid "Don't let search engines follow this link."
+msgstr "検索エンジンにこのリンクをフォローさせないようにします。"
+
+#: build/block-library/index.js:14
+msgid "Nest underneath…"
+msgstr "ネスト先..."
+
+#. translators: %s: taxonomy name
+#: build/block-library/blocks/tag-cloud.php:37
+msgid "Your site doesn&#8217;t have any %s, so there&#8217;s nothing to display here at the moment."
+msgstr "サイトに%sがないため、現在ここに表示するものはありません。"
+
+#: build/block-editor/index.js:55
+msgid "Upload a video file, pick one from your media library, or add one with a URL."
+msgstr "動画ファイルをアップロードするか、メディアライブラリから選択、または URL を追加してください。"
+
+#: build/block-editor/index.js:55 build/block-library/index.js:14
+msgid "Upload an image file, pick one from your media library, or add one with a URL."
+msgstr "画像ファイルをアップロードするか、メディアライブラリから選択、または URL を追加してください。"
+
+#: build/block-editor/index.js:55
+msgid "Upload an audio file, pick one from your media library, or add one with a URL."
+msgstr "音声ファイルをアップロードするか、メディアライブラリから選択、または URL を追加してください。"
+
+#: build/block-library/index.js:14
+msgid "Provide more context about where the link goes."
+msgstr "リンク先について、さらなるコンテキストを提供します。"
+
+#: build/block-library/index.js:14
+msgid "What's this?"
+msgstr "これは何 ?"
+
+#: build/block-library/index.js:14
+msgid "Three columns; wide center column"
+msgstr "3カラム: 中央を広く"
+
+#: build/block-library/index.js:14
+msgid "Three columns; equal split"
+msgstr "3カラム: 均等割"
+
+#: build/block-library/index.js:14
+msgid "Two columns; two-thirds, one-third split"
+msgstr "2カラム: 2/3、1/3に分割"
+
+#: build/block-library/index.js:14
+msgid "Two columns; one-third, two-thirds split"
+msgstr "2カラム: 1/3、2/3に分割"
+
+#: build/block-library/index.js:14
+msgid "Two columns; equal split"
+msgstr "2カラム: 均等割"
+
+#: build/editor/index.js:17
+msgctxt "verb"
+msgid "Group"
+msgstr "グループ化"
+
+#: build/editor/index.js:17
+msgctxt "Ungrouping blocks from within a Group block back into individual blocks within the Editor "
+msgid "Ungroup"
+msgstr "グループ解除"
+
+#: build/block-library/index.js:14
+msgid "Create Table"
+msgstr "テーブルを作成"
+
+#: build/edit-post/index.js:12
+msgid "More tools & options"
+msgstr "ツールと設定をさらに表示"
+
+#: build/block-library/index.js:14
+msgid "Insert a table for sharing data."
+msgstr "表を挿入してデータをシェアします。"
+
+#: build/block-editor/index.js:55
+msgid "Separate multiple classes with spaces."
+msgstr "複数クラスを半角スペースで区切ります。"
+
+#: build/components/index.js:19
+msgid "Separate with commas or the Enter key."
+msgstr "半角コンマまたはエンターキーで区切ります。"
+
+#: build/components/index.js:19
+msgid "Separate with commas, spaces, or the Enter key."
+msgstr "半角コンマ、スペースまたはエンターキーで区切ります。"
+
+#: lib/class-wp-rest-widget-areas-controller.php:200
+msgid "Sorry, you are not allowed to edit sidebars."
+msgstr "サイドバーを編集する権限がありません。"
+
+#: lib/class-wp-rest-widget-areas-controller.php:149
+msgid "Sorry, you are not allowed to read sidebars."
+msgstr "サイドバーを読み込む権限がありません。"
+
+#: build/block-library/index.js:14
+msgid "Move image forward"
+msgstr "画像を前に移動"
+
+#: build/block-library/index.js:14
+msgid "Move image backward"
+msgstr "画像を後ろに移動"
+
+#: lib/class-experimental-wp-widget-blocks-manager.php:328
+#: lib/class-experimental-wp-widget-blocks-manager.php:340
+msgid "Blocks Area"
+msgstr "ブロックエリア"
+
+#: lib/class-wp-rest-widget-areas-controller.php:56
+msgid "Sidebar content."
+msgstr "サイドバーのコンテンツ。"
+
+#: lib/class-wp-rest-widget-areas-controller.php:49
+msgid "The sidebar’s ID."
+msgstr "サイドバーの ID。"
+
+#: lib/class-experimental-wp-widget-blocks-manager.php:332
+msgid "Displays a set of blocks"
+msgstr "ブロックのセットを表示します。"
+
+#: build/block-library/index.js:14
+msgid "Header section"
+msgstr "ヘッダーセクション"
+
+#: build/block-library/index.js:14
+msgid "Footer section"
+msgstr "フッターセクション"
+
+#: lib/widgets.php:189
+msgid "Block area updated."
+msgstr "ブロックエリアを更新しました。"
+
+#: build/block-library/index.js:14
+msgid "Column Settings"
+msgstr "カラム設定"
+
+#: build/block-library/index.js:14
+msgid "Post Content"
+msgstr "投稿コンテンツ"
+
+#: build/block-library/index.js:14
+msgid "Post Meta Settings"
+msgstr "投稿メタ設定"
+
+#: build/block-library/index.js:14
+msgid "Post Content Settings"
+msgstr "投稿コンテンツ設定"
+
+#: build/block-library/index.js:14
+msgid "Percentage width"
+msgstr "パーセント指定幅"
+
+#: build/format-library/index.js:1
+msgid "Inline Code"
+msgstr "インラインコード"
+
+#: lib/widgets.php:188
+msgid "Block area scheduled."
+msgstr "ブロックエリアを予約投稿しました。"
+
+#: build/block-library/index.js:14
+msgid "Sorting and Filtering"
+msgstr "並べ替えと絞り込み"
+
+#: build/server-side-render/index.js:1
+msgid "Block rendered as empty."
+msgstr "ブロックを空白としてレンダリングします。"
+
+#: build/block-library/index.js:14
+msgid "Note: Autoplaying videos may cause usability issues for some visitors."
+msgstr "注: 動画の自動再生は、ビジターによってはユーザビリティの問題を引き起こす可能性があります。"
+
+#: build/block-library/index.js:14
+msgid "Note: Autoplaying audio may cause usability issues for some visitors."
+msgstr "注: 音声の自動再生は、ビジターによってはユーザビリティの問題を引き起こす可能性があります。"
+
+#: lib/widgets.php:171
+msgctxt "admin menu"
+msgid "Block Areas"
+msgstr "ブロックエリア"
+
+#: lib/widgets.php:174
+msgid "Add New Block Area"
+msgstr "新しいブロックエリアを追加"
+
+#: lib/widgets.php:178
+msgid "All Block Areas"
+msgstr "すべてのブロックエリア"
+
+#: lib/widgets.php:176
+msgid "Edit Block Area"
+msgstr "ブロックエリアを編集"
+
+#: lib/widgets.php:177
+msgid "View Block Area"
+msgstr "ブロックエリアを表示"
+
+#: lib/widgets.php:175
+msgid "New Block Area"
+msgstr "新規ブロックエリア"
+
+#: lib/widgets.php:167
+msgid "Experimental custom post type that will store block areas referenced by themes."
+msgstr "テーマが参照可能なブロックエリアを格納する、テスト中のカスタム投稿タイプです。"
+
+#: lib/widgets.php:170
+msgctxt "post type singular name"
+msgid "Block Area (Experimental)"
+msgstr "ブロックエリア (テスト機能)"
+
+#: lib/widgets.php:169
+msgctxt "post type general name"
+msgid "Block Area (Experimental)"
+msgstr "ブロックエリア (テスト機能)"
+
+#: lib/widgets.php:184
+msgid "Block areas list"
+msgstr "ブロックエリアリスト"
+
+#: lib/widgets.php:185
+msgid "Block area published."
+msgstr "ブロックエリアを公開しました。"
+
+#: lib/widgets.php:180
+msgid "No block area found."
+msgstr "ブロックエリアが見つかりません。"
+
+#: lib/widgets.php:179
+msgid "Search Block Areas"
+msgstr "ブロックエリアを検索"
+
+#: lib/widgets.php:182
+msgid "Filter block areas list"
+msgstr "ブロックエリアリストを絞り込む"
+
+#: lib/widgets.php:183
+msgid "Block areas list navigation"
+msgstr "ブロックエリアリストナビゲーション"
+
+#: build/edit-widgets/index.js:1
+msgid "Block Areas"
+msgstr "ブロックエリア"
+
+#: build/block-editor/index.js:55
+msgid "Add Block"
+msgstr "ブロックを追加"
+
+#: build/block-library/index.js:14
+msgid "section"
+msgstr "セクション"
+
+#: build/block-library/index.js:14
+msgid "row"
+msgstr "行"
+
+#: build/block-library/index.js:14
+msgid "wrapper"
+msgstr "ラッパー"
+
+#: build/block-library/index.js:14
+msgid "Group"
+msgstr "グループ"
+
+#: build/block-library/index.js:14
+msgid "container"
+msgstr "コンテナー"
+
+#: build/block-library/index.js:14
+msgid "You are now viewing the image in the image block."
+msgstr "画像ブロック内の画像を閲覧中です。"
+
+#: build/block-library/index.js:14
+msgid "You are now editing the image in the image block."
+msgstr "画像ブロック内の画像を編集中です。"
+
+#: build/block-library/index.js:14
+msgid "Crop image to fill entire column"
+msgstr "カラム全体を塗りつぶすように画像を切り抜く"
+
+#: build/block-library/index.js:14
+msgid "A block that groups other blocks."
+msgstr "他のブロックをグループ化したブロック。"
+
+#: build/block-library/index.js:14
+msgid "The current poster image url is %s"
+msgstr "現在のポスター画像 URL は %s です"
+
+#: build/block-library/index.js:14
+msgid "There is no poster image currently selected"
+msgstr "現在選択中のポスター画像はありません"
+
+#: build/edit-widgets/index.js:1
+msgid "Widgets screen content"
+msgstr "ウィジェット画面コンテンツ"
+
+#: build/edit-widgets/index.js:1
+msgid "Widgets advanced settings"
+msgstr "ウィジェットの高度な設定"
+
+#: build/edit-widgets/index.js:1
+msgid "Widgets screen top bar"
+msgstr "ウィジェット画面の上部バー"
+
+#: build/block-editor/index.js:55
+msgid "This color combination may be hard for people to read."
+msgstr "この色の組み合わせは、読みづらい可能性があります。"
+
+#: build/edit-widgets/index.js:1
+msgid "(experimental)"
+msgstr "(テスト機能)"
+
+#: build/block-editor/index.js:55
+msgid "Add a block"
+msgstr "ブロックを追加"
+
+#: build/editor/index.js:17
+msgid "Replace Image"
+msgstr "画像を置換"
+
+#: build/block-library/index.js:14
+msgid "Leave empty if the image is purely decorative."
+msgstr "画像が単なる装飾の場合、空欄にします。"
+
+#: build/block-library/index.js:14
+msgid "Describe the purpose of the image"
+msgstr "画像の目的を説明"
+
+#: build/block-library/index.js:14
+msgid "Play inline"
+msgstr "インラインで再生"
+
+#: build/block-editor/index.js:55
+msgctxt "Block vertical alignment setting"
+msgid "Vertically Align Bottom"
+msgstr "縦位置を下に"
+
+#: build/block-editor/index.js:55
+msgctxt "Block vertical alignment setting"
+msgid "Vertically Align Middle"
+msgstr "縦位置を中央に"
+
+#: build/block-editor/index.js:55
+msgctxt "Block vertical alignment setting"
+msgid "Vertically Align Top"
+msgstr "縦位置を上に"
+
+#: build/block-editor/index.js:55
+msgctxt "Block vertical alignment setting label"
+msgid "Change vertical alignment"
+msgstr "垂直配置を変更"
+
+#: build/block-library/index.js:14
+msgid "Change widget"
+msgstr "ウィジェットを変更"
+
+#: build/block-library/index.js:14
+msgid "There are no widgets available."
+msgstr "利用可能なウィジェットがありません。"
+
+#: build/block-library/index.js:14
+msgid "Not a valid widget."
+msgstr "有効なウィジェットではありません。"
+
+#: build/block-library/index.js:14
+msgid "You don't have permissions to use widgets on this site."
+msgstr "サイトでウィジェットを使用する権限がありません。"
+
+#: build/block-editor/index.js:55
+msgid "Change block type or style"
+msgstr "ブロックタイプまたはスタイルを変更"
+
+#: build/block-library/index.js:14
+msgid "Display a legacy widget."
+msgstr "従来のウィジェットを表示します。"
+
+#: build/block-library/index.js:14
+msgid "Legacy Widget"
+msgstr "従来のウィジェット"
+
+#: build/block-library/index.js:14
+msgid "Select a legacy widget to display:"
+msgstr "従来のウィジェットを選択して表示:"
+
+#: build/block-library/index.js:14
+msgid "Legacy Widget (Experimental)"
+msgstr "従来のウィジェット (テスト機能)"
+
+#: build/edit-post/index.js:12
+msgid "Block Manager"
+msgstr "ブロックマネージャー"
+
+#: lib/class-wp-rest-widget-updater-controller.php:101
+msgid "Invalid widget."
+msgstr "無効なウィジェット。"
+
+#: build/editor/index.js:17
+msgid "Search Terms"
+msgstr "検索ワード"
+
+#: build/block-library/index.js:14
+msgctxt "keyboard key"
+msgid "Space"
+msgstr "Space"
+
+#: build/block-library/index.js:14
+msgctxt "keyboard key"
+msgid "Backspace"
+msgstr "Backspace"
+
+#: build/editor/index.js:17
+msgid "Exit the Editor"
+msgstr "エディターを終了"
+
+#: lib/class-wp-rest-widget-updater-controller.php:42
+msgid "Class name of the widget."
+msgstr "ウィジェットのクラス名。"
+
+#: lib/class-wp-rest-widget-updater-controller.php:69
+msgid "Sorry, you are not allowed to access widgets on this site."
+msgstr "サイトのウィジェットにアクセスする権限がありません。"
+
+#: build/block-editor/index.js:55
+msgid "More rich text controls"
+msgstr "よりリッチなテキスト制御"
+
+#: gutenberg.php:50 gutenberg.php:51
+msgid "Widgets (beta)"
+msgstr "ウィジェット (ベータ)"
+
+#: build/components/index.js:19
+msgid "Custom Color"
+msgstr "カスタムカラー"
+
+#: build/block-library/index.js:14
+msgid "link"
+msgstr "リンク"
+
+#: build/block-library/index.js:14
+msgid "Embedded content from %s can't be previewed in the editor."
+msgstr "%s からの埋め込みコンテンツはエディター内でプレビューできません。"
+
+#: build/block-library/index.js:14
+msgid "Prompt visitors to take action with a button-style link."
+msgstr "ボタンスタイルのリンクで、訪問者に行動を喚起しましょう。"
+
+#: build/block-library/blocks/rss.php:19
+msgid "RSS Error:"
+msgstr "RSS エラー:"
+
+#: build/edit-post/index.js:12
+msgid "URL Slug"
+msgstr "URL スラッグ"
+
+#: build/edit-post/index.js:12
+msgid "The last part of the URL. "
+msgstr "URL の残り部分。"
+
+#: build/editor/index.js:17
+msgid "Stick to the top of the blog"
+msgstr "ブログのトップに固定"
+
+#: build/edit-post/index.js:12
+msgid "Read about permalinks"
+msgstr "パーマリンクの詳細"
+
+#: build/block-library/blocks/rss.php:62
+msgid "by"
+msgstr "by"
+
+#: build/block-editor/index.js:55 build/block-library/index.js:14
+msgctxt "block style"
+msgid "Default"
+msgstr "デフォルト"
+
+#: build/edit-post/index.js:12
+msgid "Fullscreen mode deactivated"
+msgstr "フルスクリーンモードを停止しました"
+
+#: build/edit-post/index.js:12
+msgid "Fullscreen mode activated"
+msgstr "フルスクリーンモードを有効化しました"
+
+#: build/edit-post/index.js:12
+msgid "Spotlight mode deactivated"
+msgstr "スポットライトモードを停止しました"
+
+#: build/edit-post/index.js:12
+msgid "Spotlight mode activated"
+msgstr "スポットライトモードを有効化しました"
+
+#: build/edit-post/index.js:12
+msgid "Top toolbar deactivated"
+msgstr "トップツールバーを停止しました"
+
+#: build/edit-post/index.js:12
+msgid "Top toolbar activated"
+msgstr "トップツールバーを有効化しました"
+
+#: build/block-library/blocks/rss.php:27
+msgid "An error has occurred, which probably means the feed is down. Try again later."
+msgstr "エラーが発生しました。フィードの配信が停止している可能性があります。再度お試しください。"
+
+#: build/edit-post/index.js:12
+msgid "You’ll find more settings for your page and blocks in the sidebar. Click the cog icon to toggle the sidebar open and closed."
+msgstr "サイドバーで、ページとブロックの詳細設定が利用可能です。歯車アイコンをクリックして、サイドバーの開閉を切り替えてください。"
+
+#: build/block-library/index.js:14
+msgid "Calendar"
+msgstr "カレンダー"
+
+#: build/block-library/index.js:14
+msgid "- Select -"
+msgstr "- 選択 -"
+
+#: build/block-library/index.js:14
+msgid "feed"
+msgstr "フィード"
+
+#: build/block-library/index.js:14
+msgid "RSS"
+msgstr "RSS"
+
+#: build/block-library/index.js:14
+msgid "Taxonomy"
+msgstr "タクソノミー"
+
+#: build/block-library/index.js:14
+msgid "Tag Cloud"
+msgstr "タグクラウド"
+
+#: build/block-library/index.js:14
+msgid "Display author"
+msgstr "投稿者を表示"
+
+#: build/block-library/index.js:14
+msgid "Display date"
+msgstr "日付を表示"
+
+#: build/block-library/index.js:14
+msgid "Display excerpt"
+msgstr "抜粋を表示"
+
+#: build/block-library/index.js:14
+msgid "A calendar of your site’s posts."
+msgstr "サイトの投稿カレンダー。"
+
+#: build/block-library/blocks/search.php:78
+#: build/block-library/blocks/search.php:86 build/block-library/index.js:14
+msgid "Search"
+msgstr "検索"
+
+#: build/block-library/index.js:14
+msgid "Add button text…"
+msgstr "ボタンのテキストを追加..."
+
+#: build/block-library/index.js:14
+msgid "Button text"
+msgstr "ボタンのテキスト"
+
+#: build/block-library/index.js:14
+msgid "Sorry, this content could not be embedded."
+msgstr "このコンテンツを埋め込めませんでした。"
+
+#: build/block-library/index.js:14
+msgid "Label text"
+msgstr "ラベルテキスト"
+
+#: build/block-library/index.js:14
+msgid "RSS Settings"
+msgstr "RSS 設定"
+
+#: build/block-library/index.js:14
+msgid "A cloud of your most used tags."
+msgstr "よく使用されているタグの羅列。"
+
+#: build/block-library/index.js:14
+msgid "Tag Cloud Settings"
+msgstr "タグクラウド設定"
+
+#: build/block-library/index.js:14
+msgid "archive"
+msgstr "アーカイブ"
+
+#: build/block-library/index.js:14
+msgid "Add label…"
+msgstr "ラベルを追加…"
+
+#: build/block-library/index.js:14
+msgid "Optional placeholder text"
+msgstr "任意のプレースホルダーテキスト"
+
+#: build/block-library/index.js:14
+msgid "Optional placeholder…"
+msgstr "任意のプレースホルダー…"
+
+#: build/block-library/index.js:14
+msgid "The excerpt is hidden."
+msgstr "抜粋は表示されません。"
+
+#: build/block-library/index.js:14
+msgid "The excerpt is visible."
+msgstr "抜粋を表示中です。"
+
+#: build/block-library/index.js:14
+msgid "Hide the excerpt on the full content page"
+msgstr "コンテンツ全文ページで抜粋を非表示"
+
+#: build/block-library/index.js:14
+msgid "Content before this block will be shown in the excerpt on your archives page."
+msgstr "このブロックより前のコンテンツを、アーカイブページの抜粋に表示します。"
+
+#: build/block-library/index.js:14
+msgid "image %1$d of %2$d in gallery"
+msgstr "ギャラリー内の画像%1$d件中%2$d件"
+
+#: build/block-library/index.js:14
+msgid "Default"
+msgstr "デフォルト"
+
+#: build/edit-post/index.js:12
+msgid "Back"
+msgstr "戻る"
+
+#: build/edit-post/index.js:12
+msgid "Feature activated"
+msgstr "機能を有効化しました"
+
+#: build/edit-post/index.js:12
+msgid "Feature deactivated"
+msgstr "機能を停止しました"
+
+#: build/block-library/index.js:14
+msgid "Embed Amazon Kindle content."
+msgstr "Amazon Kindle のコンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "ebook"
+msgstr "ebook"
+
+#: build/block-library/index.js:14
+msgid "Embed Crowdsignal (formerly Polldaddy) content."
+msgstr "Crowdsignal (旧 Polldaddy) コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Help visitors find your content."
+msgstr "訪問者がコンテンツを見つけられるよう手助けしましょう。"
+
+#: build/components/index.js:19
+msgid "Vertical Pos."
+msgstr "縦位置"
+
+#: build/components/index.js:19
+msgid "Horizontal Pos."
+msgstr "横位置"
+
+#: build/block-library/index.js:14
+msgid "posts"
+msgstr "投稿"
+
+#: build/block-library/index.js:14
+msgid "Max number of words in excerpt"
+msgstr "抜粋内の最大単語数"
+
+#: build/block-library/index.js:14
+msgid "Display entries from any RSS or Atom feed."
+msgstr "RSS または Atom フィードからの投稿を表示します。"
+
+#: build/block-library/index.js:14
+msgid "atom"
+msgstr "Atom"
+
+#: build/block-library/index.js:14
+msgid "Edit RSS URL"
+msgstr "RSS の URL を編集"
+
+#: build/block-library/index.js:14
+msgid "find"
+msgstr "見つける"
+
+#: build/block-library/index.js:14
+msgid "Focal Point Picker"
+msgstr "焦点ピッカー"
+
+#: build/editor/index.js:17
+msgid "https://codex.wordpress.org/Excerpt"
+msgstr "https://wpdocs.osdn.jp/%E6%8A%9C%E7%B2%8B"
+
+#: build/format-library/index.js:1
+msgid "Underline"
+msgstr "下線"
+
+#: build/block-editor/index.js:55
+msgid "Attempt Block Recovery"
+msgstr "ブロックのリカバリーを試行"
+
+#: build/block-library/index.js:14
+msgctxt "content placeholder"
+msgid "Content…"
+msgstr "コンテンツ…"
+
+#: build/block-library/index.js:14
+msgctxt "button label"
+msgid "Convert to link"
+msgstr "リンクへ変換"
+
+#: build/nux/index.js:1
+msgid "Editor tips"
+msgstr "エディターのヒント"
+
+#: build/block-library/index.js:14
+msgctxt "button label"
+msgid "Try again"
+msgstr "再試行"
+
+#: build/editor/index.js:17
+msgctxt "Word count type. Do not translate!"
+msgid "words"
+msgstr "characters_including_spaces"
+
+#: build/edit-post/index.js:12
+msgid "Block (selected)"
+msgstr "ブロック (選択済み)"
+
+#: build/edit-post/index.js:12
+msgid "Document (selected)"
+msgstr "文書 (選択済み)"
+
+#: build/block-library/index.js:14
+msgid "Link Rel"
+msgstr "リンク rel 属性"
+
+#: build/block-library/index.js:14
+msgid "Link CSS Class"
+msgstr "リンク CSS クラス"
+
+#: build/edit-post/index.js:12
+msgid "Top Toolbar"
+msgstr "トップツールバー"
+
+#: build/block-editor/index.js:55
+msgid "%d word"
+msgid_plural "%d words"
+msgstr[0] "%d単語"
+
+#: build/block-library/index.js:14
+msgid "Create content, and save it for you and other contributors to reuse across your site. Update the block, and the changes apply everywhere it’s used."
+msgstr "コンテンツを作成し、自分や他の投稿者がサイトで再利用できるよう保存しましょう。ブロックを更新すると、再利用しているすべての場所で更新が適用されます。 "
+
+#: build/edit-post/index.js:12
+msgid "Permalink"
+msgstr "パーマリンク"
+
+#: build/block-editor/index.js:55
+msgid "(selected block)"
+msgstr "(選択済みブロック)"
+
+#: build/editor/index.js:17
+msgid "To edit the featured image, you need permission to upload media."
+msgstr "アイキャッチ画像を編集するには、メディアのアップロード権限が必要です。"
+
+#: build/block-editor/index.js:55
+msgid "To edit this block, you need permission to upload media."
+msgstr "このブロックを編集するには、メディアのアップロード権限が必要です。"
+
+#: build/block-editor/index.js:55
+msgid "Block tools"
+msgstr "ブロックのツールバー"
+
+#: build/block-library/index.js:14
+msgid "This image has an empty alt attribute; its file name is %s"
+msgstr "画像に alt 属性が指定されていません。ファイル名: %s"
+
+#: build/block-library/index.js:14
+msgid "This image has an empty alt attribute"
+msgstr "この画像には alt 属性が指定されていません"
+
+#: build/block-library/index.js:14
+msgid "Page Break"
+msgstr "ページ区切り"
+
+#: build/block-library/index.js:14
+msgid "Paragraph block"
+msgstr "段落ブロック"
+
+#: lib/widgets-page.php:57 build/block-editor/index.js:55
+msgid "Thumbnail"
+msgstr "サムネイル"
+
+#: build/block-editor/index.js:55
+msgid "Block icon"
+msgstr "ブロックアイコン"
+
+#: lib/widgets-page.php:60 build/block-editor/index.js:55
+msgid "Full Size"
+msgstr "フルサイズ"
+
+#: build/block-editor/index.js:55
+msgid "Align Text Right"
+msgstr "右寄せ"
+
+#: build/block-editor/index.js:55
+msgid "Align Text Center"
+msgstr "中央寄せ"
+
+#: build/block-editor/index.js:55
+msgid "Align Text Left"
+msgstr "左寄せ"
+
+#: lib/widgets.php:173
+msgctxt "Block"
+msgid "Add New"
+msgstr "新規追加"
+
+#: build/editor/index.js:17
+msgid "Type text or HTML"
+msgstr "テキストまたは HTML を入力"
+
+#: build/block-editor/index.js:55 build/block-library/index.js:14
+msgid "Start writing or type / to choose a block"
+msgstr "文章を入力、または / でブロックを選択"
+
+#: build/editor/index.js:17
+msgid "Start writing with text or HTML"
+msgstr "テキストまたは HTML を入力して開始"
+
+#: build/block-library/index.js:14
+msgid "Drag images, upload new ones or select files from your library."
+msgstr "画像をドラッグして新しくアップロードするか、ライブラリからファイルを選択してください。 "
+
+#: build/block-library/index.js:14
+msgid "Empty block; start writing or type forward slash to choose a block"
+msgstr "空のブロックです - 文章を入力、または / でブロックを選択 "
+
+#: build/format-library/index.js:1
+msgid "Warning: the link has been inserted but may have errors. Please test it."
+msgstr "警告: リンクを挿入しましたが、エラーがある可能性があります。テストしてください。"
+
+#: build/block-editor/index.js:55
+msgid "%s block selected."
+msgid_plural "%s blocks selected."
+msgstr[0] "%s個のブロックを選択しました。"
+
+#: build/block-library/index.js:14
+msgid "Stack on mobile"
+msgstr "モバイルでは上下にする"
+
+#: build/block-editor/index.js:55
+msgid "Link selected."
+msgstr "リンクを選択しました。"
+
+#: build/format-library/index.js:1
+msgid "Link inserted."
+msgstr "リンクを挿入しました。"
+
+#: lib/widgets.php:187
+msgid "Block area reverted to draft."
+msgstr "ブロックエリアを下書きに戻しました。 "
+
+#: lib/widgets.php:172
+msgctxt "add new on admin bar"
+msgid "Block Area"
+msgstr "ブロックエリア"
+
+#: lib/widgets.php:186
+msgid "Block area published privately."
+msgstr "ブロックエリアを限定公開しました。 "
+
+#: lib/widgets.php:181
+msgid "No block areas found in Trash."
+msgstr "ゴミ箱内にブロックエリアはありません。 "
+
+#: build/annotations/index.js:1
+msgid "Annotation"
+msgstr "注釈"
+
+#: build/block-library/index.js:14
+msgctxt "button label"
+msgid "Embed"
+msgstr "埋め込み"
+
+#: build/block-library/index.js:14
+msgctxt "block title"
+msgid "Embed"
+msgstr "埋め込み"
+
+#: build/block-library/index.js:14
+msgctxt "button label"
+msgid "Download"
+msgstr "ダウンロード"
+
+#: build/list-reusable-blocks/index.js:1
+msgctxt "button label"
+msgid "Import"
+msgstr "インポート"
+
+#: build/block-library/index.js:14
+msgctxt "block title"
+msgid "Classic"
+msgstr "クラシック"
+
+#: build/format-library/index.js:1
+msgid "media"
+msgstr "メディア"
+
+#: build/block-editor/index.js:55
+msgid "Media"
+msgstr "メディア"
+
+#: build/editor/index.js:17
+msgid "Double-check your settings before publishing."
+msgstr "公開する前に、設定を再確認しましょう。"
+
+#: build/block-editor/index.js:55
+msgctxt "font size name"
+msgid "Large"
+msgstr "大"
+
+#: build/block-editor/index.js:55
+msgctxt "font size name"
+msgid "Normal"
+msgstr "標準"
+
+#: build/block-editor/index.js:55
+msgctxt "font size name"
+msgid "Small"
+msgstr "小"
+
+#: build/block-editor/index.js:55
+msgctxt "font size name"
+msgid "Medium"
+msgstr "中"
+
+#: build/block-library/index.js:14
+msgid "Embed a video from your media library or upload a new one."
+msgstr "動画をメディアライブラリから、または新しくアップロードして埋め込みます。"
+
+#: build/block-editor/index.js:55
+msgctxt "font size name"
+msgid "Huge"
+msgstr "特大"
+
+#: build/components/index.js:19
+msgctxt "keyboard button"
+msgid "Enter"
+msgstr "入力"
+
+#: build/editor/index.js:17
+msgid "Edit or update the image"
+msgstr "画像の編集または更新"
+
+#: build/block-library/index.js:14
+msgctxt "block style"
+msgid "Large"
+msgstr "大"
+
+#: build/format-library/index.js:1
+msgid "Link edited."
+msgstr "リンクを編集しました。"
+
+#: build/format-library/index.js:1
+msgid "Link removed."
+msgstr "リンクを削除しました。"
+
+#: build/block-editor/index.js:55
+msgctxt "imperative verb"
+msgid "Resolve"
+msgstr "解決"
+
+#: build/format-library/index.js:1
+msgid "%s (opens in a new tab)"
+msgstr "%s (新しいタブで開く)"
+
+#: build/editor/index.js:17
+msgid "Generating preview…"
+msgstr "プレビューを生成中..."
+
+#: build/edit-post/index.js:12
+msgid "Navigate to the nearest toolbar."
+msgstr "一番近くにあるツールバーに移動する。"
+
+#: build/edit-post/index.js:12
+msgid "Document tools"
+msgstr "文書ツール"
+
+#: build/edit-post/index.js:12
+msgid "Document and block tools"
+msgstr "文書・ブロックツール"
+
+#: build/block-library/index.js:14
+msgid "Insert poetry. Use special spacing formats. Or quote song lyrics."
+msgstr "詩を挿入します。特別な余白形式を使ったり、歌詞を引用したりできます。"
+
+#: build/block-editor/index.js:55
+msgctxt "blocks"
+msgid "Most Used"
+msgstr "最も使われている"
+
+#: build/block-library/index.js:14
+msgid "Insert additional custom elements with a WordPress shortcode."
+msgstr "WordPress ショートコードで追加のカスタム要素を挿入します。"
+
+#: build/block-library/index.js:14
+msgid "Add white space between blocks and customize its height."
+msgstr "ブロックの間に、高さをカスタマイズ可能な余白を追加します。"
+
+#: build/block-library/index.js:14
+msgid "Separate your content into a multi-page experience."
+msgstr "コンテンツを複数のページに分けて表示します。"
+
+#: build/block-library/index.js:14
+msgid "Give special visual emphasis to a quote from your text."
+msgstr "文章からの引用に特別な視覚的強調を与えます。"
+
+#: build/block-library/index.js:14
+msgid "Media & Text Settings"
+msgstr "メディアと文章の設定"
+
+#: build/block-library/index.js:14
+msgid "Create a bulleted or numbered list."
+msgstr "番号なし、または番号付きのリストを作成します。"
+
+#: build/block-library/index.js:14
+msgid "Add custom HTML code and preview it as you edit."
+msgstr "カスタム HTML コードを追加します。編集しながらプレビューが可能です。"
+
+#: build/block-library/index.js:14
+msgid "Display a list of your most recent comments."
+msgstr "最新のコメントを表示します。"
+
+#: build/block-library/index.js:14
+msgid "Set media and words side-by-side for a richer layout."
+msgstr "画像と文章を横並びのリッチなレイアウトにします。"
+
+#: build/block-library/index.js:14
+msgid "Insert an image to make a visual statement."
+msgstr "画像を挿入し、視覚に訴えます。"
+
+#: build/block-library/index.js:14
+msgid "Embed videos, images, tweets, audio, and other content from external sources."
+msgstr "動画、画像、ツイート、音声、およびその他のコンテンツを外部ソースから埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Display multiple images in a rich gallery."
+msgstr "複数の画像をリッチなギャラリーで表示します。"
+
+#: build/block-library/index.js:14
+msgid "Add a link to a downloadable file."
+msgstr "ファイルをダウンロードするリンクを追加します。"
+
+#: build/block-library/index.js:14
+msgid "Create a break between ideas or sections with a horizontal separator."
+msgstr "水平の区切りを使って、アイデアやセクションの間で改行します。"
+
+#: build/block-library/index.js:14
+msgid "Give quoted text visual emphasis. \"In quoting others, we cite ourselves.\" — Julio Cortázar"
+msgstr "引用テキストを視覚的に強調します。「他者の引用は、我々自身への引用である」—フリオ・コルタサル"
+
+#: build/block-library/index.js:14
+msgid "Start with the building block of all narrative."
+msgstr "ブロックを使って、いろいろな物語を組み立ててください。"
+
+#: build/block-library/index.js:14
+msgid "Introduce new sections and organize content to help visitors (and search engines) understand the structure of your content."
+msgstr "新しいセクションを紹介しコンテンツを整理することで、ビジター (および検索エンジン) のコンテンツ構造理解の手助けをしましょう。"
+
+#: build/block-library/index.js:14
+msgid "Embed Cloudup content."
+msgstr "Cloudup コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Resize for smaller devices"
+msgstr "小さい端末でリサイズ"
+
+#: build/block-library/index.js:14
+msgid "This embed may not preserve its aspect ratio when the browser is resized."
+msgstr "この埋め込みは、ブラウザのサイズ変更時にアスペクト比を保持しない場合があります。"
+
+#: build/block-library/index.js:14
+msgid "This embed will preserve its aspect ratio when the browser is resized."
+msgstr "この埋め込みは、ブラウザのサイズ変更時にアスペクト比を保持します。"
+
+#: build/block-library/index.js:14
+msgid "Display a list of all categories."
+msgstr "すべてのカテゴリーをリスト表示します。"
+
+#: build/block-library/index.js:14
+msgid "Embed a simple audio player."
+msgstr "シンプルな音声プレイヤーを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Display code snippets that respect your spacing and tabs."
+msgstr "余白やタグを考慮したコードスニペットを表示します。"
+
+#: build/block-library/index.js:14
+msgid "Add an image or video with a text overlay — great for headers."
+msgstr "テキストオーバーレイを含む画像または動画を追加します。ヘッダーに最適です。"
+
+#: build/block-library/index.js:14
+msgid "Embed a Dailymotion video."
+msgstr "Dailymotion 動画を埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed SoundCloud content."
+msgstr "SoundCloud コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed Hulu content."
+msgstr "Hulu コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Use the classic WordPress editor."
+msgstr "WordPress クラシックエディターを使用します。"
+
+#: build/block-library/index.js:14
+msgid "Embed a WordPress post."
+msgstr "WordPress 投稿を埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed an Instagram post."
+msgstr "Instagram 投稿を埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed a Facebook post."
+msgstr "Facebook 投稿を埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed a WordPress.tv video."
+msgstr "WordPress.tv 動画を埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed a VideoPress video."
+msgstr "VideoPress 動画を埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed a Tumblr post."
+msgstr "Tumblr 投稿を埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed Speaker Deck content."
+msgstr "Speaker Deck スライドを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed SmugMug content."
+msgstr "SmugMug コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed Slideshare content."
+msgstr "Slideshare スライドを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed Scribd content."
+msgstr "Scribd コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed Screencast content."
+msgstr "Screencast コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed ReverbNation content."
+msgstr "ReverbNation コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed a Reddit thread."
+msgstr "Reddit スレッドを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed an Animoto video."
+msgstr "Animoto 動画を埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed a Vimeo video."
+msgstr "Vimeo 動画を埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed Flickr content."
+msgstr "Flickr コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed Spotify content."
+msgstr "Spotify コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed a TED video."
+msgstr "TED 動画を埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed a YouTube video."
+msgstr "YouTube 動画を埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed Polldaddy content."
+msgstr "Polldaddy コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed Mixcloud content."
+msgstr "Mixcloud コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed Meetup.com content."
+msgstr "Meetup.com コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed Kickstarter content."
+msgstr "Kickstarter コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed Issuu content."
+msgstr "Issuu コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed a tweet."
+msgstr "ツイートを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed Imgur content."
+msgstr "Imgur コンテンツを埋め込みます。"
+
+#: build/block-library/index.js:14
+msgid "Embed CollegeHumor content."
+msgstr "CollegeHumor コンテンツを埋め込みます。"
+
+#: build/edit-post/index.js:12
+msgctxt "noun"
+msgid "View"
+msgstr "表示"
+
+#: build/edit-post/index.js:12
+msgid "Options"
+msgstr "オプション"
+
+#: build/edit-post/index.js:12
+msgid "Document Panels"
+msgstr "文書パネル"
+
+#: build/block-editor/index.js:55
+msgid "Paste or type URL"
+msgstr "URL を入力または貼り付け"
+
+#: build/block-editor/index.js:55
+msgid "Styles"
+msgstr "スタイル"
+
+#: build/edit-post/index.js:12
+msgid "Advanced Panels"
+msgstr "詳細パネル"
+
+#: build/edit-post/index.js:12
+msgid "General"
+msgstr "一般"
+
+#: build/block-library/index.js:14
+msgctxt "editor button"
+msgid "Left to right"
+msgstr "左から右"
+
+#: build/block-editor/index.js:55
+msgid "Insert from URL"
+msgstr "URL から挿入"
+
+#: build/components/index.js:19
+msgid "August"
+msgstr " 8月"
+
+#: build/components/index.js:19
+msgid "July"
+msgstr "7月"
+
+#: build/components/index.js:19
+msgid "September"
+msgstr "9月"
+
+#: build/components/index.js:19
+msgid "October"
+msgstr "10月"
+
+#: build/components/index.js:19
+msgid "November"
+msgstr "11月"
+
+#: build/components/index.js:19
+msgid "December"
+msgstr "12月"
+
+#: build/components/index.js:19
+msgid "June"
+msgstr "6月"
+
+#: build/components/index.js:19
+msgid "May"
+msgstr "5月"
+
+#: build/components/index.js:19
+msgid "April"
+msgstr "4月"
+
+#: build/components/index.js:19
+msgid "March"
+msgstr "3月"
+
+#: build/components/index.js:19
+msgid "February"
+msgstr "2月"
+
+#: build/components/index.js:19
+msgid "January"
+msgstr "1月"
+
+#: build/components/index.js:19
+msgid "Month"
+msgstr "月"
+
+#: build/components/index.js:19
+msgid "Change color format"
+msgstr "色の形式を変更"
+
+#: build/block-library/index.js:14
+msgid "Show media on right"
+msgstr "メディアを右に表示"
+
+#: build/block-library/index.js:14
+msgid "Show media on left"
+msgstr "メディアを左に表示"
+
+#: build/block-library/index.js:14
+msgid "Media area"
+msgstr "メディアエリア"
+
+#: build/format-library/index.js:1 build/block-library/index.js:14
+msgid "Open in New Tab"
+msgstr "新しいタブで開く"
+
+#: build/components/index.js:19
+msgid "Calendar Help"
+msgstr "カレンダーのヘルプ"
+
+#: build/components/index.js:19
+msgid "Click to Select"
+msgstr "クリックして選択"
+
+#: build/components/index.js:19
+msgid "Navigating with a keyboard"
+msgstr "キーボードでの操作"
+
+#: build/components/index.js:19
+msgid "Choose a shade"
+msgstr "影を選択"
+
+#: build/editor/index.js:17 build/components/index.js:19
+msgid "(opens in a new tab)"
+msgstr "(新しいタブで開く)"
+
+#: build/block-library/index.js:14
+msgid "Stripes"
+msgstr "ストライプ"
+
+#: build/block-library/index.js:14
+msgid "Unrecognized Block"
+msgstr "認識できないブロック"
+
+#: build/components/index.js:19
+msgid "Minutes"
+msgstr "分"
+
+#: build/components/index.js:19
+msgid "Date"
+msgstr "日付"
+
+#: build/components/index.js:19
+msgid "Time"
+msgstr "時間"
+
+#: build/components/index.js:19
+msgid "Year"
+msgstr "年"
+
+#: build/components/index.js:19
+msgid "Day"
+msgstr "日"
+
+#: build/components/index.js:19
+msgid "Hours"
+msgstr "時"
+
+#: build/components/index.js:19
+msgid "Click the desired day to select it."
+msgstr "希望日をクリックして選択します。"
+
+#: build/components/index.js:19
+msgid "Select the date in focus."
+msgstr "フォーカスする日にちを選択します。"
+
+#: build/components/index.js:19
+msgid "Left and Right Arrows"
+msgstr "十字キーの左右"
+
+#: build/components/index.js:19
+msgid "Up and Down Arrows"
+msgstr "十字キーの上下"
+
+#: build/components/index.js:19
+msgid "Move backward (PgUp) or forward (PgDn) by one month."
+msgstr "1ヶ月ずつ後ろ (PgUp) および前 (PgDn) に移動します。"
+
+#: build/components/index.js:19
+msgid "Go to the first (home) or last (end) day of a week."
+msgstr "1週間の初日 (home) または最終日 (end) に移動します。"
+
+#: build/components/index.js:19
+msgid "Home/End"
+msgstr "Home/End"
+
+#: build/components/index.js:19
+msgid "Home and End"
+msgstr "Home と End"
+
+#: build/components/index.js:19
+msgid "PgUp/PgDn"
+msgstr "PgUp/PgDn"
+
+#: build/components/index.js:19
+msgid "Page Up and Page Down"
+msgstr "Page Up と Page Down"
+
+#: build/components/index.js:19
+msgid "Color value in hexadecimal"
+msgstr "16進数での色指定"
+
+#: build/components/index.js:19
+msgid "Color value in RGB"
+msgstr "RGB 値での色指定"
+
+#: build/components/index.js:19
+msgid "Color value in HSL"
+msgstr "HSL 値での色指定"
+
+#: build/components/index.js:19
+msgid "RGB mode active"
+msgstr "RGB モードを使用中"
+
+#: build/components/index.js:19
+msgid "Hex color mode active"
+msgstr "16進数カラーモードを使用中"
+
+#: build/components/index.js:19
+msgid "Hue/saturation/lightness mode active"
+msgstr "色相 / 彩度 / 明度モードを使用中"
+
+#: build/components/index.js:19
+msgid "Move the arrow left or right to change hue."
+msgstr "矢印を左右に移動して色相を変更します。"
+
+#: build/components/index.js:19
+msgid "Hue value in degrees, from 0 to 359."
+msgstr "0から369までの度数による色相値。"
+
+#: build/components/index.js:19
+msgid "Alpha value, from 0 (transparent) to 1 (fully opaque)."
+msgstr "0 (透明) から1 (完全に不透明) までのアルファ値。"
+
+#: build/editor/index.js:17
+msgid "Save as Pending"
+msgstr "レビュー待ちとして保存"
+
+#: build/editor/index.js:17
+msgid "%s address"
+msgstr "%sのアドレス"
+
+#: build/edit-post/index.js:12
+msgid "Access all block and document tools in a single place"
+msgstr "ブロック・文書ツールを同じ場所にまとめる"
+
+#: build/edit-post/index.js:12
+msgid "Focus on one block at a time"
+msgstr "ひとつのブロックに集中"
+
+#: build/edit-post/index.js:12
+msgid "Work without distraction"
+msgstr "気が散る要素を隠す"
+
+#: build/block-library/index.js:14
+msgid "Media & Text"
+msgstr "メディアと文章"
+
+#: build/block-library/index.js:14
+msgid "Your site doesn’t include support for the \"%s\" block. You can leave this block intact, convert its content to a Custom HTML block, or remove it entirely."
+msgstr "\"%s\" ブロックはサイトでサポートされていません。そのまま残すか、カスタム HTML ブロックへ変換、または完全に削除してください。"
+
+#: build/block-library/index.js:14
+msgid "Your site doesn’t include support for the \"%s\" block. You can leave this block intact or remove it entirely."
+msgstr "\"%s\" ブロックはサイトでサポートされていません。そのまま残すか、完全に削除してください。"
+
+#: build/components/index.js:19
+msgid "Click the right or left arrows to select other months in the past or the future."
+msgstr "左右の矢印をクリックして、未来または過去の月を選択します。"
+
+#: build/components/index.js:19
+msgid "Move backward (left) or forward (right) by one day."
+msgstr "1日ずつ後ろ (左) および前 (右) に移動します。"
+
+#: build/components/index.js:19
+msgid "Move backward (up) or forward (down) by one week."
+msgstr "1週間ずつ後ろ (上) および前 (下) に移動します。"
+
+#: build/edit-post/index.js:12
+msgid "Open the block navigation menu."
+msgstr "ブロックナビゲーションメニューを開く。"
+
+#: build/block-library/index.js:14
+msgid "Your site doesn’t include support for this block."
+msgstr "このブロックはサイトで未対応です。"
+
+#: build/components/index.js:19
+msgid "Use your arrow keys to change the base color. Move up to lighten the color, down to darken, left to decrease saturation, and right to increase saturation."
+msgstr "矢印キーを使用して基本色を変更します。色を明るくするには上に、暗くするには下に、彩度を上げるには左に、彩度を下げるには右に動かしてください。"
+
+#: build/block-library/index.js:14
+msgid "Block Navigator"
+msgstr "ブロックナビゲーター"
+
+#: build/block-library/index.js:14
+msgid "Cover"
+msgstr "カバー"
+
+#: build/block-library/index.js:14
+msgid "Edit media"
+msgstr "メディアを編集"
+
+#: build/block-library/index.js:14
+msgid "Border Settings"
+msgstr "枠線設定"
+
+#: lib/widgets-page.php:58 build/block-editor/index.js:55
+msgid "Medium"
+msgstr "中"
+
+#: build/editor/index.js:17
+msgid "Are you ready to schedule?"
+msgstr "投稿を予約しますか ?"
+
+#: build/editor/index.js:17
+msgid "Always show pre-publish checks."
+msgstr "公開前チェックを常に表示する。"
+
+#: build/block-editor/index.js:55
+msgid "Paste URL or type to search"
+msgstr "URL をペーストまたは入力して検索"
+
+#: build/editor/index.js:17
+msgid "Take Over"
+msgstr "引き継ぐ"
+
+#: build/editor/index.js:17
+msgid "Another user is currently working on this post, which means you cannot make changes, unless you take over."
+msgstr "他のユーザーが現在この投稿を編集中です。引き継ぎの操作を行わない限り、変更を加えることはできません。"
+
+#: build/editor/index.js:17
+msgid "%s is currently working on this post, which means you cannot make changes, unless you take over."
+msgstr "%s さんが現在この投稿を編集中です。引き継ぎの操作を行わない限り、変更を加えることはできません。"
+
+#: build/editor/index.js:17
+msgid "Another user now has editing control of this post. Don’t worry, your changes up to this moment have been saved."
+msgstr "他のユーザーが現在この投稿のコントロールを編集中ですが、ご心配なく。これまでに加えた変更は保存されています。"
+
+#: build/editor/index.js:17
+msgid "%s now has editing control of this post. Don’t worry, your changes up to this moment have been saved."
+msgstr "%s さんが現在この投稿のコントロールを編集中ですが、ご心配なく。これまでに加えた変更は保存されています。"
+
+#: build/editor/index.js:17
+msgid "Terms"
+msgstr "項目"
+
+#: build/editor/index.js:17
+msgid "Your work will be published at the specified date and time."
+msgstr "この投稿は設定日時に公開されます。"
+
+#: build/block-editor/index.js:55
+msgid "Convert to HTML"
+msgstr "HTML に変換"
+
+#: build/block-library/index.js:14
+msgid "Insert Media"
+msgstr "メディアを挿入"
+
+#: build/edit-post/index.js:12
+msgid "Editing Code"
+msgstr "コードの編集"
+
+#: build/editor/index.js:17
+msgid "Avatar"
+msgstr "アバター"
+
+#: build/editor/index.js:17
+msgid "This post is already being edited."
+msgstr "この投稿は現在編集中です。"
+
+#: build/editor/index.js:17
+msgid "Someone else has taken over this post."
+msgstr "他の人がこの投稿の編集を引き継ぎました。"
+
+#: build/block-editor/index.js:55
+msgid "This block contains unexpected or invalid content."
+msgstr "このブロックには、想定されていないか無効なコンテンツが含まれています。"
+
+#: build/block-editor/index.js:55
+msgid "Resolve Block"
+msgstr "ブロックの問題を解決"
+
+#: build/edit-post/index.js:12
+msgid "This block can only be used once."
+msgstr "このブロックは一度のみ使用できます。"
+
+#: build/edit-post/index.js:12
+msgid "Exit Code Editor"
+msgstr "コードエディターを終了"
+
+#: build/block-library/index.js:14
+msgid "Main Color"
+msgstr "メインカラー"
+
+#: build/block-library/index.js:14
+msgid "HTML"
+msgstr "HTML"
+
+#: build/block-library/index.js:14
+msgid "Write HTML…"
+msgstr "HTML を入力…"
+
+#: build/block-library/index.js:14
+msgid "Media Settings"
+msgstr "メディア設定"
+
+#: build/block-library/index.js:14
+msgid "Overlay Color"
+msgstr "オーバーレイの色"
+
+#: build/block-library/index.js:14
+msgid "Overlay"
+msgstr "オーバーレイ"
+
+#: build/block-library/index.js:14
+msgid "Solid Color"
+msgstr "無地"
+
+#: build/block-editor/index.js:55
+msgid "%d block"
+msgid_plural "%d blocks"
+msgstr[0] "%d個のブロック"
+
+#: build/list-reusable-blocks/index.js:1
+msgid "Invalid JSON file"
+msgstr "無効な JSON ファイル"
+
+#: build/list-reusable-blocks/index.js:1
+msgid "Import from JSON"
+msgstr "JSON からインポート"
+
+#: build/keycodes/index.js:1
+msgid "Backtick"
+msgstr "バックティック"
+
+#: build/keycodes/index.js:1
+msgid "Comma"
+msgstr "カンマ"
+
+#: build/block-editor/index.js:55
+msgid "Current"
+msgstr "現在"
+
+#: build/block-editor/index.js:55
+msgid "After Conversion"
+msgstr "変換後"
+
+#: build/keycodes/index.js:1
+msgid "Period"
+msgstr "ピリオド"
+
+#: build/block-editor/index.js:55
+msgid "Change alignment"
+msgstr "配置を変更"
+
+#: build/block-editor/index.js:55
+msgid "Change text alignment"
+msgstr "テキストの配置を変更"
+
+#: build/edit-post/index.js:12
+msgid "Escape"
+msgstr "エスケープ"
+
+#: build/edit-post/index.js:12
+msgid "Forward-slash"
+msgstr "前方スラッシュ"
+
+#: build/block-editor/index.js:55
+msgid "Change type of %d block"
+msgid_plural "Change type of %d blocks"
+msgstr[0] "%d個のブロックのタイプを変更する"
+
+#: build/list-reusable-blocks/index.js:1
+msgid "Invalid Reusable Block JSON file"
+msgstr "無効な再利用ブロックの JSON ファイル"
+
+#: build/list-reusable-blocks/index.js:1
+msgid "Reusable block imported successfully!"
+msgstr "再利用ブロックは正常にインポートされました。"
+
+#: build/edit-post/index.js:12
+msgid "Fullscreen Mode"
+msgstr "フルスクリーンモード"
+
+#: build/media-utils/index.js:1
+msgid "This file is empty."
+msgstr "このファイルは空です。"
+
+#: build/editor/index.js:17
+msgid "Title"
+msgstr "タイトル"
+
+#: build/block-library/blocks/archives.php:104
+msgid "No archives to show."
+msgstr "表示するアーカイブはありません。"
+
+#: build/media-utils/index.js:1
+msgid "Sorry, this file type is not supported here."
+msgstr "このファイル形式はこの箇所で非対応です。"
+
+#: build/block-editor/index.js:55 build/edit-post/index.js:12
+msgid "Manage All Reusable Blocks"
+msgstr "再利用ブロックを管理"
+
+#: post-content.php:41
+msgid "Beautiful landscape"
+msgstr "美しい風景"
+
+#: build/block-library/index.js:14
+msgid "blockquote"
+msgstr "引用"
+
+#: build/block-editor/index.js:55
+msgid "Convert to Classic Block"
+msgstr "クラシックブロックに変換"
+
+#: build/block-library/index.js:14
+msgid "Poster Image"
+msgstr "ポスター画像"
+
+#: build/block-library/index.js:14
+msgid "Select Poster Image"
+msgstr "ポスター画像を選択"
+
+#: build/block-library/index.js:14
+msgid "Remove Poster Image"
+msgstr "ポスター画像を削除"
+
+#: build/editor/index.js:17
+msgid "Close panel"
+msgstr "パネルを閉じる"
+
+#: build/block-library/index.js:14
+msgid "Text Columns (deprecated)"
+msgstr "テキストカラム (非推奨)"
+
+#: build/block-library/index.js:14
+msgid "Subheading (deprecated)"
+msgstr "小見出し (非推奨)"
+
+#: build/block-library/index.js:14
+msgid "This block is deprecated. Please use the Columns block instead."
+msgstr "このブロックは非推奨です。代わりにカラムブロックを使用してください。"
+
+#: build/block-library/index.js:14
+msgid "Row Count"
+msgstr "行数"
+
+#: build/block-library/index.js:14
+msgid "Column Count"
+msgstr "列数"
+
+#: build/block-library/index.js:14
+msgid "This block is deprecated. Please use the Paragraph block instead."
+msgstr "このブロックは非推奨です。代わりに段落ブロックを使用してください。"
+
+#: build/edit-post/index.js:12
+msgid "Spotlight Mode"
+msgstr "スポットライトモード"
+
+#: build/edit-post/index.js:12
+msgid "Change the block type after adding a new paragraph."
+msgstr "新規段落の追加後、ブロックタイプを変更します。"
+
+#: build/editor/index.js:17
+msgid "Add tags"
+msgstr "タグを追加"
+
+#: build/editor/index.js:17
+msgid "Apply the \"%1$s\" format."
+msgstr "「%1$s」形式を適用。"
+
+#: build/editor/index.js:17
+msgid "Use a post format"
+msgstr "投稿フォーマットを使用"
+
+#: build/block-editor/index.js:55
+msgid "Insert After"
+msgstr "後に挿入"
+
+#: build/block-editor/index.js:55
+msgid "Insert Before"
+msgstr "前に挿入"
+
+#: build/edit-post/index.js:12
+msgid "Block shortcuts"
+msgstr "ブロックショートカット"
+
+#: build/edit-post/index.js:12
+msgid "Selection shortcuts"
+msgstr "選択ショートカット"
+
+#: build/edit-post/index.js:12
+msgid "Duplicate the selected block(s)."
+msgstr "選択したブロックを複製する。"
+
+#: build/edit-post/index.js:12
+msgid "Remove the selected block(s)."
+msgstr "選択したブロックを削除する。"
+
+#: build/edit-post/index.js:12
+msgid "Insert a new block before the selected block(s)."
+msgstr "選択したブロックの前に新しいブロックを挿入する。"
+
+#: build/edit-post/index.js:12
+msgid "Select all text when typing. Press again to select all blocks."
+msgstr "入力中にすべてのテキストを選択します。すべてのブロックを選択するにはもう一度押してください。"
+
+#: build/edit-post/index.js:12
+msgid "Global shortcuts"
+msgstr "グローバルショートカット"
+
+#: build/edit-post/index.js:12
+msgid "Remove a link."
+msgstr "リンクを削除する。"
+
+#: build/edit-post/index.js:12
+msgid "Convert the selected text into a link."
+msgstr "選択したテキストをリンクに変換する。"
+
+#: build/edit-post/index.js:12
+msgid "Underline the selected text."
+msgstr "選択したテキストに下線を付ける。"
+
+#: build/edit-post/index.js:12
+msgid "Make the selected text italic."
+msgstr "選択したテキストを斜体にする。"
+
+#: build/edit-post/index.js:12
+msgid "Make the selected text bold."
+msgstr "選択したテキストを太字にする。"
+
+#: build/edit-post/index.js:12
+msgid "Text formatting"
+msgstr "書式設定"
+
+#: build/edit-post/index.js:12
+msgid "Insert a new block after the selected block(s)."
+msgstr "選択したブロックの後に新しいブロックを挿入する。"
+
+#: build/edit-post/index.js:12
+msgid "Switch between Visual Editor and Code Editor."
+msgstr "ビジュアルエディターとコードエディターを切り替える。"
+
+#: build/edit-post/index.js:12
+msgid "Clear selection."
+msgstr "選択肢をクリアする。"
+
+#: build/edit-post/index.js:12
+msgid "Navigate to the previous part of the editor (alternative)."
+msgstr "エディターの前の部分に移動する (代替オプション) 。"
+
+#: build/edit-post/index.js:12
+msgid "Navigate to the previous part of the editor."
+msgstr "エディターの前の部分に移動する。"
+
+#: build/edit-post/index.js:12
+msgid "Show or hide the settings sidebar."
+msgstr "設定サイドバーの表示/非表示を切り替える。"
+
+#: build/edit-post/index.js:12
+msgid "Redo your last undo."
+msgstr "前回の取り消しをやり直す。"
+
+#: build/edit-post/index.js:12
+msgid "Undo your last changes."
+msgstr "直前の変更を取り消す。"
+
+#: build/edit-post/index.js:12
+msgid "Save your changes."
+msgstr "変更を保存する。"
+
+#: build/block-editor/index.js:55
+msgid "Move %1$d block from position %2$d down by one place"
+msgid_plural "Move %1$d blocks from position %2$d down by one place"
+msgstr[0] "%1$d個のブロックを%2$dの位置から1つ下に移動する"
+
+#: build/block-editor/index.js:55
+msgid "Move %1$d block from position %2$d up by one place"
+msgid_plural "Move %1$d blocks from position %2$d up by one place"
+msgstr[0] "%1$d個のブロックを%2$dの位置から1つ上に移動する"
+
+#: build/block-editor/index.js:55
+msgid "Move %1$s block from position %2$d up to position %3$d"
+msgstr "%1$d個のブロックを%2$dの位置から%3$dの位置に移動する"
+
+#: build/edit-post/index.js:12
+msgid "Keyboard Shortcuts"
+msgstr "キーボードショートカット"
+
+#: build/block-library/index.js:14
+msgid "movie"
+msgstr "動画"
+
+#: build/editor/index.js:17
+msgid "Your theme uses post formats to highlight different kinds of content, like images or videos. Apply a post format to see this special styling."
+msgstr "ご利用中のテーマでは投稿フォーマットを使用し、画像や動画といった異なる種類のコンテンツをハイライトしています。投稿フォーマットを適用し、独自のスタイルを確認してください。"
+
+#: build/editor/index.js:17
+msgid "Tags help users and search engines navigate your site and find your content. Add a few keywords to describe your post."
+msgstr "タグは、サーチエンジンがユーザーをあなたのサイトへ誘導したり、ユーザーがコンテンツを探す際の助けになります。いくつかのキーワードを足して投稿の説明をしてみましょう。"
+
+#: build/edit-post/index.js:12
+msgid "Navigate to the next part of the editor (alternative)."
+msgstr "エディターの後の部分に移動する (代替オプション) 。"
+
+#: build/edit-post/index.js:12
+msgid "Navigate to the next part of the editor."
+msgstr "エディターの後の部分に移動する。"
+
+#: build/block-editor/index.js:55
+msgid "Move %1$s block from position %2$d down to position %3$d"
+msgstr "%1$sブロックを%2$dから%3$dへ移動する"
+
+#: post-content.php:185
+msgid "Thanks for testing Gutenberg!"
+msgstr "Gutenberg をテストしていただき、ありがとうございます !"
+
+#: post-content.php:177
+msgid "Help build Gutenberg"
+msgstr "Gutenberg の開発を手伝う"
+
+#: post-content.php:159
+msgid "The WordPress community"
+msgstr "WordPress コミュニティ"
+
+#: post-content.php:159
+msgid "Code is Poetry"
+msgstr "Code is Poetry"
+
+#: post-content.php:116
+msgid "Media Rich"
+msgstr "メディア重視"
+
+#: post-content.php:89
+msgid "Matt Mullenweg, 2017"
+msgstr "マット・マレンウェッグ、2017"
+
+#. translators: %s: Gutenberg GitHub repository URL
+#: post-content.php:168
+msgid "If you want to learn more about how to build additional blocks, or if you are interested in helping with the project, head over to the <a href=\"%s\">GitHub repository</a>."
+msgstr "追加ブロックを作成する方法を学んだり、プロジェクトに協力したりすることに興味がある場合は、<a href=\"%s\">GitHubリポジトリ</a>へ移動してください。"
+
+#: post-content.php:155
+msgid "You can build any block you like, static or dynamic, decorative or plain. Here&#8217;s a pullquote block:"
+msgstr "静的または動的、装飾的またはプレーンなものなど、お好みのブロックを構築できます。こちらがプルクオートブロックです。"
+
+#: post-content.php:124
+msgid "Accessibility is important &mdash; don&#8217;t forget image alt attribute"
+msgstr "アクセシビリティは重要です &mdash; 画像の Alt 属性をお忘れなく。"
+
+#: post-content.php:128
+msgid "Sure, the full-wide image can be pretty big. But sometimes the image is worth it."
+msgstr "全幅画像はかなり大きくなる場合もありますが、画像によってはそうする価値があることもあります。"
+
+#: post-content.php:88
+msgid "The editor will endeavor to create a new page and post building experience that makes writing rich posts effortless, and has “blocks” to make it easy what today might take shortcodes, custom HTML, or “mystery meat” embed discovery."
+msgstr "このエディターは、リッチな投稿や固定ページの作成を簡単にする、新しい執筆体験を生み出そうとしています。また「ブロック」によって、現在はショートコード、カスタム HTML、外部埋め込みコード自動ディスカバリー機能が実現していることをより簡単にします。"
+
+#: post-content.php:112
+msgid "You can change the amount of columns in your galleries by dragging a slider in the block inspector in the sidebar."
+msgstr "サイドバーのブロックインスペクターでスライダーをドラッグすると、ギャラリーのカラム数を変更できます。"
+
+#: post-content.php:145
+msgid "Any block can opt into these alignments. The embed block has them also, and is responsive out of the box:"
+msgstr "あらゆるブロックでこれらの配置を選択できます。埋め込みブロックでも利用でき、ボックス外でもレスポンシブ対応しています:"
+
+#: post-content.php:141
+msgid "The above is a gallery with just two images. It&#8217;s an easier way to create visually appealing layouts, without having to deal with floats. You can also easily convert the gallery back to individual images again, by using the block switcher."
+msgstr "上は2つの画像のみのギャラリーです。フロート調整を行うことなく、魅力的な見た目のレイアウトを簡単に作成することができます。またブロックを切り替えて、ギャラリーを個別の画像へ簡単に戻すこともできます。"
+
+#: post-content.php:98
+msgid "Blocks can be anything you need. For instance, you may want to add a subdued quote as part of the composition of your text, or you may prefer to display a giant stylized one. All of these options are available in the inserter."
+msgstr "ブロックは、必要なもの何でもかまいません。たとえば、テキスト構成の一部として目立たない引用符を追加してもよいでしょう。または、巨大で装飾的なものを表示させることもできます。これらのオプションはすべて挿入ツール内で利用できます。"
+
+#: post-content.php:94
+msgid "The information corresponding to the source of the quote is a separate text field, similar to captions under images, so the structure of the quote is protected even if you select, modify, or remove the source. It&#8217;s always easy to add it back."
+msgstr "引用の​​ソースに対応する情報は、画像下のキャプションに似た別のテキストフィールドです。このため、ソースを選択、変更、または削除しても、引用自体の​​構造は保護されます。いつでも簡単に戻すことができます。"
+
+#: post-content.php:120
+msgid "If you combine the new <strong>wide</strong> and <strong>full-wide</strong> alignments with galleries, you can create a very media rich layout, very quickly:"
+msgstr "新しい<strong>幅広</strong>と<strong>全幅</strong>配置をギャラリーと組み合わせると、非常にメディアリッチなレイアウトをすばやく作成できます。"
+
+#: post-content.php:79
+msgid "Visual Editing"
+msgstr "ビジュアル編集"
+
+#: post-content.php:67
+msgid "Galleries"
+msgstr "ギャラリー"
+
+#: post-content.php:66
+msgid "Images &amp; Videos"
+msgstr "画像と動画"
+
+#: post-content.php:65
+msgid "Text &amp; Headings"
+msgstr "テキストと見出し"
+
+#: post-content.php:52
+msgid "The <em>Inserter</em> Tool"
+msgstr "「挿入」ツール"
+
+#: lib/demo.php:59
+msgid "Welcome to the Gutenberg Editor"
+msgstr "Gutenberg エディターにようこそ"
+
+#: build/editor/index.js:17
+msgid "Are you sure you want to unschedule this post?"
+msgstr "本当にこの投稿の予約を取り消しますか ?"
+
+#: build/block-library/index.js:14
+msgid "Alt Text (Alternative Text)"
+msgstr "Alt テキスト (代替テキスト)"
+
+#: post-content.php:69
+msgid "Layout blocks, like Buttons, Hero Images, Separators, etc."
+msgstr "ボタンやヒーロー画像、区切りなどのレイアウトブロック。"
+
+#: post-content.php:68
+msgid "Embeds, like YouTube, Tweets, or other WordPress posts."
+msgstr "YouTube、ツイート、他の WordPress 投稿などの埋め込み。"
+
+#: post-content.php:24
+msgid "... like this one, which is right aligned."
+msgstr "…例えば、右揃えのこれのようなものです。"
+
+#: post-content.php:42
+msgid "If your theme supports it, you&#8217;ll see the \"wide\" button on the image toolbar. Give it a try."
+msgstr "テーマでサポートされていれば、画像ツールバーに「幅広」ボタンが表示されます。お試しください。"
+
+#: post-content.php:70
+msgid "And <em>Lists</em> like this one of course :)"
+msgstr "もちろん、このような<em>リスト</em>も ^^"
+
+#: post-content.php:11
+msgid "Of Mountains &amp; Printing Presses"
+msgstr "Gutenberg を試してみよう"
+
+#: post-content.php:16
+msgid "The goal of this new editor is to make adding rich content to WordPress simple and enjoyable. This whole post is composed of <em>pieces of content</em>—somewhat similar to LEGO bricks—that you can move around and interact with. Move your cursor around and you&#8217;ll notice the different blocks light up with outlines and arrows. Press the arrows to reposition blocks quickly, without fearing about losing things in the process of copying and pasting."
+msgstr "この新しいエディターのゴールは、WordPress へのリッチコンテンツの追加をシンプルで楽しくすることです。この投稿全体が<em>コンテンツのパーツ</em>—LEGO ブロックのようなもの—により構成されており、動かしたり操作できるようになっています。カーソルを動かすと、様々なブロックが枠線と矢印とともにフォーカスされます。矢印を押すとブロックをすばやく並び替えることができ、コピー & ペーストしているうちに内容が消えてしまう恐れがありません。"
+
+#: post-content.php:20
+msgid "What you are reading now is a <strong>text block</strong> the most basic block of all. The text block has its own controls to be moved freely around the post..."
+msgstr "現在ご覧いただいているのが<strong>テキストブロック</strong>で、すべてのブロックのうち一番基本のブロックです。テキストブロックは、投稿内を自由に移動できる独自のコントロールがついています。"
+
+#: post-content.php:32
+msgid "A Picture is Worth a Thousand Words"
+msgstr "百聞は一画像にしかず"
+
+#: post-content.php:28
+msgid "Headings are separate blocks as well, which helps with the outline and organization of your content."
+msgstr "見出しは別ブロックとなっており、コンテンツのアウトラインと構成に役立ちます。"
+
+#: post-content.php:36
+msgid "Handling images and media with the utmost care is a primary focus of the new editor. Hopefully, you&#8217;ll find aspects of adding captions or going full-width with your pictures much easier and robust than before."
+msgstr "画像とメディア取り扱いへの高い気遣いは、新しいエディターのメインフォーカスです。キャプションを追加したり、全幅にするのがより簡単で協力になっているのにお気づきいただけるでしょう。"
+
+#: post-content.php:48
+msgid "Try selecting and removing or editing the caption, now you don&#8217;t have to be careful about selecting the image or other text by mistake and ruining the presentation."
+msgstr "キャプションを選択、削除、編集してみてください。画像や他のテキストを間違って選択して、表示を台無しにしないよう気を使わずに済むようになりました。"
+
+#: post-content.php:56
+msgid "Imagine everything that WordPress can do is available to you quickly and in the same place on the interface. No need to figure out HTML tags, classes, or remember complicated shortcode syntax. That&#8217;s the spirit behind the inserter—the <code>(+)</code> button you&#8217;ll see around the editor—which allows you to browse all available content blocks and add them into your post. Plugins and themes are able to register their own, opening up all sort of possibilities for rich editing and publishing."
+msgstr "WordPress ができるすべてのことが、すばやく、同じ場所・インターフェイスで可能であると想像してみてください。HTML タグやクラスを理解したり、複雑なショートコード構文を覚える必要はありません。これこそが「挿入」ツール—エディター中にある <code>(+)</code> ボタン—の真髄で、すべての利用可能なコンテンツブロックを閲覧し、投稿に追加することができます。プラグインとテーマは独自のブロックを登録することができ、リッチな編集や公開の可能性を広げます。"
+
+#: post-content.php:60
+msgid "Go give it a try, you may discover things WordPress can already add into your posts that you didn&#8217;t know about. Here&#8217;s a short list of what you can currently find there:"
+msgstr "お試しいただくと、WordPress が投稿に追加可能でありながら、ご存知ではなかったものを見つけていただけるでしょう、以下はこの投稿が使用しているブロックの簡単なリストです。"
+
+#: build/block-library/index.js:14
+msgctxt "block name"
+msgid "More"
+msgstr "続きを読む"
+
+#: post-content.php:83
+msgid "A huge benefit of blocks is that you can edit them in place and manipulate your content directly. Instead of having fields for editing things like the source of a quote, or the text of a button, you can directly change the content. Try editing the following quote:"
+msgstr "ブロックの大きな利点は、それぞれの場所で編集し、コンテンツを直接操作できることです。引用ソースやボタン内テキストなどを編集するためのフィールドを持つのではなく、コンテンツを直接変更できます。以下の引用を編集してみてください:"
+
+#: build/block-library/index.js:14
+msgid "Reusable Block"
+msgstr "再利用ブロック"
+
+#: build/block-library/index.js:14
+msgctxt "button to expand options"
+msgid "More"
+msgstr "さらに表示"
+
+#: build/editor/index.js:17
+msgid "Untitled Reusable Block"
+msgstr "無題の再利用ブロック"
+
+#: lib/class-wp-rest-widget-areas-controller.php:98
+msgid "Unique identifier for the object."
+msgstr "オブジェクトの独自識別子。"
+
+#: build/editor/index.js:17
+msgid "Remove from Reusable Blocks"
+msgstr "再利用ブロックから削除"
+
+#: build/editor/index.js:17
+msgid "Add to Reusable Blocks"
+msgstr "再利用ブロックに追加"
+
+#: build/block-library/index.js:14
+msgid "Keep as HTML"
+msgstr "HTML として保持"
+
+#: build/block-editor/index.js:55
+msgid "Reusable"
+msgstr "再利用可能"
+
+#: build/block-editor/index.js:55
+msgid "(%s: %s)"
+msgstr "(%s: %s)"
+
+#: build/block-editor/index.js:55
+msgid "(current %s: %s)"
+msgstr "(現在の %s: %s)"
+
+#: build/block-library/index.js:14
+msgid "Reusable Block: %s"
+msgstr "再利用ブロック: %s"
+
+#: build/block-library/index.js:14
+msgid "Edit URL"
+msgstr "URL を編集"
+
+#: build/block-library/index.js:14
+msgid "Color Settings"
+msgstr "色設定"
+
+#: build/block-library/index.js:14
+msgid "recent comments"
+msgstr "最近のコメント"
+
+#: build/block-library/index.js:14
+msgid "Latest Comments"
+msgstr "最新のコメント"
+
+#: build/block-library/index.js:14
+msgid "Display Excerpt"
+msgstr "抜粋を表示"
+
+#: build/block-library/index.js:14
+msgid "Display Date"
+msgstr "日付を表示"
+
+#: build/block-library/index.js:14
+msgid "Display Avatar"
+msgstr "アバターを表示"
+
+#: build/block-library/index.js:14
+msgid "Number of Comments"
+msgstr "コメント数"
+
+#: build/block-library/index.js:14
+msgid "Background Opacity"
+msgstr "背景の透過率"
+
+#: build/block-library/index.js:14
+msgid "Display as Dropdown"
+msgstr "ドロップダウンで表示"
+
+#. translators: 1: author name (inside <a> or <span> tag, based on if they have
+#. a URL), 2: post title related to this comment
+#: build/block-library/blocks/latest-comments.php:99
+msgid "%1$s on %2$s"
+msgstr "%2$s に %1$s より"
+
+#: build/block-library/index.js:14
+msgid "Auto"
+msgstr "自動"
+
+#: build/block-library/index.js:14
+msgid "Muted"
+msgstr "ミュート (消音)"
+
+#: build/block-library/index.js:14
+msgid "Audio Settings"
+msgstr "音声設定"
+
+#: build/block-library/index.js:14
+msgid "Archives Settings"
+msgstr "アーカイブ設定"
+
+#: build/block-library/blocks/archives.php:35 build/block-library/index.js:14
+msgid "Archives"
+msgstr "アーカイブ"
+
+#: build/block-library/index.js:14
+msgid "Preload"
+msgstr "先読み"
+
+#: build/block-library/index.js:14
+msgid "Show Post Counts"
+msgstr "投稿数を表示"
+
+#: build/block-library/blocks/archives.php:65
+msgid "Select Post"
+msgstr "投稿を選択"
+
+#: gutenberg.php:60
+msgid "Support"
+msgstr "サポート"
+
+#: gutenberg.php:62
+msgid "https://wordpress.org/support/plugin/gutenberg"
+msgstr "https://ja.wordpress.org/support/plugin/gutenberg"
+
+#: build/block-library/index.js:14
+msgid "Video Settings"
+msgstr "動画設定"
+
+#: build/block-library/index.js:14
+msgid "Latest Comments Settings"
+msgstr "最新のコメント設定"
+
+#: build/block-library/blocks/latest-comments.php:147
+msgid "No comments to show."
+msgstr "表示できるコメントはありません。"
+
+#: build/block-library/blocks/archives.php:53
+msgid "Select Year"
+msgstr "年を選択"
+
+#: build/block-library/blocks/archives.php:56
+msgid "Select Month"
+msgstr "月を選択"
+
+#: build/block-library/blocks/archives.php:59
+msgid "Select Day"
+msgstr "日を選択"
+
+#: build/block-library/blocks/archives.php:62
+msgid "Select Week"
+msgstr "週を選択"
+
+#: build/api-fetch/index.js:1
+msgid "The response is not a valid JSON response."
+msgstr "返答が正しい JSON レスポンスではありません。"
+
+#: build/edit-post/index.js:12
+msgid "Editor publish"
+msgstr "エディターの投稿パネル"
+
+#: build/block-library/index.js:14
+msgid "Display a monthly archive of your posts."
+msgstr "記事の月別アーカイブを表示します。"
+
+#: build/components/index.js:19
+msgid "Close dialog"
+msgstr "ダイアログを閉じる"
+
+#: build/block-library/index.js:14
+msgid "Autoplay"
+msgstr "自動再生"
+
+#: build/block-library/index.js:14
+msgid "Loop"
+msgstr "ループ"
+
+#: build/block-library/index.js:14
+msgid "Column"
+msgstr "カラム"
+
+#: build/block-library/index.js:14
+msgid "Playback Controls"
+msgstr "プレイバックコントロール"
+
+#: build/block-library/index.js:14
+msgid "pdf"
+msgstr "pdf"
+
+#: build/edit-post/index.js:12
+msgid "Open publish panel"
+msgstr "公開パネルを開く"
+
+#: build/block-editor/index.js:55
+msgid "Very dark gray"
+msgstr "ダーク・グレー"
+
+#: build/block-editor/index.js:55
+msgid "Very light gray"
+msgstr "ライト・グレー"
+
+#: build/format-library/index.js:1
+msgid "Inline image"
+msgstr "インライン画像"
+
+#: build/block-library/index.js:14
+msgid "Wide Line"
+msgstr "幅広線"
+
+#: build/block-editor/index.js:55
+msgid "Remove Block"
+msgstr "ブロックを削除"
+
+#: build/block-editor/index.js:55 build/edit-post/index.js:12
+msgid "Available block types"
+msgstr "利用可能なブロックタイプ"
+
+#: build/block-editor/index.js:55
+msgid "Transform To:"
+msgstr "変換:"
+
+#: build/block-library/index.js:14
+msgid "Dots"
+msgstr "ドット"
+
+#: build/block-library/index.js:14
+msgid "Show download button"
+msgstr "ダウンロードボタンを表示"
+
+#: lib/widgets-page.php:59 build/block-editor/index.js:55
+msgid "Large"
+msgstr "大"
+
+#: build/block-library/index.js:14
+msgid "Edit file"
+msgstr "ファイルを編集"
+
+#: build/block-library/index.js:14 build/list-reusable-blocks/index.js:1
+msgid "File"
+msgstr "ファイル"
+
+#: build/block-library/index.js:14
+msgid "Copy URL"
+msgstr "URL をコピー"
+
+#: build/block-library/index.js:14
+msgid "Text link settings"
+msgstr "テキストリンク設定"
+
+#: build/block-library/index.js:14
+msgid "Download button settings"
+msgstr "ダウンロードボタン設定"
+
+#: build/block-library/index.js:14
+msgid "Link To"
+msgstr "リンク先"
+
+#: build/block-library/index.js:14
+msgid "Outline"
+msgstr "アウトライン"
+
+#: build/block-library/index.js:14
+msgid "A single column within a columns block."
+msgstr "カラムブロック内の1つのカラム。"
+
+#: build/block-editor/index.js:55
+msgid "Vivid red"
+msgstr "レッド"
+
+#: build/block-editor/index.js:55
+msgid "Pale pink"
+msgstr "ピンク"
+
+#: build/block-editor/index.js:55
+msgid "Luminous vivid amber"
+msgstr "琥珀"
+
+#: build/block-editor/index.js:55
+msgid "Luminous vivid orange"
+msgstr "オレンジ"
+
+#: build/block-editor/index.js:55
+msgid "Vivid green cyan"
+msgstr "鮮やかなグリーンシアン"
+
+#: build/block-editor/index.js:55
+msgid "Light green cyan"
+msgstr "薄いグリーンシアン"
+
+#: build/block-editor/index.js:55
+msgid "Pale cyan blue"
+msgstr "淡いシアンブルー"
+
+#: build/block-editor/index.js:55
+msgid "Vivid cyan blue"
+msgstr "鮮やかなシアンブルー"
+
+#: build/block-editor/index.js:55
+msgid "Cyan bluish gray"
+msgstr "シアンブルーグレー"
+
+#: build/block-library/index.js:14
+msgid "Write file name…"
+msgstr "ファイル名を入力..."
+
+#: build/block-library/index.js:14
+msgid "document"
+msgstr "文書"
+
+#: build/edit-post/index.js:12
+msgid "Welcome to the wonderful world of blocks! Click the “+” (“Add block”) button to add a new block. There are blocks available for all kinds of content: you can insert text, headings, images, lists, and lots more!"
+msgstr "ブロックエディターへようこそ。新しいブロックを追加するには、\"+\" (ブロックを追加) ボタンをクリックしてください。テキスト、見出し、画像、リストなど、あらゆる種類のコンテンツのブロックを多数利用できます。"
+
+#: build/nux/index.js:1
+msgid "See next tip"
+msgstr "次のヒントを見る"
+
+#: build/nux/index.js:1
+msgid "Disable tips"
+msgstr "ヒントを無効化"
+
+#: build/block-library/index.js:14
+msgid "Replace image"
+msgstr "画像の置き換え"
+
+#: build/block-library/index.js:14
+msgid "Remove image"
+msgstr "画像の削除"
+
+#: build/media-utils/index.js:1
+msgid "Sorry, this file type is not permitted for security reasons."
+msgstr "このファイルタイプはセキュリティ上の理由から、許可されていません。"
+
+#: build/editor/index.js:17
+msgid "Are you ready to submit for review?"
+msgstr "レビューをリクエストする準備ができましたか ?"
+
+#: build/nux/index.js:1
+msgid "Got it"
+msgstr "OK"
+
+#: build/editor/index.js:17
+msgid "When you’re ready, submit your work for review, and an Editor will be able to approve it for you."
+msgstr "準備ができたらレビューをリクエストしましょう。編集者が承認して公開できます。"
+
+#: build/editor/index.js:17
+msgid "Finished writing? That’s great, let’s get this published right now. Just click “Publish” and you’re good to go."
+msgstr "書き終えたら、さっそく公開してみましょう。あとは「公開する」をクリックするだけです。"
+
+#: build/editor/index.js:17
+msgid "Click “Preview” to load a preview of this page, so you can make sure you’re happy with your blocks."
+msgstr "「プレビュー」をクリックして、このページのプレビューを表示しましょう。ブロックが期待通り表示されているか確認できます。"
+
+#: build/editor/index.js:17
+msgid "Autosaving"
+msgstr "自動保存中"
+
+#: build/block-library/index.js:14
+msgid "Enter URL here…"
+msgstr "URLをここに入力..."
+
+#: build/editor/index.js:17
+msgid "View the autosave"
+msgstr "自動保存を表示"
+
+#: build/editor/index.js:17
+msgid "There is an autosave of this post that is more recent than the version below."
+msgstr "以下のバージョンよりも新しい自動保存された投稿があります。"
+
+#: build/media-utils/index.js:1
+msgid "Error while uploading file %s to the media library."
+msgstr "ファイル %s をメディアライブラリへアップロード中にエラーが発生しました。"
+
+#: build/media-utils/index.js:1
+msgid "This file exceeds the maximum upload size for this site."
+msgstr "このファイルはサイトの最大アップロードサイズを超えています。"
+
+#: build/list-reusable-blocks/index.js:1
+msgid "Unknown error"
+msgstr "不明なエラー"
+
+#: build/server-side-render/index.js:1
+msgid "Error loading block: %s"
+msgstr "ブロック読み込みエラー: %s"
+
+#: build/edit-post/index.js:12
+msgid "Pin to toolbar"
+msgstr "ツールバーに固定"
+
+#: build/edit-post/index.js:12
+msgid "Unpin from toolbar"
+msgstr "ツールバーへの固定解除"
+
+#: build/block-library/index.js:14
+msgid "Fixed width table cells"
+msgstr "固定幅のテーブルセル"
+
+#: build/block-library/index.js:14
+msgid "Table Settings"
+msgstr "テーブル設定"
+
+#: build/block-library/index.js:14
+msgid "Display a list of your most recent posts."
+msgstr "最近の投稿の一覧を表示します。"
+
+#: build/block-library/index.js:14
+msgid "Add a block that displays content pulled from other sites, like Twitter, Instagram or YouTube."
+msgstr "Twitter、Instagram、YouTube など他サイトからコンテンツを引用表示するブロックを追加します。"
+
+#: build/block-library/index.js:14
+msgid "Add a block that displays content in multiple columns, then add whatever content blocks you’d like."
+msgstr "複数カラム表示のブロックを追加して、お好みのブロックを配置しましょう。"
+
+#: build/block-library/index.js:14
+msgid "Add text that respects your spacing and tabs, and also allows styling."
+msgstr "スペースやタブを含むテキストを追加し、スタイリングして表示します。"
+
+#: build/block-library/index.js:14
+msgid "Insert a table — perfect for sharing charts and data."
+msgstr "表の挿入。チャートとデータの共有に最適です。"
+
+#: build/block-library/index.js:14
+msgid "Height in pixels"
+msgstr "ピクセル値での高さ "
+
+#: build/block-library/index.js:14
+msgid "Name:"
+msgstr "名前:"
+
+#: build/components/index.js:19
+msgid "Color code: %s"
+msgstr "カラーコード: %s"
+
+#: build/editor/index.js:17
+msgid "Permalink copied"
+msgstr "パーマリンクをコピーしました"
+
+#: build/block-library/index.js:14
+msgid "Spacer Settings"
+msgstr "余白の設定"
+
+#: build/editor/index.js:17
+msgid "Copy the permalink"
+msgstr "パーマリンクをコピー"
+
+#: build/block-library/index.js:14
+msgid "Toggle to show a large initial letter."
+msgstr "先頭文字を大きな表示に切り替えます。"
+
+#: lib/rest-api.php:48
+msgid "Embed Handler"
+msgstr "埋め込みハンドラー"
+
+#: build/components/index.js:19
+msgid "%1$s (%2$s of %3$s)"
+msgstr "%1$s (%2$s/%3$s)"
+
+#: build/components/index.js:19
+msgid "Remove item"
+msgstr "項目を削除"
+
+#: build/editor/index.js:17
+msgctxt "term"
+msgid "Remove %s"
+msgstr "%sを削除"
+
+#: build/block-library/index.js:14
+msgid "Showing large initial letter."
+msgstr "先頭文字を大きく表示しています。"
+
+#: build/block-library/index.js:14
+msgid "Spacer"
+msgstr "スペーサー"
+
+#: build/edit-post/index.js:12
+msgid "Hide Block Settings"
+msgstr "ブロック設定を非表示"
+
+#: build/edit-post/index.js:12
+msgid "Show Block Settings"
+msgstr "ブロック設定を表示"
+
+#: build/block-library/index.js:14
+msgid "Page break"
+msgstr "ページ区切り"
+
+#: build/format-library/index.js:1
+msgid "Unlink"
+msgstr "リンクを解除"
+
+#: build/block-library/index.js:14
+msgid "Height"
+msgstr "高さ"
+
+#: build/format-library/index.js:1 build/block-library/index.js:14
+msgid "Width"
+msgstr "幅"
+
+#: build/block-editor/index.js:55
+msgid "Media Library"
+msgstr "メディアライブラリ"
+
+#: build/editor/index.js:17
+msgid "Publish…"
+msgstr "公開する"
+
+#: build/editor/index.js:17
+msgid "Schedule…"
+msgstr "予約する"
+
+#: build/block-editor/index.js:55
+msgid "Skip to the selected block"
+msgstr "選択したブロックをスキップ"
+
+#: build/editor/index.js:17
+msgid "Edit post permalink"
+msgstr "投稿パーマリンクの編集"
+
+#: build/edit-post/index.js:12
+msgid "Editor settings"
+msgstr "エディター設定"
+
+#: build/block-editor/index.js:55 build/block-library/index.js:14
+msgid "Link settings"
+msgstr "リンク設定"
+
+#: build/block-library/index.js:14
+msgid "pagination"
+msgstr "ページネーション"
+
+#: build/block-library/index.js:14
+msgid "next page"
+msgstr "次のページ"
+
+#: build/block-library/index.js:14
+msgid "Image Size"
+msgstr "画像サイズ"
+
+#: build/block-library/index.js:14
+msgid "Image Dimensions"
+msgstr "画像の寸法"
+
+#: build/block-library/index.js:14
+msgid "Thumbnails are not cropped."
+msgstr "サムネイルがクロップされていません。"
+
+#: build/edit-post/index.js:12
+msgid "Block settings closed"
+msgstr "ブロック設定の非表示中"
+
+#: build/edit-post/index.js:12
+msgid "Close plugin"
+msgstr "プラグインを閉じる"
+
+#: build/block-library/index.js:14
+msgid "Thumbnails are cropped to align."
+msgstr "サムネイルを整列にあわせてクロップしました。"
+
+#: build/components/index.js:19
+msgid "Add item"
+msgstr "項目を追加"
+
+#: build/block-editor/index.js:55
+msgid "Advanced"
+msgstr "高度な設定"
+
+#: build/editor/index.js:17
+msgid "Reset the template"
+msgstr "テンプレートのリセット"
+
+#: build/editor/index.js:17
+msgid "Keep it as is"
+msgstr "変更しない"
+
+#: build/editor/index.js:17
+msgid "The content of your post doesn’t match the template assigned to your post type."
+msgstr "投稿の本文は投稿タイプに割り当てられたテンプレートと一致しません。"
+
+#: build/editor/index.js:17
+msgid "Document Statistics"
+msgstr "文書の統計情報"
+
+#: build/editor/index.js:17
+msgid "Scheduled"
+msgstr "予約済み"
+
+#: build/edit-post/index.js:12
+msgid "Plugins"
+msgstr "プラグイン"
+
+#: build/components/index.js:19
+msgid "Custom Size"
+msgstr "カスタムサイズ"
+
+#: build/editor/index.js:17
+msgid "Resetting the template may result in loss of content, do you want to continue?"
+msgstr "テンプレートをリセットするとコンテンツが失われる可能性があります。続行しますか ?"
+
+#: build/editor/index.js:17
+msgid "is now scheduled. It will go live on"
+msgstr "を予約しました。公開予定日:"
+
+#: build/edit-post/index.js:12
+msgid "Code editor selected"
+msgstr "コードエディターを選択しました"
+
+#: build/edit-post/index.js:12
+msgid "Visual editor selected"
+msgstr "ビジュアルエディターを選択しました"
+
+#: build/editor/index.js:17
+msgid "Scheduling…"
+msgstr "予約中…"
+
+#: build/blocks/index.js:2
+msgid "Layout Elements"
+msgstr "レイアウト要素"
+
+#: build/editor/index.js:17 build/components/index.js:19
+msgid "Category"
+msgstr "カテゴリー"
+
+#: build/block-library/index.js:14
+msgid "Embedded content from %s"
+msgstr "%s からの埋め込みコンテンツ"
+
+#: build/format-library/index.js:1
+msgid "Bold"
+msgstr "太字"
+
+#: build/editor/index.js:17 build/format-library/index.js:1
+#: build/block-library/index.js:14
+msgid "Link"
+msgstr "リンク"
+
+#: build/format-library/index.js:1
+msgid "Italic"
+msgstr "イタリック"
+
+#: build/block-library/index.js:14
+msgid "Button"
+msgstr "ボタン"
+
+#: build/block-library/index.js:14
+msgid "Write code…"
+msgstr "コードを入力..."
+
+#: build/block-library/index.js:14
+msgid "Write title…"
+msgstr "タイトルを入力..."
+
+#: build/block-library/index.js:14
+msgid "Edit image"
+msgstr "画像を編集"
+
+#: build/editor/index.js:17 build/block-editor/index.js:55
+#: build/block-library/index.js:14
+msgid "Image"
+msgstr "画像"
+
+#: build/block-library/index.js:14
+msgid "Embedding…"
+msgstr "埋め込み中..."
+
+#: build/block-library/index.js:14
+msgid "Enter URL to embed here…"
+msgstr "埋め込む URL をここに入力..."
+
+#: build/block-library/index.js:14
+msgid "Write caption…"
+msgstr "キャプションを入力..."
+
+#: build/editor/index.js:17 build/block-library/index.js:14
+msgid "Quote"
+msgstr "引用"
+
+#: build/editor/index.js:17 build/block-library/index.js:14
+msgid "Gallery"
+msgstr "ギャラリー"
+
+#: build/block-library/index.js:14
+msgid "Columns"
+msgstr "カラム"
+
+#: build/block-library/index.js:14
+msgid "Crop Images"
+msgstr "画像の切り抜き"
+
+#: build/media-utils/index.js:1
+msgid "Select"
+msgstr "選択"
+
+#: build/block-library/index.js:14
+msgid "Heading Settings"
+msgstr "見出し設定"
+
+#: build/block-library/index.js:14
+msgid "Write heading…"
+msgstr "見出しを入力..."
+
+#: build/block-library/index.js:14
+msgid "Heading"
+msgstr "見出し"
+
+#: build/block-library/index.js:14
+msgid "Custom HTML"
+msgstr "カスタム HTML"
+
+#: build/block-editor/index.js:55 build/block-library/index.js:14
+msgid "Preview"
+msgstr "プレビュー"
+
+#: build/block-library/index.js:14
+msgid "Image Settings"
+msgstr "画像設定"
+
+#: build/block-library/index.js:14
+msgid "Display post date"
+msgstr "投稿日を表示"
+
+#: build/block-library/index.js:14
+msgid "Latest Posts"
+msgstr "最新の記事"
+
+#: build/block-library/index.js:14
+msgid "Indent list item"
+msgstr "リスト項目をインデント"
+
+#: build/block-library/index.js:14
+msgid "List"
+msgstr "リスト"
+
+#: build/block-library/index.js:14
+msgid "Preformatted"
+msgstr "整形済みテキスト"
+
+#: build/block-library/index.js:14
+msgid "Write preformatted text…"
+msgstr "整形済みテキストを入力..."
+
+#: build/block-library/index.js:14
+msgid "Write quote…"
+msgstr "引用を入力..."
+
+#: build/block-library/index.js:14
+msgid "Write citation…"
+msgstr "引用元を入力..."
+
+#: build/block-library/index.js:14
+msgid "Separator"
+msgstr "区切り"
+
+#: build/block-library/index.js:14
+msgid "Table"
+msgstr "テーブル"
+
+#: build/block-library/index.js:14
+msgid "Delete Row"
+msgstr "行の削除"
+
+#: build/block-library/index.js:14
+msgid "Text Settings"
+msgstr "テキスト設定"
+
+#: build/block-library/index.js:14
+msgid "Write…"
+msgstr "入力..."
+
+#: build/block-editor/index.js:55 build/components/index.js:19
+msgid "No results."
+msgstr "結果はありません。"
+
+#: build/components/index.js:19
+msgid "Item added."
+msgstr "項目を追加しました。"
+
+#: build/components/index.js:19
+msgid "Item removed."
+msgstr "項目を削除しました。"
+
+#: build/components/index.js:19
+msgid "Dismiss this notice"
+msgstr "通知を無視"
+
+#: build/api-fetch/index.js:1
+msgid "An unknown error occurred."
+msgstr "不明なエラーが発生しました。"
+
+#: build/editor/index.js:17
+msgid "Saving"
+msgstr "保存中"
+
+#: build/editor/index.js:17
+msgid "Saved"
+msgstr "保存しました"
+
+#: build/editor/index.js:17 build/edit-widgets/index.js:1
+msgid "Update"
+msgstr "更新"
+
+#: build/editor/index.js:17
+msgid "Schedule"
+msgstr "予約投稿"
+
+#: build/editor/index.js:17
+msgid "Blocks"
+msgstr "ブロック"
+
+#: build/blocks/index.js:2
+msgid "Embeds"
+msgstr "埋め込み"
+
+#: build/block-editor/index.js:55
+msgid "Block: %s"
+msgstr "ブロック: %s"
+
+#: build/editor/index.js:17
+msgid "Permalink:"
+msgstr "パーマリンク:"
+
+#: build/editor/index.js:17
+msgid "Allow Comments"
+msgstr "コメントを許可"
+
+#: build/editor/index.js:17
+msgid "Allow Pingbacks & Trackbacks"
+msgstr "ピンバックとトラックバックを許可"
+
+#: build/editor/index.js:17
+msgid "Set Featured Image"
+msgstr "アイキャッチ画像を設定"
+
+#: build/editor/index.js:17
+msgid "%d Revision"
+msgid_plural "%d Revisions"
+msgstr[0] "%d件のリビジョン"
+
+#: build/editor/index.js:17
+msgid "Write an excerpt (optional)"
+msgstr "抜粋を入力 (任意)"
+
+#: build/editor/index.js:17
+msgid "Standard"
+msgstr "標準"
+
+#: build/edit-post/index.js:12
+msgid "Status & Visibility"
+msgstr "ステータスと公開状態"
+
+#: build/editor/index.js:17
+msgid "Post Format"
+msgstr "投稿フォーマット"
+
+#: build/block-library/index.js:14
+msgid "Categories"
+msgstr "カテゴリー"
+
+#: build/edit-post/index.js:12
+msgid "Visibility"
+msgstr "公開状態"
+
+#: build/editor/index.js:17
+msgid "Post Visibility"
+msgstr "公開状態"
+
+#: build/editor/index.js:17
+msgid "Create password"
+msgstr "パスワードを作成"
+
+#: build/editor/index.js:17
+msgid "Public"
+msgstr "公開"
+
+#: build/editor/index.js:17
+msgid "Visible to everyone."
+msgstr "すべての人に表示されます。"
+
+#: build/editor/index.js:17
+msgid "Private"
+msgstr "非公開"
+
+#: build/editor/index.js:17
+msgid "Only visible to site admins and editors."
+msgstr "サイト管理者と編集者にだけ表示されます。"
+
+#: build/editor/index.js:17
+msgctxt "imperative verb"
+msgid "Preview"
+msgstr "プレビュー"
+
+#: build/editor/index.js:17 build/block-editor/index.js:55
+#: build/block-library/index.js:14
+msgid "Video"
+msgstr "動画"
+
+#: build/block-library/index.js:14
+msgid "Media File"
+msgstr "メディアファイル"
+
+#: build/block-library/index.js:14
+msgid "Background Color"
+msgstr "背景色"
+
+#: build/block-directory/index.js:1 build/edit-post/index.js:12
+msgid "Remove"
+msgstr "削除"
+
+#: build/editor/index.js:17
+msgid "Parent Category"
+msgstr "親カテゴリー"
+
+#: build/editor/index.js:17
+msgid "Add New Tag"
+msgstr "新規タグを追加"
+
+#: build/block-library/index.js:14
+msgid "Paragraph"
+msgstr "段落"
+
+#: build/block-library/index.js:14
+msgid "Show Hierarchy"
+msgstr "階層を表示"
+
+#: build/block-library/index.js:14
+msgid "Show post counts"
+msgstr "投稿数を表示"
+
+#: build/edit-post/index.js:12
+msgid "Settings"
+msgstr "設定"
+
+#: build/block-editor/index.js:55 build/block-library/index.js:14
+#: build/edit-post/index.js:12 build/components/index.js:19
+msgid "Close"
+msgstr "閉じる"
+
+#: build/block-editor/index.js:55
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: build/block-library/index.js:14
+msgid "None"
+msgstr "なし"
+
+#: build/block-editor/index.js:55 build/format-library/index.js:1
+#: build/block-library/index.js:14
+msgid "Apply"
+msgstr "適用"
+
+#: build/editor/index.js:17 build/block-editor/index.js:55
+#: build/block-library/index.js:14
+msgid "Edit"
+msgstr "編集"
+
+#: build/block-editor/index.js:55 build/block-library/index.js:14
+msgid "URL"
+msgstr "URL"
+
+#: build/editor/index.js:17
+msgid "Pending Review"
+msgstr "レビュー待ち"
+
+#: build/editor/index.js:17
+msgid "Published"
+msgstr "公開済み"
+
+#: build/block-library/index.js:14
+msgid "No posts found."
+msgstr "投稿が見つかりませんでした。"
+
+#: build/block-library/index.js:14
+msgid "Convert to unordered list"
+msgstr "箇条書きリストに変換"
+
+#: build/format-library/index.js:1
+msgid "Strikethrough"
+msgstr "取り消し線"
+
+#: build/block-library/index.js:14
+msgid "Categories Settings"
+msgstr "カテゴリー設定"
+
+#: build/block-library/index.js:14
+msgid "post"
+msgstr "投稿"
+
+#: build/block-library/index.js:14
+msgid "blog"
+msgstr "ブログ"
+
+#: build/block-library/index.js:14
+msgid "image"
+msgstr "画像"
+
+#: build/block-library/index.js:14
+msgid "music"
+msgstr "音楽"
+
+#: build/block-library/index.js:14
+msgid "audio"
+msgstr "音声"
+
+#: build/block-library/index.js:14
+msgid "video"
+msgstr "動画"
+
+#: build/block-library/index.js:14
+msgid "Gallery Settings"
+msgstr "ギャラリー設定"
+
+#: build/block-library/index.js:14
+msgid "Attachment Page"
+msgstr "添付ページ"
+
+#: build/block-library/index.js:14
+msgid "images"
+msgstr "画像"
+
+#: build/block-library/index.js:14
+msgid "photos"
+msgstr "写真"
+
+#: build/block-library/index.js:14
+msgid "title"
+msgstr "タイトル"
+
+#: build/block-library/index.js:14
+msgid "subtitle"
+msgstr "サブタイトル"
+
+#: build/format-library/index.js:1 build/block-library/index.js:14
+msgid "photo"
+msgstr "写真"
+
+#: build/block-library/index.js:14
+msgid "List view"
+msgstr "リスト表示"
+
+#: build/block-library/index.js:14
+msgid "Grid view"
+msgstr "グリッド表示"
+
+#: build/block-library/index.js:14
+msgid "recent posts"
+msgstr "最近の投稿"
+
+#: build/block-library/index.js:14
+msgid "Convert to ordered list"
+msgstr "順序付きリストに変換"
+
+#: build/block-library/index.js:14
+msgid "Write list…"
+msgstr "リストを入力..."
+
+#: build/block-library/index.js:14
+msgid "bullet list"
+msgstr "箇条書きリスト"
+
+#: build/block-library/index.js:14
+msgid "ordered list"
+msgstr "順序付きリスト"
+
+#: build/block-library/index.js:14
+msgid "numbered list"
+msgstr "番号付きリスト"
+
+#: build/components/index.js:19
+msgid "Font Size"
+msgstr "文字サイズ"
+
+#: build/block-library/index.js:14
+msgid "Text Color"
+msgstr "テキスト色"
+
+#: build/block-library/index.js:14
+msgid "text"
+msgstr "テキスト"
+
+#: build/block-library/index.js:14
+msgid "horizontal-line"
+msgstr "水平線"
+
+#: build/block-library/index.js:14
+msgid "divider"
+msgstr "区切り線"
+
+#: build/block-library/index.js:14
+msgid "Shortcode"
+msgstr "ショートコード"
+
+#: build/block-library/index.js:14
+msgid "Verse"
+msgstr "詩"
+
+#: build/block-editor/index.js:55 build/block-library/index.js:14
+msgid "Edit link"
+msgstr "リンクを編集"
+
+#: build/block-editor/index.js:55
+msgid "Submit"
+msgstr "送信"
+
+#: build/block-editor/index.js:55
+msgid "Move up"
+msgstr "上に移動"
+
+#: build/block-editor/index.js:55
+msgid "Move down"
+msgstr "下に移動"
+
+#: build/block-editor/index.js:55
+msgid "Block %s is the only block, and cannot be moved"
+msgstr "ブロック「%s」は唯一のブロックなので削除できません。"
+
+#: build/block-editor/index.js:55
+msgid "Block %s is at the end of the content and can’t be moved down"
+msgstr "「%s」ブロックはすでに一番下にあるため、下に移動できません。"
+
+#: build/block-editor/index.js:55
+msgid "Block %s is at the beginning of the content and can’t be moved up"
+msgstr "「%s」ブロックはすでに一番上にあるため、上に移動できません。"
+
+#: build/block-editor/index.js:55
+msgid "Blocks cannot be moved up as they are already at the top"
+msgstr "ブロックはすでに一番上にあるため、上に移動できません"
+
+#: build/block-editor/index.js:55
+msgid "Blocks cannot be moved down as they are already at the bottom"
+msgstr "ブロックはすでに一番下にあるため、下に移動できません"
+
+#: build/editor/index.js:17
+msgid "(Empty heading)"
+msgstr "(空白見出し)"
+
+#: build/editor/index.js:17
+msgid "(Incorrect heading level)"
+msgstr "(見出しレベルに間違いがあります)"
+
+#: build/editor/index.js:17
+msgid "Trashing failed"
+msgstr "ゴミ箱に入れられません"
+
+#: build/editor/index.js:17
+msgid "Copy Link"
+msgstr "リンクをコピー"
+
+#: build/block-editor/index.js:55
+msgid "No block selected."
+msgstr "ブロックが選択されていません。"
+
+#: build/edit-post/index.js:12
+msgid "Document"
+msgstr "文書"
+
+#: build/edit-post/index.js:12
+msgid "Page Attributes"
+msgstr "ページ属性"
+
+#: build/editor/index.js:17
+msgid "Order"
+msgstr "並び順"
+
+#: build/editor/index.js:17
+msgid "Aside"
+msgstr "アサイド"
+
+#: build/editor/index.js:17
+msgid "Status"
+msgstr "ステータス"
+
+#: build/editor/index.js:17
+msgid "Chat"
+msgstr "チャット"
+
+#: build/editor/index.js:17
+msgid "Use a secure password"
+msgstr "安全なパスワードを使用"
+
+#: build/editor/index.js:17
+msgid "You have unsaved changes. If you proceed, they will be lost."
+msgstr "未保存の変更があります。続行すると失われます。"
+
+#: build/editor/index.js:17
+msgid "Document Outline"
+msgstr "文書の概要"
+
+#: build/editor/index.js:17
+msgid "Paragraphs"
+msgstr "段落"
+
+#: build/editor/index.js:17
+msgid "Headings"
+msgstr "見出し"
+
+#: build/editor/index.js:17
+msgid "Words"
+msgstr "語"
+
+#: build/editor/index.js:17
+msgid "Content structure"
+msgstr "コンテンツ構造"
+
+#: build/editor/index.js:17
+msgid "Add new category"
+msgstr "新規カテゴリーを追加"
+
+#: build/editor/index.js:17
+msgid "Tag"
+msgstr "タグ"
+
+#: build/editor/index.js:17
+msgid "Switch to Draft"
+msgstr "下書きへ切り替え"
+
+#: build/editor/index.js:17
+msgid "Are you sure you want to unpublish this post?"
+msgstr "本当にこの投稿を未公開にしますか ?"
+
+#: build/editor/index.js:17
+msgid "Publish:"
+msgstr "公開:"
+
+#: build/editor/index.js:17
+msgid "Visibility:"
+msgstr "公開状態:"
+
+#: build/editor/index.js:17
+msgid "Are you ready to publish?"
+msgstr "公開してもよいですか ?"
+
+#: build/editor/index.js:17
+msgid "Submit for Review"
+msgstr "レビュー待ちとして送信"
+
+#: build/editor/index.js:17
+msgid "Template:"
+msgstr "テンプレート:"
+
+#: build/editor/index.js:17
+msgid "no parent"
+msgstr "親はありません"
+
+#: build/editor/index.js:17
+msgid "no title"
+msgstr "タイトルはありません"
+
+#: build/block-editor/index.js:55 build/edit-post/index.js:12
+msgid "Search for a block"
+msgstr "ブロックの検索"
+
+#: build/block-editor/index.js:55
+msgid "Add block"
+msgstr "ブロックの追加"
+
+#: build/editor/index.js:17
+msgid "Attempt Recovery"
+msgstr "復旧を試みる"
+
+#: build/block-editor/index.js:55
+msgid "Convert to Blocks"
+msgstr "ブロックへ変換"
+
+#: build/block-editor/index.js:55
+msgid "Edit visually"
+msgstr "ビジュアル編集"
+
+#: build/block-editor/index.js:55
+msgid "This block has encountered an error and cannot be previewed."
+msgstr "このブロックでエラーが発生したためプレビューできません。"
+
+#: build/edit-post/index.js:12
+msgid "Transform into:"
+msgstr "変換先:"
+
+#: build/edit-post/index.js:12
+msgid "Find original"
+msgstr "オリジナルの検索"
+
+#: build/edit-post/index.js:12
+msgid "Copy All Content"
+msgstr "すべてのコンテンツをコピー"
+
+#: build/editor/index.js:17 build/edit-post/index.js:12
+msgid "Featured Image"
+msgstr "アイキャッチ画像"
+
+#: build/edit-post/index.js:12
+msgid "Close settings"
+msgstr "設定を閉じる"
+
+#: build/edit-post/index.js:12
+msgid "Editor plugins"
+msgstr "エディタープラグイン"
+
+#: build/edit-post/index.js:12
+msgid "Editor content"
+msgstr "エディターコンテンツ"
+
+#: build/edit-post/index.js:12
+msgid "Tools"
+msgstr "ツール"
+
+#: build/edit-post/index.js:12
+msgid "Editor"
+msgstr "エディター"
+
+#: build/edit-post/index.js:12
+msgid "Code Editor"
+msgstr "コードエディター"
+
+#: build/edit-post/index.js:12
+msgid "Visual Editor"
+msgstr "ビジュアルエディター"
+
+#: build/block-library/index.js:14 build/components/index.js:19
+msgid "Reset"
+msgstr "リセット"
+
+#: build/block-editor/index.js:55 build/block-library/index.js:14
+msgid "Insert link"
+msgstr "リンクを挿入"
+
+#: build/block-library/index.js:14 build/components/index.js:19
+msgid "Number of items"
+msgstr "項目数"
+
+#: build/components/index.js:19
+msgid "All"
+msgstr "すべて"
+
+#: build/components/index.js:19
+msgid "Order by"
+msgstr "並び順"
+
+#: build/media-utils/index.js:1
+msgid "Select or Upload Media"
+msgstr "メディアの選択またはアップロード"
+
+#: build/block-library/index.js:14
+msgid "Edit video"
+msgstr "動画の編集"
+
+#: build/block-library/index.js:14
+msgid "New Column"
+msgstr "新規カラム"
+
+#: build/block-library/index.js:14
+msgid "Add Column After"
+msgstr "右に列を追加"
+
+#: build/block-library/index.js:14
+msgid "Add Column Before"
+msgstr "左に列を追加"
+
+#: build/block-library/index.js:14
+msgid "Add Row After"
+msgstr "下に行を追加"
+
+#: build/block-library/index.js:14
+msgid "Add Row Before"
+msgstr "上に行を追加"
+
+#: build/block-library/index.js:14
+msgid "Delete Column"
+msgstr "列の削除"
+
+#: gutenberg.php:75
+msgid "Experiments"
+msgstr "実験中"
+
+#: build/block-library/index.js:14
+msgid "Edit table"
+msgstr "テーブルの編集"
+
+#: build/block-library/blocks/latest-posts.php:70
+#: build/block-library/index.js:14
+msgid "Read more"
+msgstr "続きを読む"
+
+#: build/editor/index.js:17
+msgid "What’s next?"
+msgstr "次の操作"
+
+#: build/block-library/index.js:14
+msgid "embed"
+msgstr "埋め込み"
+
+#: build/block-library/index.js:14
+msgid "Level"
+msgstr "レベル"
+
+#: build/editor/index.js:17
+msgid "Remove Image"
+msgstr "画像の削除"
+
+#: build/block-library/index.js:14
+msgid "Classic"
+msgstr "クラシック"
+
+#: build/block-library/index.js:14
+msgid "%s URL"
+msgstr "%s URL"
+
+#: build/block-library/index.js:14
+msgid "Block has been deleted or is unavailable."
+msgstr "ブロックは削除されたか、利用できません。"
+
+#: build/block-library/index.js:14
+msgid "Edit audio"
+msgstr "音声の編集"
+
+#: build/block-library/index.js:14
+msgid "Use URL"
+msgstr "URL を使用"
+
+#: build/editor/index.js:17
+msgid "The editor has encountered an unexpected error."
+msgstr "エディターで予期しないエラーが発生しました。"
+
+#: build/editor/index.js:17
+msgid "Convert to Regular Block"
+msgstr "通常のブロックへ変換"
+
+#: build/edit-post/index.js:12
+msgid "Additional settings are now available in the Editor block settings sidebar"
+msgstr "エディター詳細設定サイドバーから追加オプションを設定できます。"
+
+#: build/editor/index.js:17
+msgid "Block deleted."
+msgstr "ブロックを削除しました。"
+
+#: build/editor/index.js:17
+msgid "Block updated."
+msgstr "ブロックを更新しました。"
+
+#: build/editor/index.js:17
+msgid "Block created."
+msgstr "ブロックを作成しました。"
+
+#: build/block-editor/index.js:55
+msgid "Duplicate"
+msgstr "複製"
+
+#: build/block-editor/index.js:55
+msgid "Add %s"
+msgstr "%sの追加"
+
+#: build/editor/index.js:17
+msgctxt "term"
+msgid "%s added"
+msgstr "%sを追加しました"
+
+#: build/block-library/index.js:14
+msgid "Code"
+msgstr "コード"
+
+#: build/block-library/index.js:14
+msgid "Fixed Background"
+msgstr "固定背景"
+
+#: build/editor/index.js:17
+msgid "Save Draft"
+msgstr "下書き保存"
+
+#: build/components/index.js:19
+msgid "AM"
+msgstr "午前"
+
+#: build/components/index.js:19
+msgid "Z → A"
+msgstr "タイトル"
+
+#: build/block-editor/index.js:55 build/edit-post/index.js:12
+msgid "No blocks found."
+msgstr "ブロックが見つかりません。"
+
+#: build/components/index.js:19
+msgid "A → Z"
+msgstr "タイトル (逆順)"
+
+#: build/components/index.js:19
+msgid "Oldest to Newest"
+msgstr "投稿日時 (古い記事を優先)"
+
+#: build/components/index.js:19
+msgid "Newest to Oldest"
+msgstr "投稿日時 (新しい記事を優先)"
+
+#: build/editor/index.js:17
+msgctxt "term"
+msgid "%s removed"
+msgstr "%sを削除しました"
+
+#: build/editor/index.js:17
+msgid "Copy Error"
+msgstr "エラー文をコピー"
+
+#: build/editor/index.js:17
+msgid "Copy Post Text"
+msgstr "投稿内容をコピー"
+
+#: build/editor/index.js:17
+msgid "(Multiple H1 headings are not recommended)"
+msgstr "(複数の H1 見出しは非推奨です)"
+
+#: build/editor/index.js:17
+msgid "(Your theme may already use a H1 for the post title)"
+msgstr "(テーマによって H1 が投稿タイトルに使用されている可能性があります)"
+
+#: build/block-library/blocks/rss.php:35
+#: build/block-library/blocks/latest-comments.php:31
+#: build/block-library/blocks/latest-posts.php:37 build/editor/index.js:17
+#: build/block-library/index.js:14 build/edit-post/index.js:12
+msgid "(no title)"
+msgstr "(タイトルなし)"
+
+#: build/components/index.js:19
+msgid "PM"
+msgstr "午後"
+
+#: build/editor/index.js:17 build/block-library/index.js:14
+#: build/edit-post/index.js:12
+msgid "Copied!"
+msgstr "コピーしました。"
+
+#: build/components/index.js:19
+msgid "Drop files to upload"
+msgstr "アップロードするファイルをドロップ"
+
+#: build/editor/index.js:17
+msgid "Updating…"
+msgstr "更新中…"
+
+#: build/editor/index.js:17
+msgid "Publishing…"
+msgstr "公開中…"
+
+#: build/block-editor/index.js:55
+msgid "Edit as HTML"
+msgstr "HTML として編集"
+
+#: build/block-library/index.js:14
+msgid "Write subheading…"
+msgstr "小見出しを入力…"
+
+#: build/block-library/index.js:14
+msgid "Write shortcode here…"
+msgstr "ショートコードをここに入力…"
+
+#: build/block-library/index.js:14
+msgid "Add text…"
+msgstr "テキストを追加…"
+
+#: build/editor/index.js:17
+msgid "Undo"
+msgstr "元に戻す"
+
+#: build/editor/index.js:17
+msgid "Redo"
+msgstr "やり直す"
+
+#: build/block-library/index.js:14
+msgid "Drop Cap"
+msgstr "ドロップキャップ"
+
+#: build/block-library/index.js:14
+msgid "Heading %d"
+msgstr "見出し%d"
+
+#: build/block-editor/index.js:55
+msgid "Block Styles"
+msgstr "ブロックスタイル"
+
+#: build/edit-post/index.js:12
+msgid "Editor top bar"
+msgstr "エディタートップバー"
+
+#: build/blocks/index.js:2
+msgid "Reusable Blocks"
+msgstr "再利用ブロック"
+
+#: build/editor/index.js:17
+msgid "Learn more about manual excerpts"
+msgstr "手動抜粋の詳細"
+
+#: build/edit-post/index.js:12
+msgid "Block"
+msgstr "ブロック"
+
+#: build/editor/index.js:17
+msgid "Would you like to privately publish this post now?"
+msgstr "今すぐ非公開で投稿しますか ?"
+
+#: build/editor/index.js:17
+msgid "Parent Term"
+msgstr "親項目"
+
+#: build/editor/index.js:17
+msgid "Add new term"
+msgstr "新規項目を追加"
+
+#: build/editor/index.js:17
+msgid "Term"
+msgstr "項目"
+
+#: build/editor/index.js:17
+msgid "Add New Term"
+msgstr "新規項目を追加"
+
+#: build/block-library/index.js:14
+msgid "Outdent list item"
+msgstr "リスト項目のインデントを戻す"
+
+#: build/editor/index.js:17
+msgid "Protected with a password you choose. Only those with the password can view this post."
+msgstr "任意のパスワードで保護します。パスワードを知っている閲覧者のみがこの記事を表示できます。"
+
+#: build/editor/index.js:17
+msgid ""
+"Are you sure you want to delete this Reusable Block?\n"
+"\n"
+"It will be permanently removed from all posts and pages that use it."
+msgstr ""
+"本当にこの再利用ブロックを削除しますか ?\n"
+"\n"
+"再利用ブロックを使用していたすべての投稿や固定ページから完全に削除されます。"
+
+#: build/editor/index.js:17
+msgid "Immediately"
+msgstr "今すぐ"
+
+#: build/editor/index.js:17
+msgid "Password Protected"
+msgstr "パスワード保護"
+
+#: build/block-library/index.js:14
+msgid "poetry"
+msgstr "詩"
+
+#: build/editor/index.js:17 build/block-editor/index.js:55
+msgid "%d result found."
+msgid_plural "%d results found."
+msgstr[0] "%d件見つかりました。"
+
+#: build/block-editor/index.js:55 build/components/index.js:19
+msgid "%d result found, use up and down arrow keys to navigate."
+msgid_plural "%d results found, use up and down arrow keys to navigate."
+msgstr[0] "%d件の結果が見つかりました。上下の矢印キーを使って操作できます。"
+
+#: build/editor/index.js:17
+msgid "Suggestion:"
+msgstr "提案:"
+
+#: build/editor/index.js:17
+msgid "is now live."
+msgstr "を公開しました。"
+
+#: build/block-editor/index.js:55 build/block-library/index.js:14
+msgid "More options"
+msgstr "詳細設定"
+
+#: build/block-library/index.js:14
+msgid "Pullquote"
+msgstr "プルクオート"
+
+#: build/editor/index.js:17
+msgid "Move to Trash"
+msgstr "ゴミ箱へ移動"
+
+#: build/edit-post/index.js:12
+msgid "View Post"
+msgstr "投稿の表示"
+
+#: build/editor/index.js:17
+msgid "Publishing failed."
+msgstr "公開に失敗しました。"
+
+#: build/editor/index.js:17
+msgid "Scheduling failed."
+msgstr "予約投稿に失敗しました。"
+
+#: build/editor/index.js:17
+msgid "Updating failed."
+msgstr "更新に失敗しました。"
+
+#: build/block-library/index.js:14
+msgid "Remove link"
+msgstr "リンクの削除"
+
+#: lib/experiments-page.php:47 build/blocks/index.js:2
+msgid "Widgets"
+msgstr "ウィジェット"
+
+#: build/block-editor/index.js:55
+msgid "Wide Width"
+msgstr "幅広"
+
+#: build/block-editor/index.js:55
+msgid "Full Width"
+msgstr "全幅"
+
+#: build/block-editor/index.js:55
+msgid "Align Left"
+msgstr "左寄せ"
+
+#: build/block-editor/index.js:55
+msgid "Align Right"
+msgstr "右寄せ"
+
+#: build/editor/index.js:17 build/block-editor/index.js:55
+#: build/block-library/index.js:14
+msgid "Audio"
+msgstr "音声"
+
+#: build/components/index.js:19
+msgid "Clear"
+msgstr "クリア"
+
+#: build/block-editor/index.js:55
+msgid "Align Center"
+msgstr "中央寄せ"
+
+#: build/block-editor/index.js:55
+msgid "Upload"
+msgstr "アップロード"
+
+#: build/block-editor/index.js:55
+msgid "Additional CSS Class(es)"
+msgstr "追加 CSS クラス"
+
+#: build/block-editor/index.js:55
+msgid "HTML Anchor"
+msgstr "HTML アンカー"
+
+#: build/components/index.js:19
+msgid "Color: %s"
+msgstr "色: %s"
+
+#: build/block-editor/index.js:55
+msgid "This color combination may be hard for people to read. Try using a brighter background color and/or a darker text color."
+msgstr "この色の組み合わせは読みにくいため、より明るい背景色、より暗い文字色を試してください。"
+
+#: build/block-editor/index.js:55
+msgid "This color combination may be hard for people to read. Try using a darker background color and/or a brighter text color."
+msgstr "この色の組み合わせは読みにくいため、より暗い背景色、より明るい文字色を試してください。"
+
+#: build/components/index.js:19
+msgid "Custom color picker"
+msgstr "カスタムカラーピッカー"
+
+#: build/blocks/index.js:2
+msgid "Common Blocks"
+msgstr "一般ブロック"
+
+#: build/blocks/index.js:2
+msgid "Formatting"
+msgstr "フォーマット"
+
+#. Description of the plugin
+msgid "Printing since 1440. This is the development plugin for the new block editor in core."
+msgstr "印刷技術は、1440年に誕生。コアに採用される新しいブロックエディターの開発プラグイン。"
+
+#: build/editor/index.js:17
+msgid "Add title"
+msgstr "タイトルを追加"
+
+#: gutenberg.php:104
+msgid "Gutenberg development mode requires files to be built. Run <code>npm install</code> to install dependencies, <code>npm run build</code> to build the files or <code>npm run dev</code> to build the files and watch for changes. Read the <a href=\"https://github.com/WordPress/gutenberg/blob/master/docs/contributors/getting-started.md\">contributing</a> file for more information."
+msgstr "Gutenberg 開発モードは、ファイルのビルドが必要です。<code>npm install</code> を実行して依存のインストール後、<code>npm run build</code> でファイルをビルドするか、または <code>npm run dev</code> でファイルをビルドして差分を監視してください。詳しくは <a href=\"https://github.com/WordPress/gutenberg/blob/master/docs/contributors/getting-started.md\">contributing</a> を参照してください。"
+
+#: build/block-library/blocks/categories.php:30
+msgid "Select Category"
+msgstr "カテゴリーを選択"
+
+#. Author of the plugin
+msgid "Gutenberg Team"
+msgstr "Gutenberg チーム"
+
+#. Plugin URI of the plugin
+msgid "https://github.com/WordPress/gutenberg"
+msgstr "https://github.com/WordPress/gutenberg"
+
+#. Plugin Name of the plugin
+msgid "Gutenberg"
+msgstr "Gutenberg"
+
+#: gutenberg.php:41 gutenberg.php:42
+msgid "Demo"
+msgstr "デモ"
+
+#: build/edit-post/index.js:12
+msgid "Custom Fields"
+msgstr "カスタムフィールド "
+
+#: build/editor/index.js:17 build/block-library/index.js:14
+msgid "Save"
+msgstr "保存"
+
+#: gutenberg.php:66
+msgid "Documentation"
+msgstr "ドキュメント"
+
+#: build/edit-post/index.js:12
+msgid "Excerpt"
+msgstr "抜粋"
+
+#: build/editor/index.js:17 build/edit-post/index.js:12
+msgid "Publish"
+msgstr "公開"
+
+#: build/block-library/index.js:14
+msgid "Metadata"
+msgstr "メタデータ"
+
+#: build/block-library/index.js:14
+msgid "(Untitled)"
+msgstr "(無題)"
+
+#: build/edit-post/index.js:12
+msgid "Discussion"
+msgstr "ディスカッション"
+
+#: build/editor/index.js:17
+msgid "Author"
+msgstr "投稿者"
+
+#. translators: %s: Minimum required version
+#: gutenberg.php:91
+msgid "Gutenberg requires WordPress %s or later to function properly. Please upgrade WordPress before activating Gutenberg."
+msgstr "Gutenberg が正しく動作するには WordPress %s以降が必要です。Gutenberg を有効化する前に WordPress をアップグレードしてください。"
+
+#: lib/class-wp-block-styles-registry.php:50
+msgid "Block style name must be a string."
+msgstr "ブロックスタイル名は文字列でなければなりません。"

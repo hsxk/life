@@ -1,0 +1,193 @@
+# Blank WordPress Pot
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: KUSANAGI Business Edition Pot v1.0.0\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2019-01-11 15:30+0900\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Prime Strategy\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,"
+"_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions.php:97
+msgid "You do not have permission."
+msgstr "アクセス権限がありません。"
+
+#: functions.php:114
+msgid "Please try again after few minutes."
+msgstr "時間をおいて再度実行してください。"
+
+#: functions.php:144
+msgid "Please select the checkbox."
+msgstr "チェックボックスを選択してください。"
+
+#: functions.php:162 functions.php:239
+msgid "Success!"
+msgstr "送信に成功しました。"
+
+#: functions.php:175
+msgid "Please write your request."
+msgstr "こちらにリクエストを入力してください。"
+
+#: functions.php:197
+msgid "Your request has been sent successfully."
+msgstr "リクエストの送信に成功しました。"
+
+#: functions.php:199 functions.php:241 functions.php:282 functions.php:316
+msgid "An unexpected error occurred. Please try again after few minutes."
+msgstr "予期しないエラーが発生しました。時間をおいて再度実行してください。"
+
+#: functions.php:216 template/parts/req-detail.php:33
+msgid "Please write your message."
+msgstr "メッセージを書いてください。"
+
+#: functions.php:255
+msgid "Invalid page number."
+msgstr "ページ番号エラー"
+
+#: functions.php:259
+msgid "Invalid status."
+msgstr "ステータスエラー"
+
+#: functions.php:273
+msgid "An unexpected error. Please reload the page."
+msgstr "予期しないエラーが発生しました。ページを再読み込みしてください。"
+
+#: functions.php:294
+msgid "Invalid request ID."
+msgstr "リクエストIDエラー"
+
+#: functions.php:307
+msgid "An unexpected error. Please back to the Business Edition top page."
+msgstr ""
+"予期しないエラーが発生しました。Business Editionのホーム画面に戻ってくださ"
+"い。"
+
+#: template/front-page.php:6
+msgid "Settings"
+msgstr "設定"
+
+#: template/front-page.php:9
+msgid "Home"
+msgstr "ホーム"
+
+#: template/parts/agreement.php:5
+msgid "The question submission function of Business Edition."
+msgstr "Business Edition の質問投稿機能を利用します。"
+
+#: template/parts/agreement.php:9
+msgid "Ongoing service"
+msgstr "サービス利用中"
+
+#: template/parts/agreement.php:13
+msgid "Start using"
+msgstr "利用を開始する"
+
+#: template/parts/agreement.php:17 template/parts/home.php:10
+#: template/parts/req-detail.php:36
+msgid "Send"
+msgstr "送信"
+
+#: template/parts/home.php:3
+msgid "Request Form"
+msgstr "リクエストフォーム"
+
+#: template/parts/home.php:6
+msgid "Please write your request here."
+msgstr "リクエストを書いてください。"
+
+#: template/parts/home.php:7
+msgid "Note"
+msgstr "補足"
+
+#: template/parts/home.php:7
+msgid "Your request will contain the server information."
+msgstr "送信データにはサーバー情報が含まれます。"
+
+#: template/parts/home.php:19
+msgid "Requests Status"
+msgstr "リクエストステータス"
+
+#: template/parts/home.php:21
+msgid "Requests List"
+msgstr "リクエスト一覧"
+
+#: template/parts/home.php:30
+msgid "Filter"
+msgstr "フィルター"
+
+#: template/parts/home.php:39
+msgid "Request ID"
+msgstr "リクエストID"
+
+#: template/parts/home.php:40 template/parts/req-detail.php:4
+msgid "Request Detail"
+msgstr "リクエスト内容"
+
+#: template/parts/home.php:41
+msgid "Status"
+msgstr "ステータス"
+
+#: template/parts/home.php:42
+msgid "Latest"
+msgstr "状態"
+
+#: template/parts/home.php:43 template/parts/req-detail.php:15
+#: template/parts/req-detail.php:17
+msgid "Date"
+msgstr "日時"
+
+#: template/parts/home.php:50
+msgid "Open"
+msgstr "オープン"
+
+#: template/parts/home.php:52
+msgid "Waiting"
+msgstr "回答待ち"
+
+#: template/parts/home.php:54
+msgid "Replied"
+msgstr "返信あり"
+
+#: template/parts/home.php:57
+msgid "Closed"
+msgstr "クローズ"
+
+#: template/parts/home.php:58
+msgid "Done"
+msgstr "完了"
+
+#: template/parts/home.php:73 template/parts/req-detail.php:45
+msgid "NONE"
+msgstr "該当するデータはありません。"
+
+#: template/parts/home.php:79
+msgid "Previous Page"
+msgstr "前のページ"
+
+#: template/parts/home.php:82
+msgid "Next Page"
+msgstr "次のページ"
+
+#: template/parts/req-detail.php:31
+msgid "Reply"
+msgstr "返信"
+
+#: template/parts/req-detail.php:41
+msgid "Ticket has been closed."
+msgstr "チケットはクローズしました。"
