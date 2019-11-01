@@ -7,7 +7,7 @@ Author URI: https://hkx.monster
 */
 
 /*-------------------------------------------------------------------------------
-                  Upload webp and Show webp in medialist
+                                    Webp
 -------------------------------------------------------------------------------*/
 
 /*---------------------------Allow upload--------------------------------------*/
@@ -27,14 +27,80 @@ function media_show_webp($result, $path) {
 add_filter( 'file_is_displayable_image', 'media_show_webp', 10, 2 );
 
 /*-------------------------------------------------------------------------------
-                               Get exif
+                                  Exif
 -------------------------------------------------------------------------------*/
 
 /*-----------------------------Get exif----------------------------------------*/
 function get_exif(){
-    global $wpdb;
-	$table_name = $wpdb -> prefix . "exif";
+   global $wpdb;
+   $filename = "";
+   $tablename = $table_prefix.'posts';
+   preg_match_all('(.*)/wp-content/uploads/[0-9]{4}/[0-9]{2}/(.*)',$_POST["guid"],$filename);
+   if(exif_imagetype($filename[3])){
+   $exif = exif_read_data($filename[3],'IFD0');
+   if($exif){
+	  $wpdb->update($tablename,array('post_content' => $exif),array('ID'=>$_POST["ID"]));
+	}
+   else{
+	  $wpdb->insert($tablename,array('post_content' => 'No exif information'),array('ID'=>$_POST["ID"]));
+	}
 }
+}
+add_action('add_attachment','get_exif',10,1);
+#apply_filters('media_upload_tabs',array)
+
+/*-------------------------------------------------------------------------------
+                          Show error message when 500
+-------------------------------------------------------------------------------*/
+function get_my_custom_die_handler($message, $title='', $args=array()) {
+   exit;
+   }
+add_filter('wp_die_handler', 'get_my_custom_die_handler');
+
+/*-------------------------------------------------------------------------------
+                              Post's title must
+--------------------------------------------------------------------------------*/
+function required_title() {
+?>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+      if('post' == $('#post_type').val()){
+            $("#post").submit(function(e){
+                  if('' == $('#title').val()) {
+                        alert('Title must be entered');
+                        $('#ajax-loading').css('visibility', 'hidden');
+                        $('#publish').removeClass('button-primary-disabled');
+                        $('#title').focus();
+                        return false;
+                    }
+             });
+	  }
+  });
+</script>
+<?php
+}
+add_action('admin_head-post-new.php', 'required_title');
+add_action('admin_head-post.php', 'required_title');
+
+/*-------------------------------------------------------------------------------
+                             Remove_updates
+--------------------------------------------------------------------------------*/
+function remove_updates()
+{
+  global $wp_version;
+  return (object) array(
+  'last_checked'    => time(),
+  'updates'         => array(),
+  'version_checked' => $wp_version
+  );  
+}
+add_filter('pre_site_transient_update_core', 'remove_updates');
+add_filter('pre_site_transient_update_plugins', 'remove_updates');
+add_filter('automatic_updater_disabled', '__return_true');
+remove_action('load-plugins.php', 'wp_update_plugins');
+remove_action('load-update.php', 'wp_update_plugins');
+remove_action('load-update-core.php', 'wp_update_plugins');
+
 
 
 ?>
