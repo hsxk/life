@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit285ce5245c749f6f79d48f1d93594eb5
+class ComposerStaticInitf7309e5dcd4e2843e8a5c77b6db497d4
 {
     public static $prefixLengthsPsr4 = array (
         'C' => 
@@ -171,6 +171,7 @@ class ComposerStaticInit285ce5245c749f6f79d48f1d93594eb5
         'WPSEO_Config_Field' => __DIR__ . '/../..' . '/admin/config-ui/fields/class-field.php',
         'WPSEO_Config_Field_Choice' => __DIR__ . '/../..' . '/admin/config-ui/fields/class-field-choice.php',
         'WPSEO_Config_Field_Choice_Post_Type' => __DIR__ . '/../..' . '/admin/config-ui/fields/class-field-choice-post-type.php',
+        'WPSEO_Config_Field_Company_Info_Missing' => __DIR__ . '/../..' . '/admin/config-ui/fields/class-field-company-info-missing.php',
         'WPSEO_Config_Field_Company_Logo' => __DIR__ . '/../..' . '/admin/config-ui/fields/class-field-company-logo.php',
         'WPSEO_Config_Field_Company_Name' => __DIR__ . '/../..' . '/admin/config-ui/fields/class-field-company-name.php',
         'WPSEO_Config_Field_Company_Or_Person' => __DIR__ . '/../..' . '/admin/config-ui/fields/class-field-company-or-person.php',
@@ -466,6 +467,7 @@ class ComposerStaticInit285ce5245c749f6f79d48f1d93594eb5
         'WPSEO_Tracking_Default_Data' => __DIR__ . '/../..' . '/admin/tracking/class-tracking-default-data.php',
         'WPSEO_Tracking_Plugin_Data' => __DIR__ . '/../..' . '/admin/tracking/class-tracking-plugin-data.php',
         'WPSEO_Tracking_Server_Data' => __DIR__ . '/../..' . '/admin/tracking/class-tracking-server-data.php',
+        'WPSEO_Tracking_Settings_Data' => __DIR__ . '/../..' . '/admin/tracking/class-tracking-settings-data.php',
         'WPSEO_Tracking_Theme_Data' => __DIR__ . '/../..' . '/admin/tracking/class-tracking-theme-data.php',
         'WPSEO_Twitter' => __DIR__ . '/../..' . '/frontend/class-twitter.php',
         'WPSEO_Twitter_Validator' => __DIR__ . '/../..' . '/inc/indexables/validators/class-twitter-validator.php',
@@ -683,7 +685,7 @@ class ComposerStaticInit285ce5245c749f6f79d48f1d93594eb5
         'Yoast_Feature_Toggles' => __DIR__ . '/../..' . '/admin/views/class-yoast-feature-toggles.php',
         'Yoast_Form' => __DIR__ . '/../..' . '/admin/class-yoast-form.php',
         'Yoast_Form_Element' => __DIR__ . '/../..' . '/admin/views/interface-yoast-form-element.php',
-        'Yoast_Form_Fieldset' => __DIR__ . '/../..' . '/admin/views/class-yoast-form-fieldset.php',
+        'Yoast_Form_Fieldset' => __DIR__ . '/../..' . '/deprecated/class-yoast-form-fieldset.php',
         'Yoast_I18n_WordPressOrg_v3' => __DIR__ . '/..' . '/yoast/i18n-module/src/i18n-wordpressorg-v3.php',
         'Yoast_I18n_v3' => __DIR__ . '/..' . '/yoast/i18n-module/src/i18n-v3.php',
         'Yoast_Input_Select' => __DIR__ . '/../..' . '/admin/views/class-yoast-input-select.php',
@@ -712,10 +714,10 @@ class ComposerStaticInit285ce5245c749f6f79d48f1d93594eb5
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit285ce5245c749f6f79d48f1d93594eb5::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit285ce5245c749f6f79d48f1d93594eb5::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit285ce5245c749f6f79d48f1d93594eb5::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit285ce5245c749f6f79d48f1d93594eb5::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf7309e5dcd4e2843e8a5c77b6db497d4::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf7309e5dcd4e2843e8a5c77b6db497d4::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf7309e5dcd4e2843e8a5c77b6db497d4::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitf7309e5dcd4e2843e8a5c77b6db497d4::$classMap;
 
         }, null, ClassLoader::class);
     }

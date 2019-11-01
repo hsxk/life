@@ -138,72 +138,6 @@ msgstr "页脚"
 msgid "Primary Color"
 msgstr "主颜色"
 
-#: 404.php:24
-msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr "这儿似乎什么都没有，试试搜索？"
-
-#: 404.php:20
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "有点尴尬诶！该页无法显示。"
-
-#: comments.php:116
-msgid "Comments are closed."
-msgstr "评论已关闭。"
-
-#: functions.php:61 template-parts/header/site-branding.php:46
-msgid "Social Links Menu"
-msgstr "社交网络链接菜单"
-
-#: header.php:25
-msgid "Skip to content"
-msgstr "跳至内容"
-
-#: image.php:52 template-parts/content/content-page.php:27
-#: template-parts/content/content.php:49
-#: template-parts/content/content-single.php:40
-msgid "Pages:"
-msgstr "页码："
-
-#. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content/content.php:36
-#: template-parts/content/content-single.php:27
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "继续阅读<span class=\"screen-reader-text\">“%s”</span>"
-
-#: single.php:41
-msgid "Previous Post"
-msgstr "上一篇文章"
-
-#: template-parts/content/content-none.php:16
-msgid "Nothing Found"
-msgstr "未找到"
-
-#. translators: 1: link to WP admin new post page.
-#: template-parts/content/content-none.php:26
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "准备好发布第一篇文章了？<a href=\"%1$s\">从这里开始</a>。"
-
-#: template-parts/content/content-none.php:39
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr "抱歉，没有符合您搜索条件的结果。请换其它关键词再试。"
-
-#: template-parts/content/content-none.php:46
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr "我们可能无法找到您需要的内容。或许搜索功能可以帮到您。"
-
-#: template-parts/header/site-branding.php:33
-msgid "Top Menu"
-msgstr "顶部菜单"
-
-#. translators: used between list items, there is a space after the comma.
-#: inc/template-tags.php:86 inc/template-tags.php:98
-msgid ", "
-msgstr "、"
-
-#: single.php:38
-msgid "Next Post"
-msgstr "下一篇文章"
-
 #: template-parts/post/discussion-meta.php:18
 msgid "No comments"
 msgstr "没有评论"
@@ -223,13 +157,54 @@ msgstr "查看更多文章"
 msgid "Published by %s"
 msgstr "发布者：%s"
 
+#: template-parts/header/site-branding.php:33
+msgid "Top Menu"
+msgstr "顶部菜单"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content/content.php:36
+#: template-parts/content/content-single.php:27
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "继续阅读<span class=\"screen-reader-text\">“%s”</span>"
+
+#: image.php:52 template-parts/content/content-page.php:27
+#: template-parts/content/content.php:49
+#: template-parts/content/content-single.php:40
+msgid "Pages:"
+msgstr "页码："
+
+#: template-parts/content/content-none.php:46
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "我们可能无法找到您需要的内容。或许搜索功能可以帮到您。"
+
+#: template-parts/content/content-none.php:39
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "抱歉，没有符合您搜索条件的结果。请换其它关键词再试。"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content/content-none.php:26
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "准备好发布第一篇文章了？<a href=\"%1$s\">从这里开始</a>。"
+
+#: template-parts/content/content-none.php:16
+msgid "Nothing Found"
+msgstr "未找到"
+
 #: single.php:42
 msgid "Previous post:"
 msgstr "上一篇文章："
 
+#: single.php:41
+msgid "Previous Post"
+msgstr "上一篇文章"
+
 #: single.php:39
 msgid "Next post:"
 msgstr "下一篇文章："
+
+#: single.php:38
+msgid "Next Post"
+msgstr "下一篇文章"
 
 #: search.php:22
 msgid "Search results for:"
@@ -250,6 +225,11 @@ msgstr "标签："
 #: inc/template-tags.php:92
 msgid "Posted in"
 msgstr "发布于"
+
+#. translators: used between list items, there is a space after the comma.
+#: inc/template-tags.php:86 inc/template-tags.php:98
+msgid ", "
+msgstr "、"
 
 #. translators: %s: Name of current post. Only visible to screen readers.
 #: inc/template-tags.php:63
@@ -314,6 +294,14 @@ msgstr "分类存档："
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr "编辑<span class=\"screen-reader-text\">%s</span>"
 
+#: header.php:25
+msgid "Skip to content"
+msgstr "跳至内容"
+
+#: functions.php:61 template-parts/header/site-branding.php:46
+msgid "Social Links Menu"
+msgstr "社交网络链接菜单"
+
 #: functions.php:59 functions.php:146
 msgid "Primary"
 msgstr "主"
@@ -322,6 +310,18 @@ msgstr "主"
 #: footer.php:28
 msgid "Proudly powered by %s."
 msgstr "自豪地由%s驱动。"
+
+#: comments.php:116
+msgid "Comments are closed."
+msgstr "评论已关闭。"
+
+#: comments.php:96
+msgid "Next"
+msgstr "下一页"
+
+#: comments.php:95
+msgid "Previous"
+msgstr "上一页"
 
 #: comments.php:92 comments.php:95 comments.php:96
 msgid "Comments"
@@ -365,13 +365,13 @@ msgstr "%1$s %2$s"
 msgid "%s <span class=\"screen-reader-text says\">says:</span>"
 msgstr "%s<span class=\"screen-reader-text says\">说：</span>"
 
-#: comments.php:95
-msgid "Previous"
-msgstr "上一页"
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "这儿似乎什么都没有，试试搜索？"
 
-#: comments.php:96
-msgid "Next"
-msgstr "下一页"
+#: 404.php:20
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "有点尴尬诶！该页无法显示。"
 
 #. Theme URI of the theme
 msgid "https://wordpress.org/themes/twentynineteen/"
