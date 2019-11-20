@@ -1,15 +1,8 @@
 <?php 
-/*
-Plugin Name: life
-Version: 0.1
-Author: haokexin
-Author URI: https://hkx.monster
-*/
-
 /*-------------------------------------------------------------------------------
                                     Webp
 -------------------------------------------------------------------------------*/
-
+if(get_option('life_options_webp')){
 /*---------------------------Allow upload--------------------------------------*/
 function add_webp_upload( $array ) {
 	$array['webp'] = 'image/webp';
@@ -25,11 +18,11 @@ function media_show_webp($result, $path) {
 	return $result;
 }
 add_filter( 'file_is_displayable_image', 'media_show_webp', 10, 2 );
-
+}
 /*-------------------------------------------------------------------------------
                                   Exif
 -------------------------------------------------------------------------------*/
-
+if(get_option('life_options_exif')){
 /*-----------------------------Get exif----------------------------------------*/
 function get_exif(){
    global $wpdb;
@@ -48,7 +41,7 @@ function get_exif(){
 }
 add_action('add_attachment','get_exif',10,1);
 #apply_filters('media_upload_tabs',array)
-
+}
 /*-------------------------------------------------------------------------------
                           Show error message when 500
 -------------------------------------------------------------------------------*/
@@ -60,6 +53,7 @@ add_filter('wp_die_handler', 'get_my_custom_die_handler');
 /*-------------------------------------------------------------------------------
                               Post's title must
 --------------------------------------------------------------------------------*/
+if(get_option('life_options_title')){
 function required_title() {
 ?>
 <script type="text/javascript">
@@ -81,10 +75,11 @@ function required_title() {
 }
 add_action('admin_head-post-new.php', 'required_title');
 add_action('admin_head-post.php', 'required_title');
-
+}
 /*-------------------------------------------------------------------------------
                              Remove_updates
 --------------------------------------------------------------------------------*/
+if(get_option('life_options_updates')){
 function remove_updates()
 {
   global $wp_version;
@@ -100,7 +95,7 @@ add_filter('automatic_updater_disabled', '__return_true');
 remove_action('load-plugins.php', 'wp_update_plugins');
 remove_action('load-update.php', 'wp_update_plugins');
 remove_action('load-update-core.php', 'wp_update_plugins');
-
+}
 
 
 ?>
