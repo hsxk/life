@@ -75,6 +75,12 @@ $table_prefix  = 'hkx_';
 define('WP_DEBUG', false);
 define('WPLANG','zh_CN');
 
+/*--------------------------------- 
+          Turn off auto save
+---------------------------------*/
+define('AUTOSAVE_INTERVAL', false ); 
+define('WP_POST_REVISIONS', false ); 
+
 #define('WP_ALLOW_MULTISITE', true);
 define('FORCE_SSL_ADMIN', true);
 #define('WP_CACHE', true);

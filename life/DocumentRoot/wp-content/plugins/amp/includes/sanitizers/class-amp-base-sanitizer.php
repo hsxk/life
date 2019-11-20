@@ -311,6 +311,18 @@ abstract class AMP_Base_Sanitizer {
 				$attributes['layout'] = 'fill';
 				return $attributes;
 			}
+
+			// Apply fill layout if width & height are 100%.
+			if ( isset( $styles['position'], $attributes['width'], $attributes['height'] )
+				&& 'absolute' === $styles['position']
+				&& '100%' === $attributes['width']
+				&& '100%' === $attributes['height']
+			) {
+				unset( $attributes['style'], $attributes['width'], $attributes['height'] );
+				$attributes['layout'] = 'fill';
+				unset( $attributes['height'], $attributes['width'] );
+				return $attributes;
+			}
 		}
 
 		if ( empty( $attributes['height'] ) ) {
@@ -475,7 +487,6 @@ abstract class AMP_Base_Sanitizer {
 		$should_remove = $this->should_sanitize_validation_error( $validation_error, compact( 'node' ) );
 		if ( $should_remove ) {
 			$element->removeAttributeNode( $node );
-			$this->clean_up_after_attribute_removal( $element, $node, $validation_error );
 		}
 		return $should_remove;
 	}
@@ -540,8 +551,8 @@ abstract class AMP_Base_Sanitizer {
 				}
 			}
 
-			// Capture script contents.
-			if ( 'script' === $node->nodeName && ! $node->hasAttribute( 'src' ) ) {
+			// Capture element contents.
+			if ( ( 'script' === $node->nodeName && ! $node->hasAttribute( 'src' ) ) || 'style' === $node->nodeName ) {
 				$error['text'] = $node->textContent;
 			}
 
@@ -567,6 +578,8 @@ abstract class AMP_Base_Sanitizer {
 					}
 				}
 			}
+		} elseif ( $node instanceof DOMProcessingInstruction ) {
+			$error['text'] = trim( $node->data, '?' );
 		}
 
 		return $error;
@@ -577,12 +590,10 @@ abstract class AMP_Base_Sanitizer {
 	 *
 	 * @since 1.3
 	 *
-	 * @param DOMElement $element          The node for which he attribute was
-	 *                                     removed.
-	 * @param DOMAttr    $attribute        The attribute that was removed.
-	 * @param array      $validation_error Validation error details.
+	 * @param DOMElement $element   The node for which the attribute was removed.
+	 * @param DOMAttr    $attribute The attribute that was removed.
 	 */
-	protected function clean_up_after_attribute_removal( $element, $attribute, $validation_error ) {
+	protected function clean_up_after_attribute_removal( $element, $attribute ) {
 		static $attributes_tied_to_href = [ 'target', 'download', 'rel', 'rev', 'hreflang', 'type' ];
 
 		if ( 'href' === $attribute->nodeName ) {

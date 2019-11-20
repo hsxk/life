@@ -1,0 +1,1 @@
+(function($,api){$(document).ready(function(){api.control("accent_hue_active").setting.bind(function(active){var control=api.control("accent_hue");if("custom"===active)control.activate({completeCallback:function(){control.focus()}});else control.deactivate({completeCallback:function(){control.setting.set(control.params.defaultValue)}})})})})(jQuery,wp.customize);

@@ -35,18 +35,17 @@ class AMP_Options_Manager {
 	 * @var array
 	 */
 	protected static $defaults = [
-		'experiences'              => [ self::WEBSITE_EXPERIENCE ],
-		'theme_support'            => AMP_Theme_Support::READER_MODE_SLUG,
-		'supported_post_types'     => [ 'post' ],
-		'analytics'                => [],
-		'auto_accept_sanitization' => true,
-		'all_templates_supported'  => true,
-		'supported_templates'      => [ 'is_singular' ],
-		'enable_response_caching'  => true,
-		'version'                  => AMP__VERSION,
-		'story_templates_version'  => false,
-		'story_export_base_url'    => '',
-		'story_settings'           => [
+		'experiences'             => [ self::WEBSITE_EXPERIENCE ],
+		'theme_support'           => AMP_Theme_Support::READER_MODE_SLUG,
+		'supported_post_types'    => [ 'post' ],
+		'analytics'               => [],
+		'all_templates_supported' => true,
+		'supported_templates'     => [ 'is_singular' ],
+		'enable_response_caching' => true,
+		'version'                 => AMP__VERSION,
+		'story_templates_version' => false,
+		'story_export_base_url'   => '',
+		'story_settings'          => [
 			'auto_advance_after'          => '',
 			'auto_advance_after_duration' => 0,
 		],
@@ -158,6 +157,11 @@ class AMP_Options_Manager {
 			$options['theme_support'] = $defaults['theme_support'];
 		}
 
+		// Remove 'auto_accept_sanitization' option as of 1.4.
+		if ( isset( $options['auto_accept_sanitization'] ) ) {
+			unset( $options['auto_accept_sanitization'] );
+		}
+
 		return $options;
 	}
 
@@ -250,8 +254,6 @@ class AMP_Options_Manager {
 				add_action( 'update_option_' . self::OPTION_NAME, [ __CLASS__, 'handle_updated_theme_support_option' ] );
 			}
 		}
-
-		$options['auto_accept_sanitization'] = ! empty( $new_options['auto_accept_sanitization'] );
 
 		// Validate post type support.
 		if ( in_array( self::WEBSITE_EXPERIENCE, $options['experiences'], true ) || isset( $new_options['supported_post_types'] ) ) {
@@ -398,9 +400,11 @@ class AMP_Options_Manager {
 				add_settings_error(
 					self::OPTION_NAME,
 					$code,
-					sprintf(
-						$error,
-						isset( $post_type->label ) ? $post_type->label : $post_type->name
+					esc_html(
+						sprintf(
+							$error,
+							isset( $post_type->label ) ? $post_type->label : $post_type->name
+						)
 					)
 				);
 			}
@@ -491,7 +495,7 @@ class AMP_Options_Manager {
 			<div class="amp-welcome-icon-holder">
 				<img width="200" height="200" class="amp-welcome-icon" src="<?php echo esc_url( amp_get_asset_url( 'images/amp-welcome-icon.svg' ) ); ?>" alt="<?php esc_attr_e( 'Illustration of WordPress running AMP plugin.', 'amp' ); ?>" />
 			</div>
-			<h1><?php esc_html_e( 'Welcome to AMP for WordPress', 'amp' ); ?></h1>
+			<h2><?php esc_html_e( 'Welcome to AMP for WordPress', 'amp' ); ?></h2>
 			<h3><?php esc_html_e( 'Bring the speed and features of the open source AMP project to your site, complete with the tools to support content authoring and website development.', 'amp' ); ?></h3>
 			<h3><?php esc_html_e( 'From granular controls that help you create AMP content, to Core Gutenberg support, to a sanitizer that only shows visitors error-free pages, to a full error workflow for developers, this release enables rich, performant experiences for your WordPress site.', 'amp' ); ?></h3>
 			<a href="https://amp-wp.org/getting-started/" target="_blank" class="button button-primary"><?php esc_html_e( 'Learn More', 'amp' ); ?></a>
@@ -548,10 +552,13 @@ class AMP_Options_Manager {
 		if ( ! wp_using_ext_object_cache() && 'toplevel_page_' . self::OPTION_NAME === get_current_screen()->id ) {
 			printf(
 				'<div class="notice notice-warning"><p>%s</p></div>',
-				sprintf(
-					/* translators: %s: Persistent object cache support URL */
-					__( 'The AMP plugin performs at its best when persistent object cache is enabled. <a href="%s">More details</a>', 'amp' ), // phpcs:ignore WordPress.Security.EscapeOutput
-					esc_url( __( 'https://codex.wordpress.org/Class_Reference/WP_Object_Cache#Persistent_Caching', 'amp' ) )
+				wp_kses(
+					sprintf(
+						/* translators: %s: Persistent object cache support URL */
+						__( 'The AMP plugin performs at its best when persistent object cache is enabled. <a href="%s">More details</a>', 'amp' ),
+						esc_url( __( 'https://codex.wordpress.org/Class_Reference/WP_Object_Cache#Persistent_Caching', 'amp' ) )
+					),
+					[ 'a' => [ 'href' => true ] ]
 				)
 			);
 		}
@@ -573,10 +580,13 @@ class AMP_Options_Manager {
 
 		printf(
 			'<div class="notice notice-warning is-dismissible"><p>%s</p></div>',
-			sprintf(
-				/* translators: %s: post-processor cache support URL */
-				__( 'The AMP plugin&lsquo;s post-processor cache was disabled due to the detection of highly-variable content. <a href="%s">More details</a>', 'amp' ), // phpcs:ignore WordPress.Security.EscapeOutput
-				esc_url( __( 'https://github.com/ampproject/amp-wp/wiki/Post-Processor-Cache', 'amp' ) )
+			wp_kses(
+				sprintf(
+					/* translators: %s: post-processor cache support URL */
+					__( 'The AMP plugin&lsquo;s post-processor cache was disabled due to the detection of highly-variable content. <a href="%s">More details</a>', 'amp' ),
+					esc_url( __( 'https://github.com/ampproject/amp-wp/wiki/Post-Processor-Cache', 'amp' ) )
+				),
+				[ 'a' => [ 'href' => true ] ]
 			)
 		);
 	}
@@ -605,10 +615,13 @@ class AMP_Options_Manager {
 
 			printf(
 				'<div class="notice notice-warning"><p>%s</p></div>',
-				sprintf(
-					/* translators: %s: path to the conflicting library */
-					__( 'A conflicting version of PHP-CSS-Parser appears to be installed by another plugin or theme (located in %s). Because of this, CSS processing will be limited, and tree shaking will not be available.', 'amp' ), // phpcs:ignore WordPress.Security.EscapeOutput
-					'<code>' . esc_html( $source_dir ) . '</code>'
+				wp_kses(
+					sprintf(
+						/* translators: %s: path to the conflicting library */
+						__( 'A conflicting version of PHP-CSS-Parser appears to be installed by another plugin or theme (located in %s). Because of this, CSS processing will be limited, and tree shaking will not be available.', 'amp' ),
+						'<code>' . esc_html( $source_dir ) . '</code>'
+					),
+					[ 'code' => [] ]
 				)
 			);
 		} catch ( ReflectionException $e ) {

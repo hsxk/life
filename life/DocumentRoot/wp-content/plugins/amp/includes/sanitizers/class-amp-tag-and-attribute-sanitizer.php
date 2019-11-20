@@ -291,6 +291,8 @@ class AMP_Tag_And_Attribute_Sanitizer extends AMP_Base_Sanitizer {
 						$result
 					);
 				}
+			} elseif ( $this_child instanceof DOMProcessingInstruction ) {
+				$this->remove_invalid_child( $this_child, [ 'code' => 'invalid_processing_instruction' ] );
 			}
 			$this_child = $next_child;
 		}
@@ -581,8 +583,24 @@ class AMP_Tag_And_Attribute_Sanitizer extends AMP_Base_Sanitizer {
 			foreach ( $node->attributes as $attribute ) {
 				$validation_error['element_attributes'][ $attribute->nodeName ] = $attribute->nodeValue;
 			}
+			$removed_attributes = [];
 			foreach ( $disallowed_attributes as $disallowed_attribute ) {
-				$this->remove_invalid_attribute( $node, $disallowed_attribute, $validation_error );
+				if ( $this->remove_invalid_attribute( $node, $disallowed_attribute, $validation_error ) ) {
+					$removed_attributes[] = $disallowed_attribute;
+				}
+			}
+
+			/*
+			 * Only run cleanup after the fact to prevent a scenario where invalid markup is kept and so the attribute
+			 * is actually not removed. This prevents a "DOMException: Not Found Error" from happening when calling
+			 * remove_invalid_attribute() since clean_up_after_attribute_removal() can end up removing invalid link
+			 * attributes (like 'target') when there is an invalid 'href' attribute, but if the 'target' attribute is
+			 * itself invalid, then if clean_up_after_attribute_removal() is called inside of remove_invalid_attribute()
+			 * it can cause a subsequent invocation of remove_invalid_attribute() to try to remove an invalid
+			 * attribute that has already been removed from the DOM.
+			 */
+			foreach ( $removed_attributes as $removed_attribute ) {
+				$this->clean_up_after_attribute_removal( $node, $removed_attribute );
 			}
 		}
 
@@ -668,7 +686,13 @@ class AMP_Tag_And_Attribute_Sanitizer extends AMP_Base_Sanitizer {
 	 * @return true|WP_Error True when valid or error when invalid.
 	 */
 	private function validate_cdata_for_node( DOMElement $element, $cdata_spec ) {
-		if ( isset( $cdata_spec['max_bytes'] ) && strlen( $element->textContent ) > $cdata_spec['max_bytes'] ) {
+		if (
+			isset( $cdata_spec['max_bytes'] ) && strlen( $element->textContent ) > $cdata_spec['max_bytes']
+			&&
+			// Skip the <style amp-custom> tag, as we want to display it even with an excessive size if it passed the style sanitizer.
+			// This would mean that AMP was disabled to not break the styling.
+			! ( 'style' === $element->nodeName && $element->hasAttribute( 'amp-custom' ) )
+		) {
 			return new WP_Error( 'excessive_bytes' );
 		}
 		if ( isset( $cdata_spec['blacklisted_cdata_regex'] ) ) {
