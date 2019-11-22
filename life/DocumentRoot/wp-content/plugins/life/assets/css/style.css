@@ -45,14 +45,14 @@
 .testswitch-inner::after {
     content: attr(data-on);
     padding-left: 10px;
-    background-color: #00e500; 
+    background-color: #31b700; 
     color: #FFFFFF;
 }
  
 .testswitch-inner::before {
     content: attr(data-off);
     padding-right: 10px;
-    background-color: #FF0000; 
+    background-color: #B0C4DE; 
     color: #000000;
     text-align: right;
 }
@@ -91,8 +91,8 @@
 	font-size: large;
 	text-align: left;
 	border: none;
-	color: #00BFFF;
-	text-shadow: #00FFFF  0.1em 0.1em 0.2em;
+	color: #000000;
+	text-shadow: #b5cbf3  0.3em 0.2em 0.2em;
 	font-style: italic;
 	font-weight: normal;
     margin: 0;

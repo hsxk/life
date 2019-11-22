@@ -2,7 +2,7 @@
 /*
 Plugin Name: Life
 Description:LIFEのために開発したプラグイン
-Version: 0.2
+Version: 0.2.5
 Author: haokexin
 Author URI: https://hkx.monster
 */
@@ -19,10 +19,10 @@ include_once "control.php";
 function life_plugin_menu(){
    add_menu_page( 'Life Settings',
                   'Life',
-				  'manage_options', 
+				  'manage_options',
 				  'life_plugin',
 				  'life_plugin_page',
-				  '../wp-content/plugins/life/panda.png',
+				  WP_PLUGIN_URL.'/life/assets/img/panda.png',
 				  '66' );
 }
 add_action('admin_menu','life_plugin_menu');
@@ -35,8 +35,8 @@ if ( !current_user_can( 'manage_options' ) )  {
    wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
    }
    ?>
-    <link rel="stylesheet" href="<?php echo WP_PLUGIN_URL ?>/life/style.css" type="text/css">
-    <script src="<?php echo WP_PLUGIN_URL ?>/life/common.js"></script>
+    <link rel="stylesheet" href="<?php echo WP_PLUGIN_URL ?>/life/assets/css/style.css" type="text/css">
+    <script src="<?php echo WP_PLUGIN_URL ?>/life/assets/js/common.js"></script>
     <div class="wrap">
 	<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 	<?php settings_errors();  //更新通知を表示する ?>  
