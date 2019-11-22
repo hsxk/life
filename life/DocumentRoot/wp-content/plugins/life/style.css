@@ -52,8 +52,8 @@
 .testswitch-inner::before {
     content: attr(data-off);
     padding-right: 10px;
-    background-color: #EEEEEE; 
-    color: #999999;
+    background-color: #FF0000; 
+    color: #000000;
     text-align: right;
 }
  
@@ -78,4 +78,22 @@
  
 .testswitch-checkbox:checked + .testswitch-label .testswitch-switch {
     right: 0px; 
+}
+
+.control_switch_block{
+    display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+}
+
+.control_switch_block p{
+    display:inline;
+	font-size: large;
+	text-align: left;
+	border: none;
+	color: #00BFFF;
+	text-shadow: #00FFFF  0.1em 0.1em 0.2em;
+	font-style: italic;
+	font-weight: normal;
+    margin: 0;
 }

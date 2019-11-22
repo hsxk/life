@@ -80,6 +80,8 @@ add_action('admin_head-post.php', 'required_title');
                              Remove_updates
 --------------------------------------------------------------------------------*/
 if(get_option('life_options_updates')){
+#$user = wp_get_current_user();    //更新可能ユーザー追加
+#if ( !($user->user_login == 'psuser')){   
 function remove_updates()
 {
   global $wp_version;
@@ -95,7 +97,38 @@ add_filter('automatic_updater_disabled', '__return_true');
 remove_action('load-plugins.php', 'wp_update_plugins');
 remove_action('load-update.php', 'wp_update_plugins');
 remove_action('load-update-core.php', 'wp_update_plugins');
+#}
 }
-
-
+/*------------------------------------------------------------------------------
+                       Disable F12, Copy, paste, cut
+------------------------------------------------------------------------------*/
+if(get_option('life_options_copy')){
+function disable_f12_copy_paste(){
+if(!current_user_can('manage_options')){
+?>
+<script type="text/javascript">
+   //Disable right click menu
+   document.oncontextmenu = new Function("return false;");
+   //Disable F12
+   document.onkeydown = document.onkeyup = document.onkeypress = function(event) {
+      var e = event || window.event || arguments.callee.caller.arguments[0];
+	  if (e && e.keyCode == 123) {
+	        e.returnValue = false;
+			return (false);
+			}
+   };
+   //Disable text selection
+   document.onselectstart = function(){ return false; };
+   //Disable copy
+   document.oncopy = function(){ return false; };
+   //Disable cut
+   document.oncut = function(){ return false; };
+   //Disable paste
+   document.onpaste = function(){ return false; };
+</script>
+<?php
+}
+}
+add_action('wp_footer', 'disable_f12_copy_paste');
+}
 ?>

@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 	$("input[id*='onoffswitch']").on('click', function(){
 		clickSwitch()
 	});
