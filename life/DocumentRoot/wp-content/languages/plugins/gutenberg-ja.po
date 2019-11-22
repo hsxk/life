@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Gutenberg - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-10-01 06:23:45+0000\n"
+"PO-Revision-Date: 2019-10-05 05:57:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,82 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - Gutenberg - Stable (latest release)\n"
+
+#: build/block-library/index.js:14
+msgid "December 6, 2018"
+msgstr "2018年12月6日"
+
+#: build/block-library/index.js:14
+msgid "Release Date"
+msgstr "リリース日"
+
+#: build/block-library/index.js:14
+msgid "May 7, 2019"
+msgstr "2019年5月7日"
+
+#: build/block-library/index.js:14
+msgid "February 21, 2019"
+msgstr "2019年2月21日"
+
+#: build/block-library/index.js:14
+msgid "Jazz Musician"
+msgstr "ジャズ音楽家"
+
+#: build/block-library/index.js:14
+msgid "Version"
+msgstr "バージョン"
+
+#: build/block-library/index.js:14
+msgid "Six."
+msgstr "6."
+
+#: build/block-library/index.js:14
+msgid "Five."
+msgstr "5."
+
+#: build/block-library/index.js:14
+msgid "Four."
+msgstr "4."
+
+#: build/block-library/index.js:14
+msgid "Three."
+msgstr "3."
+
+#: build/block-library/index.js:14
+msgid "Two."
+msgstr "2."
+
+#: build/block-library/index.js:14
+msgid "One."
+msgstr "1."
+
+#: build/block-library/index.js:14
+msgid "— Kobayashi Issa (一茶)"
+msgstr "— 小林一茶"
+
+#: build/block-library/index.js:14
+msgid "Call to Action"
+msgstr "行動喚起"
+
+#: build/block-library/index.js:14
+msgid "cite"
+msgstr "引用"
+
+#: lib/templates.php:20
+msgid "Templates"
+msgstr "テンプレート"
+
+#: build/block-editor/index.js:55
+msgid "Block navigation"
+msgstr "ブロックナビゲーション"
+
+#: lib/experiments-page.php:78
+msgid "Full Site Editing"
+msgstr "サイト全体の編集"
+
+#: lib/experiments-page.php:83
+msgid "Enable Full Site Editing"
+msgstr "サイト全体の編集を有効化"
 
 #: build/edit-post/index.js:12
 msgid "Tips"
@@ -90,6 +166,15 @@ msgid "Social links"
 msgstr "ソーシャルリンク"
 
 #: build/block-library/index.js:14
+msgid "Pill Shape"
+msgstr "カプセル形"
+
+#: build/block-directory/index.js:1
+msgid "%d total rating"
+msgid_plural "%d total ratings"
+msgstr[0] "合計%d件の評価"
+
+#: build/block-library/index.js:14
 msgid "Fill"
 msgstr "塗りつぶし"
 
@@ -101,15 +186,23 @@ msgstr "添付ファイルのページ"
 msgid "Link rel"
 msgstr "リンク rel 属性"
 
+#: build/block-library/index.js:14
+msgid "Border Radius"
+msgstr "角丸半径"
+
+#: build/block-library/index.js:14
+msgid "Open block navigator"
+msgstr "ブロックナビゲーターを開く"
+
 #: lib/class-wp-rest-block-directory-controller.php:303
 msgid " ago"
 msgstr "前"
 
-#: lib/experiments-page.php:69
+#: lib/experiments-page.php:67
 msgid "Block Directory"
 msgstr "ブロックディレクトリ"
 
-#: lib/experiments-page.php:74
+#: lib/experiments-page.php:72
 msgid "Enable Block Directory search"
 msgstr "ブロックディレクトリ検索を有効化"
 
@@ -121,11 +214,15 @@ msgstr "バックアップから復元"
 msgid "Content Blocks"
 msgstr "コンテンツブロック"
 
+#: lib/class-wp-rest-block-directory-controller.php:80
+msgid "Sorry, you are not allowed to install blocks."
+msgstr "ブロックをインストールする権限がありません。"
+
 #: build/block-editor/index.js:55
 msgid "Not set"
 msgstr "未設定"
 
-#: lib/class-wp-rest-widget-areas-controller.php:104
+#: lib/class-wp-rest-widget-areas-controller.php:98
 msgid "The content for the object."
 msgstr "オブジェクトのコンテンツ。"
 
@@ -133,7 +230,7 @@ msgstr "オブジェクトのコンテンツ。"
 msgid "While writing, you can press \"/\" to quickly insert new blocks."
 msgstr "執筆中に \"/\" を押すと、新しいブロックを素早く挿入できます。"
 
-#: lib/class-wp-rest-widget-areas-controller.php:118
+#: lib/class-wp-rest-widget-areas-controller.php:112
 msgid "HTML content for the object, transformed for display."
 msgstr "表示用に整形済みの、オブジェクトの HTML コンテンツ。"
 
@@ -150,13 +247,26 @@ msgid "%1$d block is disabled."
 msgid_plural "%1$d blocks are disabled."
 msgstr[0] "%1$d個のブロックが無効になっています。"
 
-#: lib/class-wp-rest-widget-areas-controller.php:124
+#: lib/class-wp-rest-widget-areas-controller.php:118
 msgid "Version of the content block format used by the object."
 msgstr "オブジェクトが使用するコンテンツブロック形式のバージョン。"
 
 #: build/block-library/index.js:14
 msgid "Start Value"
 msgstr "初期値"
+
+#: build/block-library/index.js:14
+msgctxt "block style"
+msgid "Circle Mask"
+msgstr "丸形マスク"
+
+#: build/block-library/index.js:14
+msgid "Ordered List Settings"
+msgstr "番号付きリスト設定"
+
+#: build/block-library/index.js:14
+msgid "Reverse List Numbering"
+msgstr "リストの数字を逆順にする"
 
 #: build/block-library/index.js:14
 msgid "Color"
@@ -194,21 +304,25 @@ msgstr "有効化してリロード"
 msgid "Display these keyboard shortcuts."
 msgstr "これらのキーボードショートカットを表示する。"
 
-#: lib/experiments-page.php:58
+#: lib/experiments-page.php:56
 msgid "Menu Block"
 msgstr "メニューブロック"
 
-#: lib/experiments-page.php:21
+#: lib/experiments-page.php:19
 msgid "Experiment settings"
 msgstr "実験的な設定"
 
-#: lib/experiments-page.php:63
+#: lib/experiments-page.php:61
 msgid "Enable Navigation Menu Block"
 msgstr "ナビゲーションメニューブロックを有効化"
 
 #: gutenberg.php:74
 msgid "Experiments Settings"
 msgstr "実験的設定"
+
+#: lib/experiments-page.php:50
+msgid "Enable Widgets Screen and Legacy Widget Block"
+msgstr "ウィジェット画面と古いウィジェットブロックを有効化"
 
 #: build/components/index.js:19
 msgid "Custom"
@@ -321,10 +435,6 @@ msgstr "スキップ"
 #: build/block-editor/index.js:55
 msgid "Choose Layout"
 msgstr "レイアウトオプションを選択"
-
-#: build/edit-widgets/index.js:1
-msgid "Block areas saved succesfully."
-msgstr "ブロックエリアを正常に保存しました。"
 
 #: build/block-editor/index.js:55
 msgid "Upload a media file or pick one from your media library."
@@ -453,11 +563,11 @@ msgstr "半角コンマまたはエンターキーで区切ります。"
 msgid "Separate with commas, spaces, or the Enter key."
 msgstr "半角コンマ、スペースまたはエンターキーで区切ります。"
 
-#: lib/class-wp-rest-widget-areas-controller.php:200
+#: lib/class-wp-rest-widget-areas-controller.php:201
 msgid "Sorry, you are not allowed to edit sidebars."
 msgstr "サイドバーを編集する権限がありません。"
 
-#: lib/class-wp-rest-widget-areas-controller.php:149
+#: lib/class-wp-rest-widget-areas-controller.php:146
 msgid "Sorry, you are not allowed to read sidebars."
 msgstr "サイドバーを読み込む権限がありません。"
 
@@ -473,10 +583,6 @@ msgstr "画像を後ろに移動"
 #: lib/class-experimental-wp-widget-blocks-manager.php:340
 msgid "Blocks Area"
 msgstr "ブロックエリア"
-
-#: lib/class-wp-rest-widget-areas-controller.php:56
-msgid "Sidebar content."
-msgstr "サイドバーのコンテンツ。"
 
 #: lib/class-wp-rest-widget-areas-controller.php:49
 msgid "The sidebar’s ID."
@@ -757,7 +863,7 @@ msgstr "従来のウィジェット (テスト機能)"
 msgid "Block Manager"
 msgstr "ブロックマネージャー"
 
-#: lib/class-wp-rest-widget-updater-controller.php:101
+#: lib/class-wp-rest-widget-updater-controller.php:99
 msgid "Invalid widget."
 msgstr "無効なウィジェット。"
 
@@ -2317,7 +2423,7 @@ msgstr "Gutenberg の開発を手伝う"
 msgid "The WordPress community"
 msgstr "WordPress コミュニティ"
 
-#: post-content.php:159
+#: post-content.php:159 build/block-library/index.js:14
 msgid "Code is Poetry"
 msgstr "Code is Poetry"
 
@@ -2430,13 +2536,13 @@ msgstr "もちろん、このような<em>リスト</em>も ^^"
 msgid "Of Mountains &amp; Printing Presses"
 msgstr "Gutenberg を試してみよう"
 
-#: post-content.php:16
-msgid "The goal of this new editor is to make adding rich content to WordPress simple and enjoyable. This whole post is composed of <em>pieces of content</em>—somewhat similar to LEGO bricks—that you can move around and interact with. Move your cursor around and you&#8217;ll notice the different blocks light up with outlines and arrows. Press the arrows to reposition blocks quickly, without fearing about losing things in the process of copying and pasting."
-msgstr "この新しいエディターのゴールは、WordPress へのリッチコンテンツの追加をシンプルで楽しくすることです。この投稿全体が<em>コンテンツのパーツ</em>—LEGO ブロックのようなもの—により構成されており、動かしたり操作できるようになっています。カーソルを動かすと、様々なブロックが枠線と矢印とともにフォーカスされます。矢印を押すとブロックをすばやく並び替えることができ、コピー & ペーストしているうちに内容が消えてしまう恐れがありません。"
-
 #: post-content.php:20
 msgid "What you are reading now is a <strong>text block</strong> the most basic block of all. The text block has its own controls to be moved freely around the post..."
 msgstr "現在ご覧いただいているのが<strong>テキストブロック</strong>で、すべてのブロックのうち一番基本のブロックです。テキストブロックは、投稿内を自由に移動できる独自のコントロールがついています。"
+
+#: post-content.php:16
+msgid "The goal of this new editor is to make adding rich content to WordPress simple and enjoyable. This whole post is composed of <em>pieces of content</em>—somewhat similar to LEGO bricks—that you can move around and interact with. Move your cursor around and you&#8217;ll notice the different blocks light up with outlines and arrows. Press the arrows to reposition blocks quickly, without fearing about losing things in the process of copying and pasting."
+msgstr "この新しいエディターのゴールは、WordPress へのリッチコンテンツの追加をシンプルで楽しくすることです。この投稿全体が<em>コンテンツのパーツ</em>—LEGO ブロックのようなもの—により構成されており、動かしたり操作できるようになっています。カーソルを動かすと、様々なブロックが枠線と矢印とともにフォーカスされます。矢印を押すとブロックをすばやく並び替えることができ、コピー & ペーストしているうちに内容が消えてしまう恐れがありません。"
 
 #: post-content.php:32
 msgid "A Picture is Worth a Thousand Words"
@@ -2484,7 +2590,7 @@ msgstr "さらに表示"
 msgid "Untitled Reusable Block"
 msgstr "無題の再利用ブロック"
 
-#: lib/class-wp-rest-widget-areas-controller.php:98
+#: lib/class-wp-rest-widget-areas-controller.php:92
 msgid "Unique identifier for the object."
 msgstr "オブジェクトの独自識別子。"
 
@@ -3524,20 +3630,12 @@ msgid "recent posts"
 msgstr "最近の投稿"
 
 #: build/block-library/index.js:14
-msgid "Convert to ordered list"
-msgstr "順序付きリストに変換"
-
-#: build/block-library/index.js:14
 msgid "Write list…"
 msgstr "リストを入力..."
 
 #: build/block-library/index.js:14
 msgid "bullet list"
 msgstr "箇条書きリスト"
-
-#: build/block-library/index.js:14
-msgid "ordered list"
-msgstr "順序付きリスト"
 
 #: build/block-library/index.js:14
 msgid "numbered list"
@@ -4166,7 +4264,15 @@ msgstr "更新に失敗しました。"
 msgid "Remove link"
 msgstr "リンクの削除"
 
-#: lib/experiments-page.php:47 build/blocks/index.js:2
+#: build/block-library/index.js:14
+msgid "ordered list"
+msgstr "番号付きリスト"
+
+#: build/block-library/index.js:14
+msgid "Convert to ordered list"
+msgstr "番号付きリストに変換"
+
+#: lib/experiments-page.php:45 build/blocks/index.js:2
 msgid "Widgets"
 msgstr "ウィジェット"
 
