@@ -81,13 +81,13 @@
 }
 
 .control_switch_block{
-    display: -webkit-flex;
+	display: -webkit-flex;
 	display: flex;
 	flex-direction: column;
 }
 
 .control_switch_block p{
-    display:inline;
+	display:inline;
 	font-size: large;
 	text-align: left;
 	border: none;
@@ -95,5 +95,5 @@
 	text-shadow: #b5cbf3  0.3em 0.2em 0.2em;
 	font-style: italic;
 	font-weight: normal;
-    margin: 0;
+	margin: 0;
 }

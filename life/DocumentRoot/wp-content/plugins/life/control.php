@@ -3,17 +3,17 @@
    if ( isset( $option_name ) && isset( $option_value ) && isset( $title ) ) {
 	 if ( !$option_value ) {
 	    $checkbox = '<input class="testswitch-checkbox" 
-		                    name="'.$option_name.'"
-			   		 	    id="onoffswitch'.$option_name.'"
-						    type="checkbox" value="0">';
-					       }
+							name="'.$option_name.'"
+							id="onoffswitch'.$option_name.'"
+							type="checkbox" value="0">';
+							}
 	 else {
 	    $checkbox = '<input class="testswitch-checkbox" 
-		                    name="'.$option_name.'" 
-						    id="onoffswitch'.$option_name.'" 
-						    checked="checked"  
-						    type="checkbox" 
-						    value="1">';
+							name="'.$option_name.'" 
+							id="onoffswitch'.$option_name.'" 
+							checked="checked"  
+							type="checkbox" 
+							value="1">';
 		  }
 	 $switch = '<div class="testswitch">'
 	           .$checkbox.

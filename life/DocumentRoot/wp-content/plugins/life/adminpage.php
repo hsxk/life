@@ -35,16 +35,16 @@ if ( !current_user_can( 'manage_options' ) )  {
    wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
    }
    ?>
-    <link rel="stylesheet" href="<?php echo WP_PLUGIN_URL ?>/life/assets/css/style.css" type="text/css">
-    <script src="<?php echo WP_PLUGIN_URL ?>/life/assets/js/common.js"></script>
-    <div class="wrap">
+	<link rel="stylesheet" href="<?php echo WP_PLUGIN_URL ?>/life/assets/css/style.css" type="text/css">
+	<script src="<?php echo WP_PLUGIN_URL ?>/life/assets/js/common.js"></script>
+	<div class="wrap">
 	<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 	<?php settings_errors();  //更新通知を表示する ?>  
 	<form  action="options.php" method="post">
 	<?php
-	    settings_fields('life-group');
+		settings_fields('life-group');
 		do_settings_sections('life-group');
-	    submit_button();
+		submit_button();
 	?>
 	</form>
 	</div>
@@ -68,15 +68,15 @@ add_action('admin_init','life_admin_init');
           管理画面内容
 ---------------------------------------*/
 function checkbox(){
-    $exif = get_option('life_options_exif');
+	$exif = get_option('life_options_exif');
 	$title = get_option('life_options_title');
-    $updates = get_option('life_options_updates');
+	$updates = get_option('life_options_updates');
 	$copy= get_option('life_options_copy');
-    $webp = get_option('life_options_webp');
-    echo control_switch_block( "life_options_webp", $webp, 'Allow uploading webp images' );
+	$webp = get_option('life_options_webp');
+	echo control_switch_block( "life_options_webp", $webp, 'Allow uploading webp images' );
 	echo control_switch_block( "life_options_exif", $exif, 'Get exif from image' );
 	echo control_switch_block( "life_options_title", $title, 'Post\'s title must' );
 	echo control_switch_block( "life_options_updates", $updates, 'Remove updates' );
-    echo control_switch_block( "life_options_copy", $copy, 'Disable f12,copy,paste but except managers' );
+	echo control_switch_block( "life_options_copy", $copy, 'Disable f12,copy,paste but except managers' );
 }
 ?>
