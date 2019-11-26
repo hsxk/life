@@ -2,7 +2,7 @@
 /*
 Plugin Name: Life
 Description:LIFEのために開発したプラグイン
-Version: 0.2.5
+Version: 0.3
 Author: haokexin
 Author URI: https://hkx.monster
 */
