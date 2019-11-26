@@ -1,4 +1,5 @@
-<?php 
+<?php
+include_once "functions.php";
 /*-------------------------------------------------------------------------------
                                     Webp
 -------------------------------------------------------------------------------*/
@@ -26,25 +27,25 @@ add_filter( 'file_is_displayable_image', 'media_show_webp', 10, 2 );
 /*-------------------------------------------------------------------------------
                                   Exif
 -------------------------------------------------------------------------------*/
-if(get_option('life_options_exif')){  //管理画面コントロール用
-     if (!get_option('exif_loaded_post_id')){
+if( get_option( 'life_options_exif' ) ) {  //管理画面コントロール用
+     if ( !get_option( 'exif_loaded_post_id' ) ) {
          add_option( 'exif_loaded_post_id', '1', '', 'yes' );
      }
                         /*------Get exif-------*/
    function exif(){
-       $exif_loaded_post_id=get_option('exif_loaded_post_id');
+       $exif_loaded_post_id = get_option( 'exif_loaded_post_id' );
        $args = array(
-                  'post_type'	 => 'attachment',
-				  'post_status'	 => 'inherit',
-				  'post_mime_type' => array('image/jpeg',
-				                            'image/tiff'),
-				  //'post__not_in'=> range(1,(int)$exif_loaded_post_id),
-				  'orderby'=>'ID',
-				  'order'=>'ASC',
+                  'post_type' => 'attachment',
+				  'post_status'	=> 'inherit',
+				  'post_mime_type' => array( 'image/jpeg',
+				                             'image/tiff' ),
+				  'post__not_in' => range( 1, (int)$exif_loaded_post_id ),
+				  'orderby' => 'ID',
+				  'order' => 'ASC',
        );
-       $query = new WP_Query($args);
-       if($query -> have_posts()):
-             while ( $query -> have_posts()  ) : $query -> the_post();
+       $query = new WP_Query( $args );
+       if( $query -> have_posts() ):
+             while ( $query -> have_posts() ) : $query -> the_post();
                    $id = get_the_id();
 				   //Jpeg/Tiff画像URLを取得
   	               $img_url = get_the_guid();
@@ -59,14 +60,53 @@ if(get_option('life_options_exif')){  //管理画面コントロール用
 	               $path_front = $matches_sv[1];
 				   //画像のサーバーパスを生成
 	               $img_path = $path_front . $path_rear;
-				   //EXIFデータを取得
-	               $exif = exif_read_data($img_path,0,true);
-	               #var_dump($exif[EXIF]);
+				   //Metaデータを取得
+	               $metadata = exif_read_data($img_path,0,true);
+				   //EXIF情報を取得,加工
+				   if ( $metadata[EXIF] ) {
+				   $exif[ 'Make' ] = $metadata[IFD0][Make].' '.$metadata[IFD0][Model];
+				   $exif[ 'ExposureTime' ] = exif_data( $metadata[EXIF][ExposureTime] );
+				   $exif[ 'FNumber' ] = gps_data( $metadata[EXIF][FNumber] );
+				   $exif[ 'ISOSpeedRatings' ] = $metadata[EXIF][ISOSpeedRatings];
+				   $exif[ 'DateTimeOriginal' ] = $metadata[EXIF][DateTimeOriginal];
+				   $exif[ 'ShutterSpeedValue' ] = $metadata[EXIF][ShutterSpeedValue];
+				   $exif[ 'ApertureValue' ] = $metadata[EXIF][ApertureValue];
+				   $exif[ 'BrightnessValue' ] = $metadata[EXIF][BrightnessValue];
+				   $exif[ 'ColorSpace' ] = $metadata[EXIF][ColorSpace];
+				   $exif[ 'InteroperabilityOffset' ] = $metadata[EXIF][InteroperabilityOffset];
+				   $exif[ 'WhiteBalance' ] = $metadata[EXIF][WhiteBalance];
+				   $exif[ 'ExposureMode' ] = $metadata[EXIF][ExposureMode];
+				   $exif[ 'DigitalZoomRatio' ] = $metadata[EXIF][DigitalZoomRatio];
+				   $exif[ 'FocalLengthIn35mmFilm' ] = $metadata[EXIF][FocalLengthIn35mmFilm];
+				   add_post_meta( $id, 'exif', $exif, true );
+				   }
+				   //GPS情報を取得,加工
+				   if ( $metadata[GPS] ){
+				   if ( $metadata[GPS][GPSLatitudeRef] == "S" )//南緯Sはマイナス
+				   $latitudeRef = '-';
+				   else
+				   $latitudeRef = '';
+				   if ( $metadata[GPS][GPSLongitudeRef] == "W" )//西経Wはマイナス
+				   $longitudeRef = '-';
+				   else 
+				   $longitudeRef = '';
+				   if( $metadata[GPS][GPSAltitudeRef] == "1" )//1は海拔以下
+				   $altitudeRef = '-';
+				   else 
+				   $altitudeRef = '';
+				   $longitude = gps_data( $metadata[GPS][GPSLongitude][0] ) + gps_data( $metadata[GPS][GPSLongitude][1] ) / 60 + gps_data( $metadata[GPS][GPSLongitude][2] ) / 60 / 60;
+				   $latitude = gps_data( $metadata[GPS][GPSLatitude][0] ) + gps_data( $metadata[GPS][GPSLatitude][1] ) / 60 + gps_data( $metadata[GPS][GPSLatitude][2] ) / 60 / 60;
+				   $GPS['longitude'] = $longitudeRef.$longitude;
+				   $GPS['latitude'] = $latitudeRef.$latitude;
+				   $GPS['coordinate'] = $latitudeRef.$latitude.','.$longitudeRef.$longitude;
+				   $GPS['altitude'] = $altitudeRef.$metadata[GPS][GPSAltitude]/100;
+				   add_post_meta( $id, 'gps', $GPS, true );
+                   }
              endwhile;
-             update_option('exif_loaded_post_id', $id);
+             update_option( 'exif_loaded_post_id', $id );
       endif;
     }
-add_action('init','exif');
+add_action( 'shutdown' , 'exif' );
 }
 
 /*-------------------------------------------------------------------------------

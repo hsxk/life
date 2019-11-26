@@ -11,7 +11,7 @@ Author URI: https://hkx.monster
           インクルードファイル
 -----------------------------------------*/
 include_once "life.php";
-include_once "control.php";
+include_once "functions.php";
 
 /*-----------------------------------------
           管理画面メニュー追加

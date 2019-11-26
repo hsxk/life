@@ -1,4 +1,5 @@
-<?php 
+<?php
+            /*--------------管理画面checkboxbutton----------------*/
   function control_switch_block( $option_name, $option_value, $title ) {
    if ( isset( $option_name ) && isset( $option_value ) && isset( $title ) ) {
 	 if ( !$option_value ) {
@@ -25,6 +26,40 @@
 	 $block = '<div class="control_switch_block"><p>'.$title.'</p>'.$switch.'</div>';
 	 return $block;
 	}
-	return false;
+	else{
+ 	 return false;
+	}
   }
+     /*---------------分数化簡-------------*/
+  function exif_data($str){
+  	if( isset ( $str ) ) {
+		$pattern = '/(.*)?\/(.*)?/';
+		preg_match( $pattern, $str, $number );
+		$a = $number[1];
+		$b = $number[2];
+		while( $b != 0 ) {   //最大公約数
+		   $gcd = $a % $b;
+		   $a = $b;
+		   $b = $gcd;
+		}
+		$str = ( $number[1] / $a ).'/'.( $number[2] / $a );
+		return $str;
+	}
+	else{
+		return false;
+	}
+  }
+
+  function gps_data($str){
+  	if( isset ( $str ) ) {
+		$pattern = '/(.*)?\/(.*)?/';
+		preg_match( $pattern, $str, $number );
+		$str = (double)$number[1]/(double)$number[2];
+		return $str;
+	}
+	else{
+		return false;
+	}
+  }
+
 ?>
