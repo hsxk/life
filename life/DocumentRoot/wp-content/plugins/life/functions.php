@@ -49,7 +49,7 @@
 		return false;
 	}
   }
-
+      /*-------------計算--------------*/
   function gps_data($str){
   	if( isset ( $str ) ) {
 		$pattern = '/(.*)?\/(.*)?/';

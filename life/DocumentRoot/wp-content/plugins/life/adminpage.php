@@ -60,7 +60,8 @@ register_setting( 'life-group', 'life_options_exif', array('type' => int,'defaul
 register_setting( 'life-group', 'life_options_title', array('type' => int,'default'=>'0' ) );
 register_setting( 'life-group', 'life_options_updates', array('type' => int,'default'=>'0'));
 register_setting( 'life-group', 'life_options_copy', array('type' => int,'default'=>'0' ) );
-add_settings_section('onoffswitchlife_options_webp', 'Checkbox Settings', 'checkbox', 'life-group' );
+register_setting( 'life-group', 'life_options_photo', array('type' => int,'default'=>'0' ) );
+add_settings_section('life_plugin_options', 'Checkbox Settings', 'checkbox', 'life-group' );
 }
 add_action('admin_init','life_admin_init');
 
@@ -73,10 +74,12 @@ function checkbox(){
 	$updates = get_option('life_options_updates');
 	$copy= get_option('life_options_copy');
 	$webp = get_option('life_options_webp');
+	$photo = get_option('life_options_photo');
 	echo control_switch_block( "life_options_webp", $webp, 'Allow uploading webp images' );
 	echo control_switch_block( "life_options_exif", $exif, 'Get exif from image' );
 	echo control_switch_block( "life_options_title", $title, 'Post\'s title must' );
 	echo control_switch_block( "life_options_updates", $updates, 'Remove updates' );
 	echo control_switch_block( "life_options_copy", $copy, 'Disable f12,copy,paste but except managers' );
+	echo control_switch_block( "life_options_photo", $photo, 'Allow originalsize photo upload' );
 }
 ?>

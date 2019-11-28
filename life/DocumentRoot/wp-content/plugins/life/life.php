@@ -1,4 +1,5 @@
 <?php
+/*-AIzaSyB3HNBEo_ND6z7s3ethaRA0lPxikOUqjwU-*/
 include_once "functions.php";
 /*-------------------------------------------------------------------------------
                                     Webp
@@ -184,5 +185,21 @@ if(get_option('life_options_copy')){
          <?php }
       }
 add_action('wp_footer', 'disable_f12_copy_paste');
+}
+
+/*--------------------------------------------------------------------------------
+                        Allow original photo upload 
+---------------------------------------------------------------------------------*/
+if(get_option('life_options_photo')){
+		add_filter( 'big_image_size_threshold', '__return_false' );
+}
+
+/*-------------------------------------------------------------------------------
+                         img type to webp
+-------------------------------------------------------------------------------*/
+if(get_option('life_options_img_type')){
+	function get_webp_img(){
+		
+	}
 }
 ?>
