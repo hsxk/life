@@ -202,4 +202,42 @@ if(get_option('life_options_img_type')){
 		
 	}
 }
+/*-------------------------------------------------------------------------------
+                          Show all image sizes
+-------------------------------------------------------------------------------*/
+if(get_option('life_options_size')){
+function get_all_image_sizes(){
+	global $_wp_additional_image_sizes;
+	$default = get_intermediate_image_sizes();
+	$default_sizes    = array( 'thumbnail', 'medium', 'medium_large', 'large' );
+	 foreach($_wp_additional_image_sizes as $name => $size){
+	 	$crop = $size[crop]?'crop':'';
+	    $image_size_list .= '<li style="float:left;line-height: 1.5">'.$name.'>>>>>'.$size[width].'X'.$size[height].'&nbsp;&nbsp;&nbsp;'.$crop.'</li>';
+	 }
+	 foreach($default_sizes as $name){
+	 	$strc = '_crop';
+		$optionc = $name.$strc;
+		$strw = '_size_w';
+		$optionw = $name.$strw;
+		$strh = '_size_h';
+		$optionh = $name.$strh;
+		$gcrop = get_option($optionc);
+		$width = get_option($optionw);
+		$height = get_option($optionh);
+		$crop = $gcrop?'crop':'';
+	 	$image_size_list .= '<li style="float:left;line-height: 1.5">'.$name.'>>>>>'.$width.'X'.$height.'&nbsp;&nbsp;&nbsp;'.$crop.'</li>';
+	 }
+	 global $wp_admin_bar;
+	 $args = array(
+	 	'id'     => 'show_all_image_size',
+		'title' => '<span class="show-template-name">Show all image sizes</span>',
+	 );
+	 $wp_admin_bar->add_node( $args );
+	 $wp_admin_bar->add_menu( array(
+	 	'parent' => 'show_all_image_size',
+		'id' => 'image_size',
+		'title' => '<ul id="included-files-list">'.$image_size_list.'</ul>',));
+	 }
+add_action('admin_bar_menu','get_all_image_sizes',999);
+}
 ?>

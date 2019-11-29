@@ -1,4 +1,5 @@
-.testswitch {
+/*-----------管理画面checkboxbuttonblock-----------*/
+.switch {
     position: relative;
     float: left; 
     width: 90px;
@@ -8,11 +9,11 @@
     -ms-user-select: none;
 }
  
-.testswitch-checkbox {
+.switch-checkbox {
     display: none!important;
 }
  
-.testswitch-label {
+.switch-label {
     display: block; 
     overflow: hidden; 
     cursor: pointer;
@@ -20,14 +21,14 @@
     border-radius: 20px;
 }
  
-.testswitch-inner {
+.switch-inner {
     display: block; 
     width: 200%; 
     margin-left: -100%;
     transition: margin 0.3s ease-in 0s;
 }
  
-.testswitch-inner::before, .testswitch-inner::after {
+.switch-inner::before, .switch-inner::after {
     display: block; 
     float: right; 
     width: 50%; 
@@ -42,14 +43,14 @@
     box-sizing: border-box;
 }
  
-.testswitch-inner::after {
+.switch-inner::after {
     content: attr(data-on);
     padding-left: 10px;
     background-color: #31b700; 
     color: #FFFFFF;
 }
  
-.testswitch-inner::before {
+.switch-inner::before {
     content: attr(data-off);
     padding-right: 10px;
     background-color: #B0C4DE; 
@@ -57,7 +58,7 @@
     text-align: right;
 }
  
-.testswitch-switch {
+.switch-switch {
     position: absolute; 
     display: block; 
     width: 22px;
@@ -72,11 +73,11 @@
     transition: all 0.3s ease-in 0s;
 }
  
-.testswitch-checkbox:checked + .testswitch-label .testswitch-inner {
+.switch-checkbox:checked + .switch-label .switch-inner {
     margin-left: 0;
 }
  
-.testswitch-checkbox:checked + .testswitch-label .testswitch-switch {
+.switch-checkbox:checked + .switch-label .switch-switch {
     right: 0px; 
 }
 
@@ -96,4 +97,14 @@
 	font-style: italic;
 	font-weight: normal;
 	margin: 0;
+}
+
+/*---------------Google Maps--------------------*/
+.map{
+width: 96%;
+height: 96%;
+}
+/*-----------------image size------------------*/
+#wp-admin-bar-image_size li{
+	float:inherit;
 }
