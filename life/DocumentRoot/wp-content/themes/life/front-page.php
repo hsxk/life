@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<?php get_header(); ?>
     <style>
        /* Set the size of the div element that contains the map */
       #map {
@@ -8,8 +6,22 @@
         width: 100%;  /* The width is the width of the web page */
        }
     </style>
-  </head>
-  <body>
+  <?php
+  global $wpdb;
+  $table = $table_prefix.'postmeta';
+  $query = 'SELECT post_id FROM '.$table.' WHERE meta_key = \'gps\'';
+  $post_ids = $wpdb->get_col( $query);
+  $locations = '[';
+  $last = key($post_ids);
+  foreach( $post_ids as $key => $post_id ) {
+  	$metadata = get_post_meta($post_id,'gps');
+	if($key != $last){
+	$locations .= '{lat:'.$metadata[0]['longitude'].',lng:'.$metadata[0]['latitude'].'},';
+		}
+	$locations .= '{lat:'.$metadata[0]['longitude'].',lng:'.$metadata[0]['latitude'].'}]';
+	}
+	echo $locations;
+  ?>
     <h3>My Google Maps Demo</h3>
     <!--The div element for the map -->
     <div id="map"></div>
@@ -17,13 +29,12 @@
 // Initialize and add the map
 function initMap() {
   // The location of Uluru
-  var uluru = {lat: -25.344, lng: 131.036};
+  var locations = <?php  echo $locations ; ?>
   // The map, centered at Uluru
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 14, center: uluru});
+      document.getElementById('map'), {zoom: 14, center: <?php  echo '{lat:'.$metadata[0]['latitude'].',lng:'.$metadata[0]['longitude'].'}'; ?>});
   // The marker, positioned at Uluru
-  var image = 'https://hkx.monster/wp-content/uploads/2019/11/819444b271925d4cb3d68e52b3d95d4.jpg';
-  var marker = new google.maps.Marker({position: uluru, map: map, icon:image});
+  var marker = new google.maps.Marker({position: locations, map: map});
 }
     </script>
     <!--Load the API from the specified URL
@@ -34,5 +45,4 @@ function initMap() {
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3HNBEo_ND6z7s3ethaRA0lPxikOUqjwU&callback=initMap">
     </script>
-  </body>
-</html>
+<?php get_footer(); ?>

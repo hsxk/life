@@ -55,13 +55,14 @@ if ( !current_user_can( 'manage_options' ) )  {
             Option登録
 ---------------------------------------*/
 function life_admin_init(){
-register_setting( 'life-group', 'life_options_webp', array('type' => int,'default'=>'0' ) );
-register_setting( 'life-group', 'life_options_exif', array('type' => int,'default'=>'0' ) );
-register_setting( 'life-group', 'life_options_title', array('type' => int,'default'=>'0' ) );
-register_setting( 'life-group', 'life_options_updates', array('type' => int,'default'=>'0'));
-register_setting( 'life-group', 'life_options_copy', array('type' => int,'default'=>'0' ) );
-register_setting( 'life-group', 'life_options_photo', array('type' => int,'default'=>'0' ) );
-register_setting( 'life-group', 'life_options_size', array('type' => int,'default'=>'0' ) );
+register_setting( 'life-group', 'life_options_webp', array('default'=>'0' ) );
+register_setting( 'life-group', 'life_options_exif', array('default'=>'0' ) );
+register_setting( 'life-group', 'life_options_title', array('default'=>'0' ) );
+register_setting( 'life-group', 'life_options_updates', array('default'=>'0'));
+register_setting( 'life-group', 'life_options_copy', array('default'=>'0' ) );
+register_setting( 'life-group', 'life_options_photo', array('default'=>'0' ) );
+register_setting( 'life-group', 'life_options_size', array('default'=>'0' ) );
+register_setting( 'life-group', 'life_options_adminbar', array('default'=>'0' ) );
 add_settings_section('life_plugin_options', 'Checkbox Settings', 'checkbox', 'life-group' );
 }
 add_action('admin_init','life_admin_init');
@@ -73,10 +74,11 @@ function checkbox(){
 	$exif = get_option('life_options_exif');
 	$title = get_option('life_options_title');
 	$updates = get_option('life_options_updates');
-	$copy= get_option('life_options_copy');
+	$copy = get_option('life_options_copy');
 	$webp = get_option('life_options_webp');
 	$photo = get_option('life_options_photo');
 	$size = get_option('life_options_size');
+	$adminbar = get_option('life_options_adminbar');
 	echo control_switch_block( "life_options_webp", $webp, 'Allow uploading webp images' );
 	echo control_switch_block( "life_options_exif", $exif, 'Get exif from image' );
 	echo control_switch_block( "life_options_title", $title, 'Post\'s title must' );
@@ -84,5 +86,6 @@ function checkbox(){
 	echo control_switch_block( "life_options_copy", $copy, 'Disable f12,copy,paste but except managers' );
 	echo control_switch_block( "life_options_photo", $photo, 'Allow originalsize photo upload' );
 	echo control_switch_block( "life_options_size", $size, 'Show all image sizes' );
+	echo control_switch_block( "life_options_adminbar", $adminbar, 'Remove admin bar' );
 }
 ?>
