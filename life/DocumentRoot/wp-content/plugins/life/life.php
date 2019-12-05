@@ -64,49 +64,50 @@ if( get_option( 'life_options_exif' ) ) {  //管理画面コントロール用
 				   //Metaデータを取得
 	               $metadata = exif_read_data($img_path,0,true);
 				   //EXIF情報を取得,加工
-				   if ( $metadata[EXIF] ) {
-				   $exif[ 'Make' ] = $metadata[IFD0][Make].' '.$metadata[IFD0][Model];
-				   $exif[ 'ExposureTime' ] = exif_data( $metadata[EXIF][ExposureTime] );
-				   $exif[ 'FNumber' ] = gps_data( $metadata[EXIF][FNumber] );
-				   $exif[ 'ISOSpeedRatings' ] = $metadata[EXIF][ISOSpeedRatings];
-				   $exif[ 'DateTimeOriginal' ] = $metadata[EXIF][DateTimeOriginal];
-				   $exif[ 'ShutterSpeedValue' ] = $metadata[EXIF][ShutterSpeedValue];
-				   $exif[ 'ApertureValue' ] = $metadata[EXIF][ApertureValue];
-				   $exif[ 'BrightnessValue' ] = $metadata[EXIF][BrightnessValue];
-				   $exif[ 'ColorSpace' ] = $metadata[EXIF][ColorSpace];
-				   $exif[ 'InteroperabilityOffset' ] = $metadata[EXIF][InteroperabilityOffset];
-				   $exif[ 'WhiteBalance' ] = $metadata[EXIF][WhiteBalance];
-				   $exif[ 'ExposureMode' ] = $metadata[EXIF][ExposureMode];
-				   $exif[ 'DigitalZoomRatio' ] = $metadata[EXIF][DigitalZoomRatio];
-				   $exif[ 'FocalLengthIn35mmFilm' ] = $metadata[EXIF][FocalLengthIn35mmFilm];
+				   if ( $metadata['EXIF'] ) {
+				   $exif[ 'Make' ] = $metadata['IFD0']['Make'].' '.$metadata['IFD0']['Model'];
+				   $exif[ 'ExposureTime' ] = exif_data( $metadata['EXIF']['ExposureTime'] );
+				   $exif[ 'FNumber' ] = gps_data( $metadata['EXIF']['FNumber'] );
+				   $exif[ 'ISOSpeedRatings' ] = $metadata['EXIF']['ISOSpeedRatings'];
+				   $exif[ 'DateTimeOriginal' ] = $metadata['EXIF']['DateTimeOriginal'];
+				   $exif[ 'ShutterSpeedValue' ] = $metadata['EXIF']['ShutterSpeedValue'];
+				   $exif[ 'ApertureValue' ] = $metadata['EXIF']['ApertureValue'];
+				   $exif[ 'BrightnessValue' ] = $metadata['EXIF']['BrightnessValue'];
+				   $exif[ 'ColorSpace' ] = $metadata['EXIF']['ColorSpace'];
+				   $exif[ 'InteroperabilityOffset' ] = $metadata['EXIF']['InteroperabilityOffset'];
+				   $exif[ 'WhiteBalance' ] = $metadata['EXIF']['WhiteBalance'];
+				   $exif[ 'ExposureMode' ] = $metadata['EXIF']['ExposureMode'];
+				   $exif[ 'DigitalZoomRatio' ] = $metadata['EXIF']['DigitalZoomRatio'];
+				   $exif[ 'FocalLengthIn35mmFilm' ] = $metadata['EXIF']['FocalLengthIn35mmFilm'];
 				   add_post_meta( $id, 'exif', $exif, true );
 				   }
 				   //GPS情報を取得,加工
-				   if ( $metadata[GPS] ){
-				   if ( $metadata[GPS][GPSLatitudeRef] == "S" )//南緯Sはマイナス
+				   if ( $metadata['GPS'] ){
+				   if ( $metadata['GPS']['GPSLatitudeRef'] == "S" )//南緯Sはマイナス
 				   $latitudeRef = '-';
 				   else
 				   $latitudeRef = '';
-				   if ( $metadata[GPS][GPSLongitudeRef] == "W" )//西経Wはマイナス
+				   if ( $metadata['GPS']['GPSLongitudeRef'] == "W" )//西経Wはマイナス
 				   $longitudeRef = '-';
 				   else 
 				   $longitudeRef = '';
-				   if( $metadata[GPS][GPSAltitudeRef] == "1" )//1は海拔以下
+				   if( $metadata['GPS']['GPSAltitudeRef'] == "1" )//1は海拔以下
 				   $altitudeRef = '-';
 				   else 
 				   $altitudeRef = '';
-				   $longitude = gps_data( $metadata[GPS][GPSLongitude][0] ) + gps_data( $metadata[GPS][GPSLongitude][1] ) / 60 + gps_data( $metadata[GPS][GPSLongitude][2] ) / 60 / 60;
-				   $latitude = gps_data( $metadata[GPS][GPSLatitude][0] ) + gps_data( $metadata[GPS][GPSLatitude][1] ) / 60 + gps_data( $metadata[GPS][GPSLatitude][2] ) / 60 / 60;
+				   $longitude = gps_data( $metadata['GPS']['GPSLongitude'][0] ) + gps_data( $metadata['GPS']['GPSLongitude'][1] ) / 60 + gps_data( $metadata['GPS']['GPSLongitude'][2] ) / 60 / 60;
+				   $latitude = gps_data( $metadata['GPS']['GPSLatitude'][0] ) + gps_data( $metadata['GPS']['GPSLatitude'][1] ) / 60 + gps_data( $metadata['GPS']['GPSLatitude'][2] ) / 60 / 60;
 				   $GPS['longitude'] = $longitudeRef.$longitude;
 				   $GPS['latitude'] = $latitudeRef.$latitude;
 				   $GPS['coordinate'] = $latitudeRef.$latitude.','.$longitudeRef.$longitude;
-				   $GPS['altitude'] = $altitudeRef.$metadata[GPS][GPSAltitude]/100;
+				   $GPS['altitude'] = $altitudeRef.$metadata['GPS']['GPSAltitude']/100;
 				   add_post_meta( $id, 'gps', $GPS, true );
                    }
              endwhile;
              update_option( 'exif_loaded_post_id', $id );
       endif;
     }
+	add_image_size('map-icon',50,50,true);
 add_action( 'shutdown' , 'exif' );
 }
 

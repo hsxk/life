@@ -11,30 +11,27 @@
   $table = $table_prefix.'postmeta';
   $query = 'SELECT post_id FROM '.$table.' WHERE meta_key = \'gps\'';
   $post_ids = $wpdb->get_col( $query);
-  $locations = '[';
+  $markers = '';
   $last = key($post_ids);
   foreach( $post_ids as $key => $post_id ) {
   	$metadata = get_post_meta($post_id,'gps');
-	if($key != $last){
-	$locations .= '{lat:'.$metadata[0]['longitude'].',lng:'.$metadata[0]['latitude'].'},';
-		}
-	$locations .= '{lat:'.$metadata[0]['longitude'].',lng:'.$metadata[0]['latitude'].'}]';
-	}
-	echo $locations;
+	$locations = '{lat:'.$metadata[0]['latitude'].',lng:'.$metadata[0]['longitude'].'}';
+			$thumbnail = wp_get_attachment_image_src( $post_id ,'map-icon',true);
+	$markers .= 'var marker = new google.maps.Marker({position:'.$locations.',icon:\''.$thumbnail[0].'\', map:map});';
+  }
   ?>
-    <h3>My Google Maps Demo</h3>
+    <h3>Life Maps</h3>
     <!--The div element for the map -->
     <div id="map"></div>
     <script>
-// Initialize and add the map
+	var map;
+	// Initialize and add the map
 function initMap() {
-  // The location of Uluru
-  var locations = <?php  echo $locations ; ?>
   // The map, centered at Uluru
   var map = new google.maps.Map(
       document.getElementById('map'), {zoom: 14, center: <?php  echo '{lat:'.$metadata[0]['latitude'].',lng:'.$metadata[0]['longitude'].'}'; ?>});
   // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: locations, map: map});
+  <?php echo $markers; ?>
 }
     </script>
     <!--Load the API from the specified URL
@@ -42,6 +39,8 @@ function initMap() {
     * The key parameter will contain your own API key (which is not needed for this tutorial)
     * The callback parameter executes the initMap() function
     -->
+	<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+	</script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3HNBEo_ND6z7s3ethaRA0lPxikOUqjwU&callback=initMap">
     </script>
