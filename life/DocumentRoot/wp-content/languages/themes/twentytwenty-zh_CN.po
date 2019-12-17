@@ -28,7 +28,7 @@ msgctxt "Theme starter content"
 msgid "The New UMoMA Opens its Doors"
 msgstr "全新UMoMA开门迎客"
 
-#: inc/template-tags.php:387
+#: inc/template-tags.php:393
 msgctxt "A string that is output before one or more categories"
 msgid "In"
 msgstr "分类于"
@@ -94,27 +94,27 @@ msgstr "瑞典北部现代艺术的主要目的地。在夏季每天从10时到1
 msgid "The New UMoMA Opens its Doors"
 msgstr "全新UMoMA开门迎客"
 
-#: classes/class-twentytwenty-customize.php:374
+#: classes/class-twentytwenty-customize.php:395
 msgid "Overlay Opacity"
 msgstr "覆层不透明度"
 
-#: classes/class-twentytwenty-customize.php:354
+#: classes/class-twentytwenty-customize.php:375
 msgid "The color used for the text in the overlay."
 msgstr "覆层内文字的颜色。"
 
-#: classes/class-twentytwenty-customize.php:353
+#: classes/class-twentytwenty-customize.php:374
 msgid "Overlay Text Color"
 msgstr "覆层文字颜色"
 
-#: classes/class-twentytwenty-customize.php:332
+#: classes/class-twentytwenty-customize.php:353
 msgid "The color used for the overlay. Defaults to the accent color."
 msgstr "覆层的颜色，默认为强调色。"
 
-#: classes/class-twentytwenty-customize.php:331
+#: classes/class-twentytwenty-customize.php:352
 msgid "Overlay Background Color"
 msgstr "覆层背景色"
 
-#: classes/class-twentytwenty-customize.php:262
+#: classes/class-twentytwenty-customize.php:283
 msgid "Settings for the \"Cover Template\" page template. Add a featured image to use as background."
 msgstr "”封面模板“页面模板设置。"
 
@@ -134,7 +134,7 @@ msgstr "默认"
 msgid "Primary Color"
 msgstr "主颜色"
 
-#: searchform.php:24 template-parts/modal-search.php:20
+#: template-parts/modal-search.php:20 searchform.php:24
 msgid "Search for:"
 msgstr "搜索："
 
@@ -201,7 +201,7 @@ msgstr "页脚"
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr "编辑<span class=\"screen-reader-text\">%s</span>"
 
-#: inc/starter-content.php:176 inc/starter-content.php:186 functions.php:491
+#: functions.php:491 inc/starter-content.php:176 inc/starter-content.php:186
 msgid "Primary"
 msgstr "主"
 
@@ -280,7 +280,7 @@ msgid "Social links"
 msgstr "社交网络链接"
 
 #. translators: %s: Author name
-#: template-parts/entry-author-bio.php:20 inc/template-tags.php:348
+#: template-parts/entry-author-bio.php:20 inc/template-tags.php:354
 msgid "By %s"
 msgstr "由%s"
 
@@ -306,24 +306,24 @@ msgstr "我们未能就您的搜索找到任何结果。您可以通过下方的
 msgid "Search:"
 msgstr "搜索："
 
-#: inc/template-tags.php:439
+#: inc/template-tags.php:445
 msgid "Sticky post"
 msgstr "置顶文章"
 
-#: inc/template-tags.php:401
+#: inc/template-tags.php:407
 msgid "Tags"
 msgstr "标签"
 
 #: template-parts/entry-header.php:36 template-parts/content-cover.php:70
-#: inc/template-tags.php:383
+#: inc/template-tags.php:389
 msgid "Categories"
 msgstr "分类"
 
-#: inc/template-tags.php:365
+#: inc/template-tags.php:371
 msgid "Post date"
 msgstr "发布日期"
 
-#: inc/template-tags.php:341
+#: inc/template-tags.php:347
 msgid "Post author"
 msgstr "文章作者"
 
@@ -439,7 +439,7 @@ msgstr "较早评论"
 msgid "Newer Comments"
 msgstr "较新评论"
 
-#: classes/class-twentytwenty-walker-page.php:134 inc/template-tags.php:545
+#: inc/template-tags.php:555 classes/class-twentytwenty-walker-page.php:134
 msgid "Show sub menu"
 msgstr "显示子菜单"
 
@@ -456,32 +456,32 @@ msgstr "由文章作者"
 msgid "says:"
 msgstr "说："
 
-#: classes/class-twentytwenty-customize.php:375
+#: classes/class-twentytwenty-customize.php:396
 msgid "Make sure that the contrast is high enough so that the text is readable."
 msgstr "确保对比度足够高，以使文本可读。"
 
-#: classes/class-twentytwenty-customize.php:285
+#: classes/class-twentytwenty-customize.php:306
 msgid "Creates a parallax effect when the visitor scrolls."
 msgstr "在访客滚动时创建视差效果。"
 
-#: classes/class-twentytwenty-customize.php:284
+#: classes/class-twentytwenty-customize.php:305
 msgid "Fixed Background Image"
 msgstr "固定背景图像"
 
 #. Template Name of the theme
-#: classes/class-twentytwenty-customize.php:260
+#: classes/class-twentytwenty-customize.php:281
 msgid "Cover Template"
 msgstr "封面模板"
 
-#: classes/class-twentytwenty-customize.php:249
+#: classes/class-twentytwenty-customize.php:270
 msgid "Summary"
 msgstr "摘要"
 
-#: classes/class-twentytwenty-customize.php:248
+#: classes/class-twentytwenty-customize.php:269
 msgid "Full text"
 msgstr "全文"
 
-#: classes/class-twentytwenty-customize.php:246
+#: classes/class-twentytwenty-customize.php:267
 msgid "On archive pages, posts show:"
 msgstr "在归档页面上，文章显示："
 
