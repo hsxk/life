@@ -8,9 +8,7 @@
     </style>
   <?php
   global $wpdb;
-  $table = $table_prefix.'postmeta';
-  $query = 'SELECT post_id FROM '.$table.' WHERE meta_key = \'gps\'';
-  $post_ids = $wpdb->get_col( $query);
+  $post_ids = $wpdb->get_col( "SELECT post_id FROM $wpdb->postmeta WHERE meta_key = 'gps'" );
   $markers = '';
   $last = key($post_ids);
   foreach( $post_ids as $key => $post_id ) {

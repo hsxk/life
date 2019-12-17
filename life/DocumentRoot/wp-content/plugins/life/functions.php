@@ -44,21 +44,41 @@
 		}
 		$str = ( $number[1] / $a ).'/'.( $number[2] / $a );
 		return $str;
-	}
-	else{
+	}else{
 		return false;
 	}
   }
       /*-------------計算--------------*/
   function gps_data($str){
   	if( isset ( $str ) ) {
-		$pattern = '/(.*)?\/(.*)?/';
-		preg_match( $pattern, $str, $number );
-		$str = (double)$number[1]/(double)$number[2];
+  		if(is_array($str)){
+			$size = sizeof($str);
+			$i = 0;
+			for($i ; $i < $size ; $i++){
+				$pattern = '/(.*)?\/(.*)?/';
+				preg_match( $pattern, $str[$i], $number );
+				if($number[2] != 0){
+					$string = (double)$number[1]/(double)$number[2];
+				}else{ 
+					return false;
+				}
+			$str[$i]=$string;
+			}
+		$str=implode(':',$str);
 		return $str;
-	}
-	else{
-		return false;
+		}
+		else{
+			$pattern = '/(.*)?\/(.*)?/';
+			preg_match( $pattern, $str, $number );
+			if($number[2] != 0){
+				$str = (double)$number[1]/(double)$number[2];
+			}else{
+				return false;
+			}
+			return $str;
+			}
+		}else{
+			return false;
 	}
   }
 
