@@ -81,5 +81,56 @@
 			return false;
 	}
   }
+  	/*-----------maps content-----------*/
+  function maps_content( $id ) {
+  	if ( isset( $id ) ) {
+		$metadata = get_post_meta( $id, 'exif' );
+		if ( $metadata ) {
+			var_dump( $metadata );			
+		} else {
+			return "No exifinfo for this photo";
+		}
+	} else {
+		return false;
+	}
+  }
+
+  /*-----------maps markers------------*/
+  function map_marker( $id ) {
+  	if ( isset( $id ) ) {
+		$metadata = get_post_meta( $id, 'gps' );
+		if ( $metadata ) {
+		$locations = '{lat:' . $metadata[ 0 ][ 'latitude' ] . ',lng:' . $metadata[ 0 ][ 'longitude' ] . '}';
+		$thumbnail = wp_get_attachment_image_src( $id, 'map-icon', true );
+		$markers = 'var marker = new google.maps.Marker({position:'.$locations.',icon:\''.$thumbnail[0].'\', map:map});';
+		return $markers;
+		} else {
+			return "No gpsinfo for this photo";
+		}
+	} else {
+		return false;
+	}
+  }
+
+  /*---------maps center-------------*/
+  function map_center( $ids ) {
+  	if ( isset( $ids ) ) {
+		if ( is_array( $ids ) ){
+		again:
+			$id = array_rand( $ids, 1 );
+			$center_info = get_post_meta( $ids[ $id ], 'gps' );
+			if ( $center_info ) {
+				$center = '{lat:'.$center_info[ 0 ][ 'latitude' ].',lng:'.$center_info[ 0 ][ 'longitude' ].'}';
+				return $center;
+			} else {
+				goto again;
+			}
+		} else {
+			return false;
+		}
+	} else {
+		return false;
+	}
+  }
 
 ?>
