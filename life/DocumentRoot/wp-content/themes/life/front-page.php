@@ -9,6 +9,7 @@
   <?php
   global $wpdb;
   $post_ids = $wpdb->get_col( "SELECT post_id FROM $wpdb->postmeta WHERE meta_key = 'gps'" );
+  $center = map_center( $post_ids );
   $markers = '';
   foreach( $post_ids as $key => $post_id ) {
   	$markers .= map_marker( $post_id );
@@ -20,7 +21,7 @@
 	var map;
 function initMap() {
   var map = new google.maps.Map(
-      document.getElementById( 'map' ), {zoom: 14, center: <?php echo map_center( $post_ids ); ?>} );
+      document.getElementById( 'map' ), {zoom: 14, center: <?php echo $center; ?>} );
   <?php echo $markers; ?>
 }
     </script>

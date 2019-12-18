@@ -64,54 +64,53 @@ if( get_option( 'life_options_exif' ) ) {  //管理画面コントロール用
 				   //Metaデータを取得
 	               $metadata = exif_read_data( $img_path, 0, true );
 				   //EXIF情報を取得,加工
-				   if ( isset( $metadata[ 'EXIF' ] ) ) {
-				   $exif[ 'Make' ] = $metadata[ 'IFD0' ][ 'Make' ].' '.$metadata[ 'IFD0' ][ 'Model' ];
-				   $exif[ 'ExposureTime' ] = exif_data( $metadata[ 'EXIF' ][ 'ExposureTime' ] );
-				   $exif[ 'FNumber' ] = gps_data( $metadata[ 'EXIF' ][ 'FNumber' ] );
-				   $exif[ 'ISOSpeedRatings' ] = $metadata[ 'EXIF' ][ 'ISOSpeedRatings' ];
-				   $exif[ 'DateTimeOriginal' ] = $metadata[ 'EXIF' ][ 'DateTimeOriginal' ];
-				   $exif[ 'ShutterSpeedValue' ] = $metadata[ 'EXIF' ][ 'ShutterSpeedValue' ];
-				   $exif[ 'ApertureValue' ] = $metadata[ 'EXIF' ][ 'ApertureValue' ];
-				   $exif[ 'BrightnessValue' ] = $metadata[ 'EXIF' ][ 'BrightnessValue' ];
-				   $exif[ 'ColorSpace' ] = $metadata[ 'EXIF' ][ 'ColorSpace' ];
-				   $exif[ 'InteroperabilityOffset' ] = $metadata[ 'EXIF' ][ 'InteroperabilityOffset' ];
-				   $exif[ 'WhiteBalance' ] = $metadata[ 'EXIF' ][ 'WhiteBalance' ];
-				   $exif[ 'ExposureMode' ] = $metadata[ 'EXIF' ][ 'ExposureMode' ];
-				   $exif[ 'DigitalZoomRatio' ] = $metadata[ 'EXIF' ][ 'DigitalZoomRatio' ];
-				   $exif[ 'FocalLengthIn35mmFilm' ] = $metadata[ 'EXIF' ][ 'FocalLengthIn35mmFilm' ];
+				   if ( isset( $metadata['EXIF'] ) ) {
+						$exif['Make'] = $metadata['IFD0']['Make'].' '.$metadata['IFD0']['Model'];
+						$exif['ExposureTime'] = exif_data( $metadata['EXIF']['ExposureTime'] );
+				   		$exif['FNumber'] = gps_data( $metadata['EXIF']['FNumber'] );
+				   		$exif['ISOSpeedRatings'] = $metadata['EXIF']['ISOSpeedRatings'];
+				   		$exif['DateTimeOriginal'] = $metadata['EXIF']['DateTimeOriginal'];
+				   		$exif['ShutterSpeedValue'] = $metadata['EXIF']['ShutterSpeedValue'];
+				   		$exif['ApertureValue'] = $metadata['EXIF']['ApertureValue'];
+				   		$exif['BrightnessValue'] = $metadata['EXIF']['BrightnessValue'];
+				   		$exif['ColorSpace'] = $metadata['EXIF']['ColorSpace'];
+				   		$exif['InteroperabilityOffset'] = $metadata['EXIF']['InteroperabilityOffset'];
+				   		$exif['WhiteBalance'] = $metadata['EXIF']['WhiteBalance'];
+				   		$exif['ExposureMode'] = $metadata['EXIF']['ExposureMode'];
+				   		$exif['DigitalZoomRatio'] = $metadata['EXIF']['DigitalZoomRatio'];
+				   		$exif['FocalLengthIn35mmFilm'] = $metadata['EXIF']['FocalLengthIn35mmFilm'];
 				   add_post_meta( $id, 'exif', $exif, true );
 				   }
 				   //GPS情報を取得,加工
-				   if ( isset( $metadata[ 'GPS' ] ) ) {
-				   if ( $metadata[ 'GPS' ][ 'GPSLatitudeRef' ] == "S" )//南緯Sはマイナス
-				   $latitudeRef = '-';
-				   else
-				   $latitudeRef = '';
-				   if ( $metadata[ 'GPS' ][ 'GPSLongitudeRef' ] == "W" )//西経Wはマイナス
-				   $longitudeRef = '-';
-				   else 
-				   $longitudeRef = '';
-				   if( $metadata[ 'GPS' ][ 'GPSAltitudeRef' ] == "1" )//1は海拔以下
-				   $altitudeRef = '-';
-				   else 
-				   $altitudeRef = '';
-				   $longitude = gps_data( $metadata[ 'GPS' ][ 'GPSLongitude' ][ 0 ] ) + gps_data( $metadata[ 'GPS' ][ 'GPSLongitude' ][ 1 ] ) / 60 + gps_data( $metadata[ 'GPS' ][ 'GPSLongitude' ][ 2 ] ) / 60 / 60;
-				   $latitude = gps_data( $metadata[ 'GPS' ][ 'GPSLatitude' ][ 0 ] ) + gps_data( $metadata[ 'GPS' ][ 'GPSLatitude' ][ 1 ] ) / 60 + gps_data( $metadata[ 'GPS' ][ 'GPSLatitude' ][ 2 ] ) / 60 / 60;
-				   $GPS[ 'longitude' ] = $longitudeRef . $longitude;
-				   $GPS[ 'latitude' ] = $latitudeRef . $latitude;
-				   $GPS[ 'coordinate' ] = $latitudeRef . $latitude . ',' . $longitudeRef . $longitude;
-				   $GPS[ 'altitude' ] = $altitudeRef . ( gps_data( $metadata[ 'GPS' ][ 'GPSAltitude' ] ) );
-				   $GPS[ 'datestamp' ] = $metadata[ 'GPS' ][ 'GPSDateStamp' ];
-				   $GPS[ 'timestamp' ] = gps_data( $metadata[ 'GPS' ][ 'GPSTimeStamp' ] );
-				   add_post_meta( $id, 'gps', $GPS, true );
-				   var_dump($GPS);
-                   }
+				   if ( isset( $metadata['GPS'] ) ) {
+				   		if ( $metadata['GPS']['GPSLatitudeRef'] == "S" )//南緯Sはマイナス
+				   			$latitudeRef = '-';
+				   		else
+				   			$latitudeRef = '';
+				   		if ( $metadata['GPS']['GPSLongitudeRef'] == "W" )//西経Wはマイナス
+				   			$longitudeRef = '-';
+				   		else 
+				   			$longitudeRef = '';
+				   		if( $metadata['GPS']['GPSAltitudeRef'] == "1" )//1は海拔以下
+				   			$altitudeRef = '-';
+				   		else 
+				   			$altitudeRef = '';
+				   		$longitude = gps_data( $metadata['GPS']['GPSLongitude'][0] ) + gps_data( $metadata['GPS']['GPSLongitude'][1] ) / 60 + gps_data( $metadata['GPS']['GPSLongitude'][2] ) / 60 / 60;
+				   		$latitude = gps_data( $metadata['GPS']['GPSLatitude'][0] ) + gps_data( $metadata['GPS']['GPSLatitude'][1] ) / 60 + gps_data( $metadata['GPS']['GPSLatitude'][2] ) / 60 / 60;
+				   		$GPS['longitude'] = $longitudeRef . $longitude;
+				   		$GPS['latitude'] = $latitudeRef . $latitude;
+				   		$GPS['coordinate'] = $latitudeRef . $latitude . ',' . $longitudeRef . $longitude;
+				   		$GPS['altitude'] = $altitudeRef . ( gps_data( $metadata['GPS']['GPSAltitude'] ) );
+				   		$GPS['datestamp'] = $metadata['GPS']['GPSDateStamp'];
+				   		$GPS['timestamp'] = gps_data( $metadata['GPS']['GPSTimeStamp'] );
+				   		add_post_meta( $id, 'gps', $GPS, true );
+                   	}
              endwhile;
              update_option( 'exif_loaded_post_id', $id );
       endif;
     }
-	add_image_size( 'map-icon', 50, 50, true);
-add_action( 'shutdown', 'exif' );
+	add_image_size( 'map-icon', 50, 50, true );
+	add_action( 'shutdown', 'exif' );
 }
 
 /*-------------------------------------------------------------------------------
@@ -134,9 +133,9 @@ if ( get_option( 'life_options_title' ) ) {
 	              }  
              });
         </script>
-<?php }
-add_action( 'admin_head-post-new.php', 'required_title' );
-add_action( 'admin_head-post.php', 'required_title' );
+<?php 		}
+	add_action( 'admin_head-post-new.php', 'required_title' );
+	add_action( 'admin_head-post.php', 'required_title' );
 }
 /*-------------------------------------------------------------------------------
                              Remove_updates
@@ -152,12 +151,12 @@ if( get_option( 'life_options_updates' ) ) {
           'version_checked' => $wp_version
           );  
      }
-add_filter( 'pre_site_transient_update_core', 'remove_updates' );
-add_filter( 'pre_site_transient_update_plugins', 'remove_updates' );
-add_filter( 'automatic_updater_disabled', '__return_true' );
-remove_action( 'load-plugins.php', 'wp_update_plugins' );
-remove_action( 'load-update.php', 'wp_update_plugins' );
-remove_action( 'load-update-core.php', 'wp_update_plugins' );
+	add_filter( 'pre_site_transient_update_core', 'remove_updates' );
+	add_filter( 'pre_site_transient_update_plugins', 'remove_updates' );
+	add_filter( 'automatic_updater_disabled', '__return_true' );
+	remove_action( 'load-plugins.php', 'wp_update_plugins' );
+	remove_action( 'load-update.php', 'wp_update_plugins' );
+	remove_action( 'load-update-core.php', 'wp_update_plugins' );
 #}
 }
 /*------------------------------------------------------------------------------
@@ -188,7 +187,7 @@ if ( get_option( 'life_options_copy' ) ) {
              </script>
          <?php }
       }
-add_action( 'wp_footer', 'disable_f12_copy_paste' );
+	add_action( 'wp_footer', 'disable_f12_copy_paste' );
 }
 
 /*--------------------------------------------------------------------------------
@@ -210,40 +209,41 @@ if ( get_option( 'life_options_img_type' ) ) {
                           Show all image sizes
 -------------------------------------------------------------------------------*/
 if ( get_option( 'life_options_size' ) ) {
-function get_all_image_sizes() {
-	global $_wp_additional_image_sizes;
-	$image_size_list = '';
-	 foreach( $_wp_additional_image_sizes as $name => $size ) {
-	 	$imgcrop = $size[ 'crop' ] ? 'crop' : '';
-	    $image_size_list .= '<li style="float:left;line-height: 1.5">' . $name . '>>>>>' . $size[ 'width' ] . 'X' . $size[ 'height' ] . '&nbsp;&nbsp;&nbsp;' . $imgcrop . '</li>';
-	 }
-	 $default = get_intermediate_image_sizes();
-	 $default_sizes    = array( 'thumbnail', 'medium', 'medium_large', 'large' );
-	 $strc = '_crop';
-	 $strw = '_size_w';
-	 $strh = '_size_h';
-	 foreach ( $default_sizes as $name ) {
-		$optionc = $name.$strc;
-		$optionw = $name.$strw;
-		$optionh = $name.$strh;
-		$gcrop = get_option( $optionc );
-		$width = get_option( $optionw );
-		$height = get_option( $optionh );
-		$imgcrop = $gcrop ? 'crop' : '';
-	 	$image_size_list .= '<li style="float:left;line-height: 1.5">' . $name . '>>>>>' . $width . 'X' . $height . '&nbsp;&nbsp;&nbsp;' . $imgcrop . '</li>';
-	 }
-	 global $wp_admin_bar;
-	 $args = array(
-	 	'id' => 'show_all_image_size',
-		'title' => 'Show all image sizes',
-	 );
-	 $wp_admin_bar->add_node( $args );
-	 $wp_admin_bar->add_menu( array (
-	 	'parent' => 'show_all_image_size',
-		'id' => 'image_size',
-		'title' => '<ul id="included-files-list">' . $image_size_list . '</ul>', ) );
-	 }
-add_action( 'admin_bar_menu', 'get_all_image_sizes', 999 );
+	function get_all_image_sizes() {
+		global $_wp_additional_image_sizes;
+		$image_size_list = '';
+	 	foreach( $_wp_additional_image_sizes as $name => $size ) {
+	 		$imgcrop = $size['crop'] ? 'crop' : '';
+	    	$image_size_list .= '<li style="float:left;line-height: 1.5">' . $name . '>>>>>' . $size['width'] . 'X' . $size['height'] . '&nbsp;&nbsp;&nbsp;' . $imgcrop . '</li>';
+	 		}
+	 	$default = get_intermediate_image_sizes();
+	 	$default_sizes    = array( 'thumbnail', 'medium', 'medium_large', 'large' );
+	 	$strc = '_crop';
+	 	$strw = '_size_w';
+	 	$strh = '_size_h';
+	 	foreach ( $default_sizes as $name ) {
+			$optionc = $name.$strc;
+			$optionw = $name.$strw;
+			$optionh = $name.$strh;
+			$gcrop = get_option( $optionc );
+			$width = get_option( $optionw );
+			$height = get_option( $optionh );
+			$imgcrop = $gcrop ? 'crop' : '';
+	 		$image_size_list .= '<li style="float:left;line-height: 1.5">' . $name . '>>>>>' . $width . 'X' . $height . '&nbsp;&nbsp;&nbsp;' . $imgcrop . '</li>';
+	 		}
+	 	global $wp_admin_bar;
+	 	$args = array(
+	 		'id' => 'show_all_image_size',
+			'title' => 'Show all image sizes',
+	 		);
+	 	$wp_admin_bar->add_node( $args );
+	 	$wp_admin_bar->add_menu( array (
+	 		'parent' => 'show_all_image_size',
+			'id' => 'image_size',
+			'title' => '<ul id="included-files-list">' . $image_size_list . '</ul>', 
+			) );
+	 	}
+	add_action( 'admin_bar_menu', 'get_all_image_sizes', 999 );
 }
 
 /*-------------------------------------------------------------------------------
