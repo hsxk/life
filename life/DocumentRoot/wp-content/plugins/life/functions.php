@@ -86,10 +86,20 @@
   }
   	/*-----------maps content-----------*/
   function maps_content( $id ) {
-  	if ( isset( $id ) ) {
+  	$content = '';
+	if ( isset( $id ) ) {
 		$metadata = get_post_meta( $id, 'exif' );
 		if ( $metadata ) {
-			var_dump( $metadata );			
+			$thumbnail = wp_get_attachment_image_src( $id, 'medium', true );
+			$info = 'var infowindow'.$id.' = new google.maps.InfoWindow({ content: ';
+			$content .= 'var info'.$id.' = \'<div>';
+			$content .= '<img src="'.$thumbnail[0].'">';
+			$content .= '<p>maker: '.$metadata[0]['Make'].'</p>';
+			$content .= '<p>ExposureTime: '.$metadata[0]['ExposureTime'].'</p>';
+			$content .= '</div>\';'.PHP_EOL;
+			$info .= 'info'.$id.'});'.PHP_EOL;
+			$contents = $content.$info;
+			return $contents;
 			} 
 		else {
 			return "No exifinfo for this photo";
@@ -107,7 +117,10 @@
 		if ( $metadata ) {
 			$locations = '{lat:' . $metadata[0]['latitude'] . ',lng:' . $metadata[0]['longitude'] . '}';
 			$thumbnail = wp_get_attachment_image_src( $id, 'map-icon', true );
-			$markers = 'var marker = new google.maps.Marker({position:' . $locations . ',icon:\'' . $thumbnail[0] . '\', map:map});';
+			$markers = 'var marker' . $id . ' = new google.maps.Marker({position:' . $locations . ',icon:\'' . $thumbnail[0] . '\', map:map});';
+			if ( get_post_meta( $id, 'exif' ) ) {
+			$markers .= PHP_EOL.'marker'.$id.'.addListener(\'click\', function() { infowindow'.$id.'.open(map, marker'.$id.');});'.PHP_EOL;
+			}
 			return $markers;
 			} 
 		else {
