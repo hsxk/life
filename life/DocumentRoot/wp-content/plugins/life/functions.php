@@ -97,9 +97,9 @@
 			$content .= '<p>maker: '.$metadata[0]['Make'].'</p>';
 			$content .= '<p>ExposureTime: '.$metadata[0]['ExposureTime'].'</p>';
 			$content .= '</div>\';'.PHP_EOL;
+			$info = 'var infowindow'.$id.' = new google.maps.InfoWindow({ content: ';
 			$info .= 'info'.$id.'});'.PHP_EOL;
-			$contents = $content.$info;
-			return $contents;
+			return $content.$info;
 			} 
 		else {
 			return "No exifinfo for this photo";
@@ -117,11 +117,15 @@
 		if ( $metadata ) {
 			$locations = '{lat:' . $metadata[0]['latitude'] . ',lng:' . $metadata[0]['longitude'] . '}';
 			$thumbnail = wp_get_attachment_image_src( $id, 'map-icon', true );
-			$markers = 'var marker' . $id . ' = new google.maps.Marker({position:' . $locations . ',icon:\'' . $thumbnail[0] . '\', map:map});';
+			$markers = 'var marker'.$id;
+			$markers .= ' = new google.maps.Marker({position:' . $locations;
+			$markers .= ',icon:\'' . $thumbnail[0] . '\', map:map});'.PHP_EOL;
 			if ( get_post_meta( $id, 'exif' ) ) {
-			$markers .= PHP_EOL.'marker'.$id.'.addListener(\'click\', function() { infowindow'.$id.'.open(map, marker'.$id.');});'.PHP_EOL;
+			$info_cilck = '';
+			$info_cilck .= 'marker'.$id.'.addListener(\'click\', function() { ';
+			$info_cilck .= 'infowindow'.$id.'.open(map, marker'.$id.');});'.PHP_EOL;
 			}
-			return $markers;
+			return $markers.$info_cilck;
 			} 
 		else {
 			return "No gpsinfo for this photo";

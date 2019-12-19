@@ -213,8 +213,11 @@ if ( get_option( 'life_options_size' ) ) {
 		global $_wp_additional_image_sizes;
 		$image_size_list = '';
 	 	foreach( $_wp_additional_image_sizes as $name => $size ) {
-	 		$imgcrop = $size['crop'] ? 'crop' : '';
-	    	$image_size_list .= '<li style="float:left;line-height: 1.5">' . $name . '>>>>>' . $size['width'] . 'X' . $size['height'] . '&nbsp;&nbsp;&nbsp;' . $imgcrop . '</li>';
+	 		$imgcrop = $size['crop'] ? '>>>>>crop' : '';
+	    	$image_size_list .= '<li style="float:left;line-height: 1.5">';
+			$image_size_list .= $name . '>>>>>';
+			$image_size_list .= $size['width'] . 'X' . $size['height'];
+			$image_size_list .= $imgcrop . '</li>';
 	 		}
 	 	$default = get_intermediate_image_sizes();
 	 	$default_sizes    = array( 'thumbnail', 'medium', 'medium_large', 'large' );
@@ -228,8 +231,11 @@ if ( get_option( 'life_options_size' ) ) {
 			$gcrop = get_option( $optionc );
 			$width = get_option( $optionw );
 			$height = get_option( $optionh );
-			$imgcrop = $gcrop ? 'crop' : '';
-	 		$image_size_list .= '<li style="float:left;line-height: 1.5">' . $name . '>>>>>' . $width . 'X' . $height . '&nbsp;&nbsp;&nbsp;' . $imgcrop . '</li>';
+			$imgcrop = $gcrop ? '>>>>>crop' : '';
+	 		$image_size_list .= '<li style="float:left;line-height: 1.5">';
+			$image_size_list .= $name . '>>>>>';
+			$image_size_list .= $width . 'X' . $height;
+			$image_size_list .= $imgcrop . '</li>';
 	 		}
 	 	global $wp_admin_bar;
 	 	$args = array(
