@@ -284,6 +284,7 @@ if ( get_option( 'life_options_post_branch' ) ) {
 			}
 		}
 	add_action( 'post_submitbox_start', 'wpbs_post_submitbox_start' );
+	
 	function wpbs_pre_post_update( $id ) {
 		if ( isset( $_POST['wp_post_branches'] ) ) {
 			$pub = get_post( $id, ARRAY_A );
@@ -299,7 +300,6 @@ if ( get_option( 'life_options_post_branch' ) ) {
 					continue;
 				if ( preg_match( '/_wp_old_slug/', $key ) )
 					continue;
-				$key = apply_filters( 'wpbs_publish_to_draft_postmeta_filter', $key );
 				$values = get_post_custom_values($key, $id );
 				foreach ( $values as $value ) {
 					add_post_meta( $draft_id, $key, $value );
@@ -333,7 +333,6 @@ if ( get_option( 'life_options_post_branch' ) ) {
 						'post_mime_type' => $attachment->post_mime_type,
 						'comment_count' => $attachment->comment_count
 					);
-					$new = apply_filters( 'wpbs_pre_publish_to_draft_attachment', $new );
 					$attachment_newid = wp_insert_post( $new );
 					$keys = get_post_custom_keys( $attachment->ID );
 					$custom_field = array();
@@ -346,7 +345,6 @@ if ( get_option( 'life_options_post_branch' ) ) {
 				$taxonomies = get_object_taxonomies( $pub['post_type'] );
 				foreach ($taxonomies as $taxonomy) {
 					$post_terms = wp_get_object_terms($id, $taxonomy, array( 'orderby' => 'term_order' ));
-					$post_terms = apply_filters( 'wpbs_pre_publish_to_draft_taxonomies', $post_terms );
 					$terms = array();
 					for ($i=0; $i<count($post_terms); $i++) {
 						$terms[] = $post_terms[$i]->slug;
@@ -394,7 +392,6 @@ if ( get_option( 'life_options_post_branch' ) ) {
             	'comment_status' => $post->comment_status,
             	'ping_status' => $post->ping_status,
             	'post_password' => $post->post_password,
-//          'post_name' => $post->post_name,
             	'to_ping' => $post->to_ping,
             	'pinged' => $post->pinged,
             	'post_modified' => $post->post_modified,
@@ -406,79 +403,76 @@ if ( get_option( 'life_options_post_branch' ) ) {
             	'post_type' => $post->post_type,
             	'post_mime_type' => $post->post_mime_type
         	);
-			wp_update_post( apply_filters( 'wpbs_draft_to_publish_update_post', $new ) );
-
-	$keys = get_post_custom_keys( $id );
-	$custom_field = array();
-	foreach ( (array) $keys as $key ) {
-		if ( preg_match( '/^_feedback_/', $key ) )
-			continue;
-		if ( preg_match( '/_wpbs_pre_post_id/', $key ) )
-			continue;
-		if ( preg_match( '/_wp_old_slug/', $key ) )
-			continue;
-		$key = apply_filters( 'wpbs_draft_to_publish_postmeta_filter', $key );
-		delete_post_meta( $org_id, $key );
-		$values = get_post_custom_values($key, $id );
-		foreach ( $values as $value ) {
-			add_post_meta( $org_id, $key, $value );
-		}
-	}
-	$args = array( 'post_type' => 'attachment', 'numberposts' => -1, 'post_status' => null, 'post_parent' => $id );
-        $attachments = get_posts( $args );
-        if ($attachments) {
-            foreach ( $attachments as $attachment ) {
-                $new = array(
-                    'post_author' => $attachment->post_author,
-                    'post_date' => $attachment->post_date,
-                    'post_date_gmt' => $attachment->post_date_gmt,
-                    'post_content' => $attachment->post_content,
-                    'post_title' => $attachment->post_title,
-                    'post_excerpt' => $attachment->post_excerpt,
-                    'post_status' => $attachment->post_status,
-                    'comment_status' => $attachment->comment_status,
-                    'ping_status' => $attachment->ping_status,
-                    'post_password' => $attachment->post_password,
-                    'post_name' => $attachment->post_name,
-                    'to_ping' => $attachment->to_ping,
-                    'pinged' => $attachment->pinged,
-                    'post_modified' => $attachment->post_modified,
-                    'post_modified_gmt' => $attachment->post_modified_gmt,
-                    'post_content_filtered' => $attachment->post_content_filtered,
-                    'post_parent' => $draft_id,
-                    'guid' => $attachment->guid,
-                    'menu_order' => $attachment->menu_order,
-                    'post_type' => $attachment->post_type,
-                    'post_mime_type' => $attachment->post_mime_type,
-                    'comment_count' => $attachment->comment_count
-                );
-                $new = apply_filters( 'wpbs_pre_draft_to_publish_attachment', $new );
-                $attachment_newid = wp_insert_post( $new );
-                $keys = get_post_custom_keys( $attachment->ID );
-				$custom_field = array();
-                foreach ( (array) $keys as $key ) {
-                    $value = get_post_meta( $attachment->ID, $key, true );
-
-                    delete_post_meta( $org_id, $key );
-                    add_post_meta( $org_id, $key, $value );
-                }
-            }        
-		}
-		$taxonomies = get_object_taxonomies( $post->post_type );
-		foreach ($taxonomies as $taxonomy) {
-			$post_terms = wp_get_object_terms($id, $taxonomy, array( 'orderby' => 'term_order' ));
-			$post_terms = apply_filters( 'wpbs_pre_draft_to_publish_taxonomies', $post_terms );
-			$terms = array();
-			for ($i=0; $i<count($post_terms); $i++) {
-				$terms[] = $post_terms[$i]->slug;
+			wp_update_post( $new );
+			$keys = get_post_custom_keys( $id );
+			$custom_field = array();
+			foreach ( (array) $keys as $key ) {
+				if ( preg_match( '/^_feedback_/', $key ) )
+					continue;
+				if ( preg_match( '/_wpbs_pre_post_id/', $key ) )
+					continue;
+				if ( preg_match( '/_wp_old_slug/', $key ) )
+					continue;
+			delete_post_meta( $org_id, $key );
+			$values = get_post_custom_values($key, $id );
+			foreach ( $values as $value ) {
+				add_post_meta( $org_id, $key, $value );
 			}
-			wp_set_object_terms($org_id, $terms, $taxonomy);
 		}
-		wp_delete_post( $id );
-		wp_safe_redirect( admin_url( '/post.php?post=' . $org_id . '&action=edit&message=1' ) );
-		exit;
- }
+		$args = array( 'post_type' => 'attachment', 'numberposts' => -1, 'post_status' => null, 'post_parent' => $id );
+        	$attachments = get_posts( $args );
+        	if ($attachments) {
+            	foreach ( $attachments as $attachment ) {
+                	$new = array(
+                    	'post_author' => $attachment->post_author,
+                    	'post_date' => $attachment->post_date,
+                   		'post_date_gmt' => $attachment->post_date_gmt,
+                    	'post_content' => $attachment->post_content,
+                    	'post_title' => $attachment->post_title,
+                    	'post_excerpt' => $attachment->post_excerpt,
+                    	'post_status' => $attachment->post_status,
+                    	'comment_status' => $attachment->comment_status,
+                    	'ping_status' => $attachment->ping_status,
+                    	'post_password' => $attachment->post_password,
+                    	'post_name' => $attachment->post_name,
+                    	'to_ping' => $attachment->to_ping,
+                    	'pinged' => $attachment->pinged,
+                    	'post_modified' => $attachment->post_modified,
+                    	'post_modified_gmt' => $attachment->post_modified_gmt,
+                    	'post_content_filtered' => $attachment->post_content_filtered,
+                    	'post_parent' => $draft_id,
+                    	'guid' => $attachment->guid,
+                    	'menu_order' => $attachment->menu_order,
+                    	'post_type' => $attachment->post_type,
+                    	'post_mime_type' => $attachment->post_mime_type,
+                    	'comment_count' => $attachment->comment_count
+                	);
+                	$attachment_newid = wp_insert_post( $new );
+                	$keys = get_post_custom_keys( $attachment->ID );
+					$custom_field = array();
+                	foreach ( (array) $keys as $key ) {
+                    	$value = get_post_meta( $attachment->ID, $key, true );
+                    	delete_post_meta( $org_id, $key );
+                    	add_post_meta( $org_id, $key, $value );
+                	}
+            	}        
+			}
+			$taxonomies = get_object_taxonomies( $post->post_type );
+			foreach ($taxonomies as $taxonomy) {
+				$post_terms = wp_get_object_terms($id, $taxonomy, array( 'orderby' => 'term_order' ));
+				$terms = array();
+				for ($i=0; $i<count($post_terms); $i++) {
+					$terms[] = $post_terms[$i]->slug;
+				}
+				wp_set_object_terms($org_id, $terms, $taxonomy);
+			}
+			wp_delete_post( $id );
+			wp_safe_redirect( admin_url( '/post.php?post=' . $org_id . '&action=edit&message=1' ) );
+			exit;
+ 		}
 }	
+add_action( 'publish_page', 'wpbs_save_post', 9999, 2 );
+add_action( 'publish_post', 'wpbs_save_post', 9999, 2 );
 
 function wpbs_admin_notice_saved_init() {
     if ( isset($_REQUEST['message']) && $_REQUEST['message'] == 'wpbs_msg' )
@@ -490,7 +484,6 @@ function wpbs_admin_notice_saved() {
 
 }
 
-add_filter( 'display_post_states', 'wpbs_display_branch_stat' );
 function wpbs_display_branch_stat( $stat ) {
     global $post;
     if ( $org_id = get_post_meta( $post->ID, '_wpbs_pre_post_id', true ) ) {
@@ -498,4 +491,5 @@ function wpbs_display_branch_stat( $stat ) {
     }
     return $stat;
 }
+add_filter( 'display_post_states', 'wpbs_display_branch_stat' );
 }

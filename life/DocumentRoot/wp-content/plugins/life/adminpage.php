@@ -63,6 +63,7 @@ register_setting( 'life-group', 'life_options_copy', array('default'=>'0' ) );
 register_setting( 'life-group', 'life_options_photo', array('default'=>'0' ) );
 register_setting( 'life-group', 'life_options_size', array('default'=>'0' ) );
 register_setting( 'life-group', 'life_options_adminbar', array('default'=>'0' ) );
+register_setting( 'life-group', 'life_options_post_branch', array('default'=>'0' ) );
 add_settings_section('life_plugin_options', 'Checkbox Settings', 'checkbox', 'life-group' );
 }
 add_action('admin_init','life_admin_init');
@@ -79,6 +80,7 @@ function checkbox(){
 	$photo = get_option('life_options_photo');
 	$size = get_option('life_options_size');
 	$adminbar = get_option('life_options_adminbar');
+	$postbranch = get_option('life_options_post_branch');
 	echo control_switch_block( "life_options_webp", $webp, 'Allow uploading webp images' );
 	echo control_switch_block( "life_options_exif", $exif, 'Get exif from image' );
 	echo control_switch_block( "life_options_title", $title, 'Post\'s title must' );
@@ -87,5 +89,6 @@ function checkbox(){
 	echo control_switch_block( "life_options_photo", $photo, 'Allow originalsize photo upload' );
 	echo control_switch_block( "life_options_size", $size, 'Show all image sizes' );
 	echo control_switch_block( "life_options_adminbar", $adminbar, 'Remove admin bar' );
+	echo control_switch_block( "life_options_post_branch", $postbranch, 'Post branch' );
 }
 ?>
