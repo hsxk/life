@@ -1,3 +1,8 @@
+<?php
+/*
+ * Template Name: google map
+ */
+ ?>
 <?php get_header(); ?>
     <style>
        /* Set the size of the div element that contains the map */

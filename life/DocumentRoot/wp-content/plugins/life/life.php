@@ -201,8 +201,42 @@ if ( get_option('life_options_photo' ) ) {
                          img type to webp
 -------------------------------------------------------------------------------*/
 if ( get_option( 'life_options_img_type' ) ) {
+	if ( !get_option( 'webp_loaded_post_id' ) ) {
+		add_option( 'webp_loaded_post_id', '1', '', 'yes' );
+		}
 	function get_webp_img() {
-		
+		$webp_loaded_post_id = get_option( 'webp_loaded_post_id' );
+		$args = array(
+					'post_type' => 'attachment',
+					'post_status' => 'inherit',
+					'post_mime_type' => array( 'image/jpeg',
+												'image/tiff',
+												'image/gif',
+												'image/png',
+												'image/bmp',
+												'image/tif',
+												'image/jpg'),
+					'post__not_in' => range( 1, (int)$webp_loaded_post_id ),
+					'orderby' => 'ID',
+					'order' => 'ASC',
+					);
+		$query = new WP_Query( $args );
+		if( $query -> have_posts() ):
+			while ( $query -> have_posts() ) : $query -> the_post();
+				$id = get_the_id();
+				$img_url = get_the_guid();
+				$pattern = '/.*wp-content(.*)/';
+				preg_match( $pattern, $img_url, $matches_url );
+				$path_rear = $matches_url[1];
+				$pattern = '/(.*wp-content)/';
+				$path_sv = __FILE__;
+				preg_match( $pattern, $path_sv, $matches_sv );
+				$path_front = $matches_sv[1];
+				$img_path = $path_front . $path_rear;
+				$metadata = exif_read_data( $img_path, 0, true );
+				
+			endwhile;
+		endif;
 	}
 }
 /*-------------------------------------------------------------------------------
