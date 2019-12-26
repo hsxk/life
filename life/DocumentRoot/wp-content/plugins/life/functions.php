@@ -87,11 +87,10 @@
   	/*-----------maps content-----------*/
   function maps_content( $id ) {
   	$content = '';
-	if ( isset( $id ) ) {
+	if ( isset( $id ) && $id != null ) {
 		$metadata = get_post_meta( $id, 'exif' );
 		if ( $metadata ) {
 			$thumbnail = wp_get_attachment_image_src( $id, 'medium', true );
-			$info = 'var infowindow'.$id.' = new google.maps.InfoWindow({ content: ';
 			$content .= 'var info'.$id.' = \'<div>';
 			$content .= '<img src="'.$thumbnail[0].'">';
 			$content .= '<p>maker: '.$metadata[0]['Make'].'</p>';
@@ -106,13 +105,15 @@
 			}
 		} 
 	else {
-		return false;
+		$info = 'var infowindow= new google.maps.InfoWindow({ content: info});'.PHP_EOL;
+		$content = 'var info = \'<div>Home</div>\';'.PHP_EOL;
+		return $content.$info;
 		}
   }
 
   /*-----------maps markers------------*/
   function map_marker( $id ) {
-  	if ( isset( $id ) ) {
+  	if ( isset( $id ) && $id != null ) {
 		$metadata = get_post_meta( $id, 'gps' );
 		if ( $metadata ) {
 			$locations = '{lat:' . $metadata[0]['latitude'] . ',lng:' . $metadata[0]['longitude'] . '}';
@@ -132,13 +133,15 @@
 			}
 		} 
 	else {
-		return false;
+		$markers = 'var marker = new google.maps.Marker({position:{lat:42.4434914,lng:123.5403288},map: map});'.PHP_EOL;
+		$info_cilck = 'marker.addListener(\'click\', function() { infowindow.open(map, marker);});'.PHP_EOL;
+		return $markers.$info_cilck;
 		}
   }
 
   /*---------maps center-------------*/
   function map_center( $ids ) {
-  	if ( isset( $ids ) ) {
+  	if ( isset( $ids ) && $ids != null ) {
 		if ( is_array( $ids ) ){
 		again:
 			$id = array_rand( $ids, 1 );
@@ -156,7 +159,8 @@
 			}
 		} 
 	else {
-		return false;
+		$center = '{lat:42.4434914,lng:123.5403288}';
+		return $center;
 		}
   }
 

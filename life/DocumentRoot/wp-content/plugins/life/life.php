@@ -290,11 +290,14 @@ if ( get_option( 'life_options_size' ) ) {
                           Remove admin bar
 -------------------------------------------------------------------------------*/
 if ( get_option( 'life_options_adminbar' ) ) {
-	add_filter( 'show_admin_bar', '__return_false', 1000 );
-	#add_action('after_setup_theme','remove_admin_bar_space');
-	#function remove_admin_bar_space(){
-	#add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
-	#}
+	#$user = wp_get_current_user();
+	#if ( !($user->user_login == 'haokexin')){ 
+		add_filter( 'show_admin_bar', '__return_false', 1000 );
+		#add_action('after_setup_theme','remove_admin_bar_space');
+		#function remove_admin_bar_space(){
+		#add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
+		#}
+	#	}
 }
 
 /*-------------------------------------------------------------------------------

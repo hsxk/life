@@ -15,11 +15,17 @@
   global $wpdb;
   $post_ids = $wpdb->get_col( "SELECT post_id FROM $wpdb->postmeta WHERE meta_key = 'gps'" );
   $center = map_center( $post_ids );
-  $markers = '';
-  $content = '';
-  foreach( $post_ids as $key => $post_id ) {
-  	$content .= maps_content( $post_id );
-	$markers .= map_marker( $post_id );
+  if ( isset( $post_ids ) && $post_ids != null ) {
+  	$markers = '';
+  	$content = '';
+  	foreach( $post_ids as $key => $post_id ) {
+  		$content .= maps_content( $post_id );
+		$markers .= map_marker( $post_id );
+  	}
+  } 
+  else {
+  	$markers = map_marker($post_ids);
+  	$content = maps_content( $post_ids );
   }
   ?>
     <h3>Life Maps</h3>
@@ -28,7 +34,7 @@
 	var map;
 function initMap() {
   var map = new google.maps.Map(
-      document.getElementById( 'map' ), {zoom: 14, center: <?php echo $center; ?>} );
+      document.getElementById( 'map' ), {zoom: 16, center: <?php echo $center; ?>} );
   <?php echo $content; ?>
   <?php echo $markers; ?>
 }
