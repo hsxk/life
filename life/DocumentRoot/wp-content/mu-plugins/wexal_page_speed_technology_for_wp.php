@@ -7,7 +7,26 @@ public $lib;
 public $default;
 
 function __construct() {
-	if ( isset( $_GET['pst'] ) && 'off' == $_GET['pst'] ) { return; }
+	$pst = '';
+	if ( isset( $_GET['pst'] ) ) {
+		$pst = strtolower( $_GET['pst'] );
+	} elseif ( isset( $_SERVER['HTTP_X_PST_CONFIGNAME'] ) ) { //GET and HEADER Priority to be fixed.
+		$pst = strtolower( $_SERVER['HTTP_X_PST_CONFIGNAME'] );
+	}
+	if ( 'off' == $pst ) {
+		return;
+	}
+	if ( isset( $_SERVER['HTTP_X_PST_DISABLE'] ) && 'on' == strtolower( $_SERVER['HTTP_X_PST_DISABLE'] ) ) {
+		return;
+	}
+	foreach ( headers_list() as $header ) {
+		if ( preg_match( '#^content-type:#i', $header ) ) {
+			if ( ! preg_match( '#text/html#', $header ) ) {
+				return;
+			}
+			break;
+		}
+	}
 	$plugin_dir = WP_PLUGIN_DIR . '/wexal_page_speed_technology';
 	$plugin = 'wexal_page_speed_technology/agent.php';
 	$path = $plugin_dir . '/core/pst.control.php';
@@ -27,7 +46,10 @@ function __construct() {
 	}
 	$this->pst = $wexal_pst_control;
 	$conf = $this->pst->config;
-	if ( 'on' != $conf['pst'] || ! in_array( 'wp', $conf['options'] ) ) {
+	if ( ! in_array( 'wp', $conf['options'] ) ) {
+		return;
+	}
+	if ( 'on' != $conf['pst'] && 'stg' != $pst ) {
 		return;
 	}
 
@@ -43,6 +65,14 @@ function __construct() {
 }
 
 function wexal_init() {
+	$global_exclude = '#(' . join( '|', $this->pst->config['global_exclude']) . ')#';
+ 	$request_uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
+	if ( preg_match( '#\?[^\?]+$#', $request_uri ) ) {
+		$request_uri = preg_replace( '#\?[^\?]+$#', '', $request_uri );
+	}
+	if ( preg_match( $global_exclude, $request_uri ) ) {
+		return;
+	}
 	if ( in_array( 'apply_logged_in_user' ,$this->pst->config['options'] ) || ! is_user_logged_in() ) {
 		require_once( $this->pst->pst_dir . '/lib_for_wp.php' );
 		if ( is_file( $this->pst->userdir . '/lib_for_wp.php' ) ) {
@@ -51,6 +81,47 @@ function wexal_init() {
 		} else {
 			$this->lib = new wexal_page_speed_technology_lib_for_wp( $this->pst );
 		}
+
+		if ( isset( $this->pst->config['overrides'] ) ) {
+			foreach ( $this->pst->config['overrides'] as $key => $val ) {
+				$default = array(
+					'device' => '',
+					'path' => '.',
+					'if' => false,
+					'node' => array(),
+					'applied' => array(
+						'wp' => array()
+					),
+				);
+				$val = array_merge( $default, $val );
+				if ( ! in_array( 'wp', $val['node'] ) ) {
+					continue;
+				}
+				$is_device = false;
+				if ( 'mobile' == $val['device'] && is_kusanagi_mobile() ) {
+					$is_device = true;
+				}
+				if ( 'tablet' == $val['device'] && is_kusanagi_tablet() ) {
+					$is_device = true;
+				}
+				if ( 'pc' == $val['device'] && is_kusanagi_pc() ) {
+					$is_device = true;
+				}
+				$is_path = false;
+				if ( @preg_match( '#' . $val['path'] . '#', $request_uri ) ) {
+					$is_path = true;
+				}
+				$is_if = false;
+				if ( 1 == $val['if'] ) {
+					$is_if = true;
+				}
+				if ( $is_device && $is_path && $is_if && $val['applied']['wp']) {
+					$this->pst->config['wp'] = $val['applied']['wp'];
+					break;
+				}
+			}
+		}
+
 		$default = array(
 			'wexal_init' => array(),
 			'wexal_head' => array(),
@@ -99,7 +170,7 @@ function wexal_footer() {
 function wexal_flush( $str ) {
 	$conf = $this->pst->config['wp']['wexal_flush'];
 	$this->wexal_check_and_do_cmd( $conf, $str, 'flush_' );
-	$opt_js = $this->pst->wexal_dir . '/optdir/wp-content/mu-plugins/pst/js/wexal_pst_init.js.opt.js';
+	$opt_js = $this->pst->config['tdir'] . '/' . $this->pst->config['odir'] . '/wp-content/mu-plugins/pst/js/wexal_pst_init.js.opt.js';
 	if ( is_file( $opt_js ) ) {
 		$js = $opt_js;
 	} else {

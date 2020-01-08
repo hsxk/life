@@ -169,6 +169,11 @@
 		var js = function (z) {
 			var l = cE('script');
 			l.src = z.url;
+			if ( z.attr ) {
+				Object.keys( z.attr ).forEach( function (k) {
+					l.setAttribute( k, z.attr[k] );
+				});
+			}
 			var s = gE('script');
 			s = s[ s.length -1 ];
 			s.parentNode.insertBefore(l, s);

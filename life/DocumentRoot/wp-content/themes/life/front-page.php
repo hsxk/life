@@ -14,18 +14,19 @@
   <?php
   global $wpdb;
   $post_ids = $wpdb->get_col( "SELECT post_id FROM $wpdb->postmeta WHERE meta_key = 'gps'" );
-  $center = map_center( $post_ids );
+  $center = google_map_center( $post_ids );
   if ( isset( $post_ids ) && $post_ids != null ) {
   	$markers = '';
   	$content = '';
   	foreach( $post_ids as $key => $post_id ) {
-  		$content .= maps_content( $post_id );
-		$markers .= map_marker( $post_id );
+		#var_dump( get_post_custom_keys( $post_id ) ); //select all metakeys from post
+  		$content .= google_maps_content( $post_id );
+		$markers .= google_map_marker( $post_id );
   	}
   } 
   else {
-  	$markers = map_marker($post_ids);
-  	$content = maps_content( $post_ids );
+  	$markers = google_map_marker($post_ids);
+  	$content = google_maps_content( $post_ids );
   }
   ?>
     <h3>Life Maps</h3>
