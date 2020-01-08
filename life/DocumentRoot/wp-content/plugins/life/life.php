@@ -1,5 +1,4 @@
 <?php
-/*-AIzaSyB3HNBEo_ND6z7s3ethaRA0lPxikOUqjwU-*/
 include_once "functions.php";
 /*-------------------------------------------------------------------------------
                                     Webp
@@ -243,15 +242,16 @@ if ( get_option( 'life_options_img_type' ) ) {
                           Show all image sizes
 -------------------------------------------------------------------------------*/
 if ( get_option( 'life_options_size' ) ) {
+if ( is_admin() ) {
 	function get_all_image_sizes() {
 		global $_wp_additional_image_sizes;
 		$image_size_list = '';
 	 	foreach( $_wp_additional_image_sizes as $name => $size ) {
 	 		$imgcrop = $size['crop'] ? '>>>>>crop' : '';
-	    	$image_size_list .= '<li style="float:left;line-height: 1.5">';
+	    	$image_size_list .= '<p data-height="'.$size['height'].'" data-width="'.$size['width'].'">';
 			$image_size_list .= $name . '>>>>>';
 			$image_size_list .= $size['width'] . 'X' . $size['height'];
-			$image_size_list .= $imgcrop . '</li>';
+			$image_size_list .= $imgcrop . '</p>';
 	 		}
 	 	$default = get_intermediate_image_sizes();
 	 	$default_sizes    = array( 'thumbnail', 'medium', 'medium_large', 'large' );
@@ -266,24 +266,29 @@ if ( get_option( 'life_options_size' ) ) {
 			$width = get_option( $optionw );
 			$height = get_option( $optionh );
 			$imgcrop = $gcrop ? '>>>>>crop' : '';
-	 		$image_size_list .= '<li style="float:left;line-height: 1.5">';
+	 		$image_size_list .= '<p data-height="'.$height.'" data-width="'.$width.'">';
 			$image_size_list .= $name . '>>>>>';
 			$image_size_list .= $width . 'X' . $height;
-			$image_size_list .= $imgcrop . '</li>';
+			$image_size_list .= $imgcrop . '</p>';
 	 		}
 	 	global $wp_admin_bar;
-	 	$args = array(
-	 		'id' => 'show_all_image_size',
+	 	$wp_admin_bar->add_node( array(
+			'id' => 'show_all_image_size',
 			'title' => 'Show all image sizes',
-	 		);
-	 	$wp_admin_bar->add_node( $args );
+			) );
 	 	$wp_admin_bar->add_menu( array (
 	 		'parent' => 'show_all_image_size',
 			'id' => 'image_size',
-			'title' => '<ul id="included-files-list">' . $image_size_list . '</ul>', 
+			'title' => '<div id="image_sizes_list">' . $image_size_list . '</div>', 
 			) );
+		/*$wp_admin_bar->add_menu( array (
+			'parent' => 'image_size',
+			'id' => 'image_size_div',
+			'title' => '<div id="image_size_div"></div>',
+			) );*/
 	 	}
 	add_action( 'admin_bar_menu', 'get_all_image_sizes', 999 );
+	}
 }
 
 /*-------------------------------------------------------------------------------
@@ -316,18 +321,19 @@ if ( get_option( 'life_options_post_branch' ) ) {
 		global $post;
 		if ( in_array( $post->post_status, array('publish', 'future', 'private') ) && 0 != $post->ID ) {
 			echo '<div id="branch-action" style="margin-bottom:5px;">';
-			echo '<input type="submit" class="button-primary" name="wp_post_branches" value="Create Branch" />';
+			echo '<input type="submit" class="button-primary" name="life_post" value="副本を作る" />';
 			echo '</div>';
 			}
 		}
 	add_action( 'post_submitbox_start', 'wpbs_post_submitbox_start' );
 	
 	function wpbs_pre_post_update( $id ) {
-		if ( isset( $_POST['wp_post_branches'] ) ) {
+		if ( isset( $_POST['life_post'] ) ) {
 			$pub = get_post( $id, ARRAY_A );
 			unset( $pub['ID'] );
+			$user = wp_get_current_user();
 			$pub['post_status'] = 'draft';
-			$pub['post_name']   = $pub['post_name'] . '-branch';
+			$pub['post_name']   = $pub['post_name'] . '-fukuhon';
 			$pub = apply_filters( 'wpbs_pre_publish_to_draft_post', $pub );
 			$draft_id = wp_insert_post( $pub );
 			$keys = get_post_custom_keys( $id );
@@ -524,7 +530,8 @@ function wpbs_admin_notice_saved() {
 function wpbs_display_branch_stat( $stat ) {
     global $post;
     if ( $org_id = get_post_meta( $post->ID, '_wpbs_pre_post_id', true ) ) {
-        $stat[] = sprintf( 'Branch of %d', $org_id );
+		$user = wp_get_current_user();
+        $stat[] = sprintf( '%dの副本 作成者: %s', $org_id , $user->user_login );
     }
     return $stat;
 }

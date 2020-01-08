@@ -12,3 +12,17 @@ jQuery(document).ready(function($) {
 		}
 	};
 });
+
+/*------------Image sizes list------------------------*/
+/*
+jQuery(document).ready(function($) {
+	$("#image_sizes_list").children("p").hover( function(){
+		console.log($(this).attr('data-height'));
+		$("#image_size_div").height($(this).attr('data-height'));
+		$("#image_size_div").width($(this).attr('data-width'));
+	},
+	function(){
+		$("#image_sizes_list p").hide();
+	});
+});
+*/

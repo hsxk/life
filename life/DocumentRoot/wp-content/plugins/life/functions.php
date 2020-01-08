@@ -1,5 +1,8 @@
 <?php
-            /*--------------管理画面checkboxbutton----------------*/
+/*-------------------------------------------------------------------------------
+									管理画面
+-------------------------------------------------------------------------------*/
+      /*--------------管理画面checkboxbutton----------------*/
   function control_switch_block( $option_name, $option_value, $title ) {
 	if ( isset( $option_name ) && isset( $option_value ) && isset( $title ) ) {
 		if ( !$option_value ) {
@@ -30,6 +33,10 @@
 		return false;
 	}
   }
+
+/*-------------------------------------------------------------------------------
+								写真データ処理
+-------------------------------------------------------------------------------*/
      /*---------------分数化簡-------------*/
   function exif_data( $str ) {
   	if ( isset ( $str ) ) {
@@ -84,8 +91,12 @@
 			return false;
 	}
   }
-  	/*-----------maps content-----------*/
-  function maps_content( $id ) {
+
+/*-------------------------------------------------------------------------------
+									Google maps
+-------------------------------------------------------------------------------*/
+  	/*-----------google maps content-----------*/
+  function google_maps_content( $id ) {
   	$content = '';
 	if ( isset( $id ) && $id != null ) {
 		$metadata = get_post_meta( $id, 'exif' );
@@ -101,7 +112,7 @@
 			return $content.$info;
 			} 
 		else {
-			return "No exifinfo for this photo";
+			return "<div>No exifinfo for this photo</div>";
 			}
 		} 
 	else {
@@ -111,8 +122,8 @@
 		}
   }
 
-  /*-----------maps markers------------*/
-  function map_marker( $id ) {
+  /*-----------google maps markers------------*/
+  function google_map_marker( $id ) {
   	if ( isset( $id ) && $id != null ) {
 		$metadata = get_post_meta( $id, 'gps' );
 		if ( $metadata ) {
@@ -139,8 +150,8 @@
 		}
   }
 
-  /*---------maps center-------------*/
-  function map_center( $ids ) {
+  /*---------google maps center-------------*/
+  function google_map_center( $ids ) {
   	if ( isset( $ids ) && $ids != null ) {
 		if ( is_array( $ids ) ){
 		again:

@@ -2,7 +2,7 @@
 /*
 Plugin Name: Life
 Description:LIFEのために開発したプラグイン
-Version: 0.3.5
+Version: 0.4.0
 Author: haokexin
 Author URI: https://hkx.monster
 */
@@ -12,6 +12,17 @@ Author URI: https://hkx.monster
 -----------------------------------------*/
 include_once "life.php";
 include_once "functions.php";
+
+/*----------------------------------------
+			plugin用js追加
+-----------------------------------------*/
+function life_include() {
+	if( is_admin() ) {
+		wp_enqueue_script( 'life_js', WP_PLUGIN_URL . '/life/assets/js/common.js', array() );
+		wp_enqueue_style( 'life_css', WP_PLUGIN_URL . '/life/assets/css/style.css' );
+	}
+}
+add_action( 'admin_enqueue_scripts', 'life_include' );
 
 /*-----------------------------------------
           管理画面メニュー追加
@@ -35,8 +46,6 @@ if ( !current_user_can( 'manage_options' ) )  {
    wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
    }
    ?>
-	<link rel="stylesheet" href="<?php echo WP_PLUGIN_URL ?>/life/assets/css/style.css" type="text/css">
-	<script src="<?php echo WP_PLUGIN_URL ?>/life/assets/js/common.js"></script>
 	<div class="wrap">
 	<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 	<?php settings_errors();  //更新通知を表示する ?>  

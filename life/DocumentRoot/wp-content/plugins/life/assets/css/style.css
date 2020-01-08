@@ -99,12 +99,18 @@
 	margin: 0;
 }
 
-/*---------------Google Maps--------------------*/
-.map{
-width: 96%;
-height: 96%;
-}
 /*-----------------image size------------------*/
-#wp-admin-bar-image_size li{
-	float:inherit;
+#image_sizes_list {
+	float:left;
+}
+#image_sizes_list p{
+	line-height:1.5;
+}
+#image_sizes_list p:hover{
+	border:1px LIGHTGOLDENRODYELLOW solid;
+}
+#image_size_div {
+	background-color:blue;
+	width:100px;
+	height:100px;
 }
