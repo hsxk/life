@@ -317,24 +317,22 @@ if ( get_option( 'life_options_adminbar' ) ) {
 							投稿分肢
 -------------------------------------------------------------------------------*/
 if ( get_option( 'life_options_post_branch' ) ) {
-	function wpbs_post_submitbox_start() {
+	function life_post_submitbox_button() {
 		global $post;
 		if ( in_array( $post->post_status, array('publish', 'future', 'private') ) && 0 != $post->ID ) {
-			echo '<div id="branch-action" style="margin-bottom:5px;">';
+			echo '<div style="margin-bottom:5px;">';
 			echo '<input type="submit" class="button-primary" name="life_post" value="副本を作る" />';
 			echo '</div>';
 			}
 		}
-	add_action( 'post_submitbox_start', 'wpbs_post_submitbox_start' );
+	add_action( 'post_submitbox_start', 'life_post_submitbox_button' );
 	
-	function wpbs_pre_post_update( $id ) {
+	function life_pre_post_update( $id ) {
 		if ( isset( $_POST['life_post'] ) ) {
 			$pub = get_post( $id, ARRAY_A );
 			unset( $pub['ID'] );
-			$user = wp_get_current_user();
 			$pub['post_status'] = 'draft';
 			$pub['post_name']   = $pub['post_name'] . '-fukuhon';
-			$pub = apply_filters( 'wpbs_pre_publish_to_draft_post', $pub );
 			$draft_id = wp_insert_post( $pub );
 			$keys = get_post_custom_keys( $id );
 			$custom_field = array();
@@ -394,35 +392,40 @@ if ( get_option( 'life_options_post_branch' ) ) {
 					}
 					wp_set_object_terms($draft_id, $terms, $taxonomy);
 				}
-				add_post_meta($draft_id, '_wpbs_pre_post_id', $id);
+				add_post_meta($draft_id, '_genhon_post_id', $id);
+				$user = wp_get_current_user();
+				add_post_meta($draft_id, '_fukuhon_name', $user->display_name );
+				add_post_meta($draft_id, '_fukuhon_user', $user->user_login );
+				add_post_meta($draft_id, '_fukuhon_user_id', $user->ID );
 				if ( ! defined( 'DOING_CRON' ) || ! DOING_CRON ) {
 					wp_safe_redirect( admin_url( 'post.php?post=' . $draft_id . '&action=edit' ) );
 					exit;
 				}
 			}
 	}
-	add_filter( 'pre_post_update', 'wpbs_pre_post_update' );
+	add_filter( 'pre_post_update', 'life_pre_post_update' );
 	
-	function wpbs_admin_notice() {
+	function life_admin_notice() {
 		if ( isset($_REQUEST['post']) ) {
 			$id = $_REQUEST['post'];
-			if ( $old_id = get_post_meta( $id, '_wpbs_pre_post_id', true ) ) {
-				echo '<div id="wpbs_notice" class="updated fade"><p>' . sprintf( "This post is a copy of the post id <a href='%s' target='__blank' >%s</a> Overwrite the original post by pressing the publish button.",  get_permalink($old_id), $old_id ) . '</p></div>';
+			if ( $old_id = get_post_meta( $id, '_genhon_post_id', true ) ) {
+				$name = get_post_meta( $id, '_fukuhon_name', true );
+				echo '<div class="updated fade" style="text-align:center; color:blue;"><p>' . sprintf( "当副本は <a href='%s' target='__blank' >%s</a>の副本です。作成者は%s ",  get_permalink($old_id), $old_id, $name ) . '</p></div>';
 			}
 		}
 	}
-	add_action( 'admin_notices', 'wpbs_admin_notice' );
+	add_action( 'admin_notices', 'life_admin_notice' );
 
-	function add_wpbs_save_post_hooks() {
+	function add_life_save_post_hooks() {
 		$additional_post_types = get_post_types( array( '_builtin' => false, 'show_ui' => true ) );
 		foreach ( $additional_post_types as $post_type ) {
-			add_action( 'publish_' . $post_type, 'wpbs_save_post', 9999, 2 );
+			add_action( 'publish_' . $post_type, 'life_save_post', 9999, 2 );
 		}
 	}
-	add_action( 'init', 'add_wpbs_save_post_hooks', 9999 );
+	add_action( 'init', 'add_life_save_post_hooks', 9999 );
 
-	function wpbs_save_post( $id, $post ) {
-		if ( $org_id = get_post_meta( $id, '_wpbs_pre_post_id', true ) ) {
+	function life_save_post( $id, $post ) {
+		if ( $org_id = get_post_meta( $id, '_genhon_post_id', true ) ) {
 			$new = array(
             	'ID' => $org_id,
            		'post_author' => $post->post_author,
@@ -452,7 +455,7 @@ if ( get_option( 'life_options_post_branch' ) ) {
 			foreach ( (array) $keys as $key ) {
 				if ( preg_match( '/^_feedback_/', $key ) )
 					continue;
-				if ( preg_match( '/_wpbs_pre_post_id/', $key ) )
+				if ( preg_match( '/_genhon_post_id/', $key ) )
 					continue;
 				if ( preg_match( '/_wp_old_slug/', $key ) )
 					continue;
@@ -514,26 +517,32 @@ if ( get_option( 'life_options_post_branch' ) ) {
 			exit;
  		}
 }	
-add_action( 'publish_page', 'wpbs_save_post', 9999, 2 );
-add_action( 'publish_post', 'wpbs_save_post', 9999, 2 );
+add_action( 'publish_page', 'life_save_post', 9999, 2 );
+add_action( 'publish_post', 'life_save_post', 9999, 2 );
 
-function wpbs_admin_notice_saved_init() {
-    if ( isset($_REQUEST['message']) && $_REQUEST['message'] == 'wpbs_msg' )
-        add_action( 'admin_notices', 'wpbs_admin_notice_saved' );
-}
+#function wpbs_admin_notice_saved_init() {
+#    if ( isset($_REQUEST['message']) && $_REQUEST['message'] == 'wpbs_msg' )
+#        add_action( 'admin_notices', 'wpbs_admin_notice_saved' );
+#}
 
-function wpbs_admin_notice_saved() {
-    echo '<div id="wpbs_notice" class="updated fade"><p></p></div>';
+#function wpbs_admin_notice_saved() {
+#    echo '<div  class="updated fade"><p></p></div>';
+#}
 
-}
-
-function wpbs_display_branch_stat( $stat ) {
+function life_display_branch_stat( $stat ) {
     global $post;
-    if ( $org_id = get_post_meta( $post->ID, '_wpbs_pre_post_id', true ) ) {
-		$user = wp_get_current_user();
-        $stat[] = sprintf( '%dの副本 作成者: %s', $org_id , $user->user_login );
+    if ( $org_id = get_post_meta( $post->ID, '_genhon_post_id', true ) ) {
+        $name = get_post_meta( $post->ID, '_fukuhon_name', true );
+		$user = get_post_meta( $post->ID, '_fukuhon_user', true );
+		$id = get_post_meta( $post->ID, '_fukuhon_user_id', true );
+		$stat[] = sprintf( '%dの副本 作成者: %s ID: %d', $org_id, $name, $id );
     }
     return $stat;
 }
-add_filter( 'display_post_states', 'wpbs_display_branch_stat' );
+add_filter( 'display_post_states', 'life_display_branch_stat' );
 }
+
+#function test(){
+#var_dump(wp_get_current_user());
+#}
+#add_action('shutdown',test);

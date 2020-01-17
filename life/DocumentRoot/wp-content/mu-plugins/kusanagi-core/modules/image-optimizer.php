@@ -19,6 +19,7 @@ class KUSANAGI_Image_Optimizer {
 			'jpeg_quality'          => 82,
 			'max_image_width'       => 1280,
 			'error_mes'             => false,
+			'png_min_quality'       => 60,
 		);
 
 		$this->settings = array_merge( $this->default, $this->settings );
@@ -234,8 +235,9 @@ class KUSANAGI_Image_Optimizer {
 	 */
 	private function optimize_png( $file ) {
 
+		$png_min_quality = $this->settings['png_min_quality'];
 		if ( $this->pngquant ) {
-			exec( "pngquant --skip-if-larger --ext=.png --force $file" );
+			exec( "pngquant --quality=$png_min_quality- --skip-if-larger --ext=.png --force $file" );
 		}
 		if ( $this->optipng ) {
 			exec( "optipng --preserve $file" );
