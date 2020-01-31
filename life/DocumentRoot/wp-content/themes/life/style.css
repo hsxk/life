@@ -4,3 +4,9 @@ Template: twentytwenty
 */
 
 @import url("../twentytwenty/style.css");
+
+#map {
+	margin:0 auto;
+	height: 400px;
+	width: 40%;
+}

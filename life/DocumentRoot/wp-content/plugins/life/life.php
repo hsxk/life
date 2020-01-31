@@ -392,6 +392,13 @@ if ( get_option( 'life_options_post_branch' ) ) {
 					}
 					wp_set_object_terms($draft_id, $terms, $taxonomy);
 				}
+				if( function_exists('acf_add_local_field_group') ) {
+					if ( $acf_fields = get_fields( $id ) ) {
+						foreach( $acf_fields as $name => $value ) {
+							update_field( $name, $value, $draft_id );
+						}
+					}
+				}
 				add_post_meta($draft_id, '_genhon_post_id', $id);
 				$user = wp_get_current_user();
 				add_post_meta($draft_id, '_fukuhon_name', $user->display_name );
@@ -511,6 +518,13 @@ if ( get_option( 'life_options_post_branch' ) ) {
 					$terms[] = $post_terms[$i]->slug;
 				}
 				wp_set_object_terms($org_id, $terms, $taxonomy);
+			}
+			if( function_exists('acf_add_local_field_group') ) {
+				if ( $acf_fields = get_fields( $id ) ) {
+					foreach( $acf_fields as $name => $value ) {
+						update_field( $name, $value, $org_id );
+					}
+				}
 			}
 			wp_delete_post( $id );
 			wp_safe_redirect( admin_url( '/post.php?post=' . $org_id . '&action=edit&message=1' ) );
